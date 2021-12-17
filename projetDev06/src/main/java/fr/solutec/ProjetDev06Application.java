@@ -8,6 +8,9 @@ public class ProjetDev06Application {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ProjetDev06Application.class, args);
+		
+		// Salut
+		
 	}
 
 }
