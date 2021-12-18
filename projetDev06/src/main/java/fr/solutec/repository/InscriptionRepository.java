@@ -1,5 +1,5 @@
 package fr.solutec.repository;
 
-public class PersonRepository {
+public class InscriptionRepository {
 
 }
