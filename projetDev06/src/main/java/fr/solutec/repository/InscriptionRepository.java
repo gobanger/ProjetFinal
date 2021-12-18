@@ -1,5 +1,9 @@
 package fr.solutec.repository;
 
-public class InscriptionRepository {
+import org.springframework.data.repository.CrudRepository;
+
+import fr.solutec.entities.Inscription;
+
+public interface InscriptionRepository extends CrudRepository<Inscription, Long> {
 
 }

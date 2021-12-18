@@ -1,7 +1,6 @@
 package fr.solutec.entities;
 
-
-import java.util.Date;
+import java.sql.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,24 +10,22 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@NoArgsConstructor @AllArgsConstructor @Data   // automatise les constructor et les getters and setters  (cf Outline)
+
+@NoArgsConstructor @AllArgsConstructor @Data
 @Entity
+
 public class Inscription {
-	@Id @GeneratedValue 
+	@Id @GeneratedValue
 	private Long idPerson;
-	private Date dateCandidature;
-	private boolean civ;
+	//private Date dateCandidature;
+	//private boolean civ;
 	private String nomUsage;
-	private String nomNaissance;
+	//private String nomNaissance;
 	private String prenom;
-	private int age;
+	//private int age;
+	
+	
+
 	
 }
-
-
-
-
-
-
-
 
