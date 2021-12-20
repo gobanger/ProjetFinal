@@ -1,17 +1,65 @@
 package fr.solutec;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import fr.solutec.entities.Candidat;
+
+import fr.solutec.repository.CandidatRepository;
+
+
+
+
+
+
+
 @SpringBootApplication
-public class ProjetDev06Application {
+public class ProjetDev06Application implements CommandLineRunner {
+	@Autowired
+
+	private CandidatRepository candidatRepo;
+
+	@Autowired
+	private CandidatRepository candiRepo;
+
 
 	public static void main(String[] args) {
 		SpringApplication.run(ProjetDev06Application.class, args);
 		
-		// Salut
-		// comment tu vas nicolas ?
-		//pour seulement 50 euros/mois, bénéficiez d'une appli sensationnelle pour trouver votre vocation (DEV6 entertainement ne vous promet pas contractuellement la lune, nos avocats se chargeront)
+		
+
+		
+		
+	}
+	
+	@Override
+	public void run(String... args) throws Exception {
+		System.out.println("lancement projet OK");
+	//	System.out.println(ZonedDateTime.now());
+
+		
 	}
 
-}
+	public CandidatRepository getCandidatRepo() {
+		return candidatRepo;
+	}
+
+	public void setCandidatRepo(CandidatRepository candidatRepo) {
+		this.candidatRepo = candidatRepo;
+	}
+
+	public CandidatRepository getCandiRepo() {
+		return candiRepo;
+	}
+
+	public void setCandiRepo(CandidatRepository candiRepo) {
+		this.candiRepo = candiRepo;
+	}
+
+
+
+	
+	}
+
