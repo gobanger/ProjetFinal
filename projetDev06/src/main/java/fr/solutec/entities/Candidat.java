@@ -28,11 +28,6 @@ public class Candidat {
 	private int age;
 	
 	
+
 	
-	
-	
-	
-	
-	
-		
 }
