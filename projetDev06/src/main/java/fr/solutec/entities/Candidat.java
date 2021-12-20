@@ -15,18 +15,28 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor @AllArgsConstructor @Data
 @Entity
 public class Candidat {
-	private Role role = Role.CANDIDAT;
+	private Role role;
 	@Id @GeneratedValue
 	private Long id;
 	private String mail;
 	private String mdp;
 	private String nomUsage;
-	private String nomNaissance;
+	//private String nomNaissance;
 	private String prenom;
-	private Long idCandidat;
 	@CreationTimestamp
 	private Date dateCandidature;
-	private boolean civ;
-	private int age;
-		
+	//private boolean civ;
+	//private int age;
+	
+	public Candidat(Long id, String mail, String mdp, String nomUsage, String prenom, Date dateCandidature) {
+		this.id = id;
+		this.mail = mail;
+		this.mdp = mdp;
+		this.nomUsage = nomUsage;
+		this.prenom = prenom;
+		this.dateCandidature = dateCandidature;
+		this.role = Role.CANDIDAT;
+	}
+	
+	
 }
