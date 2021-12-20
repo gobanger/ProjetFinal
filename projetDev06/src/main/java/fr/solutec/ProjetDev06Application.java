@@ -53,8 +53,10 @@ public class ProjetDev06Application implements CommandLineRunner {
 		connexionRepo.save(co1);
 		System.out.println(co1); */
 	//	System.out.println(ZonedDateTime.now());
-	
-	}
-		
 
-	}
+		DateFormat d = new SimpleDateFormat("dd/MM/yyyy"); 
+		
+		//Candidat c1 = new Candidat(null,d.parse("14/07/2018"));
+		//candidatRepo.save(c1);
+
+	}}

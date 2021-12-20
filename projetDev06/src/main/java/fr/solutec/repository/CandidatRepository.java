@@ -6,5 +6,7 @@ import fr.solutec.entities.Candidat;
 
 
 public interface CandidatRepository extends CrudRepository<Candidat, Long> {
+	
+	
 
 }
