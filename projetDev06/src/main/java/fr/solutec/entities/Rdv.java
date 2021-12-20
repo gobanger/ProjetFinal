@@ -18,6 +18,7 @@ public class Rdv {
 	private String sujet;
 	@ManyToMany
 	private Conseiller emetteur;
+	//private Conseiller emetteur;
 	private Candidat destinataire;
 	private String lien;
 	private String message;
