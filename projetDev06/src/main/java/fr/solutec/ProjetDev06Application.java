@@ -5,7 +5,9 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import fr.solutec.entities.Candidat;
 import fr.solutec.entities.Inscription;
+import fr.solutec.repository.CandidatRepository;
 import fr.solutec.repository.InscriptionRepository;
 
 
@@ -14,6 +16,8 @@ import fr.solutec.repository.InscriptionRepository;
 public class ProjetDev06Application implements CommandLineRunner {
 	@Autowired
 	private InscriptionRepository inscriRepo;
+	@Autowired
+	private CandidatRepository candiRepo;
 
 	public static void main(String[] args) {
 		SpringApplication.run(ProjetDev06Application.class, args);
@@ -21,8 +25,13 @@ public class ProjetDev06Application implements CommandLineRunner {
 	
 	@Override
 	public void run(String... args) throws Exception {
-		System.out.println("lancement projet");
+		System.out.println("lancement projet OK");
 	//	System.out.println(ZonedDateTime.now());
+		Candidat c1 = new Candidat(null, "chameau@mail.fr", "lama", "Chameau", "Lama", true);
+		candiRepo.save(c1);
+		Candidat c2 = new Candidat(null, "league@mail.fr", "lol", "Yasuo", "Garen", false);
+		candiRepo.save(c2);
+		
 	}
 
 	
