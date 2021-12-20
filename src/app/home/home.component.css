@@ -1,4 +1,16 @@
-div{
+.container{
+    padding-left : 0px;
+}
+
+#sidebar{
+    position: fixed;
+    background-color: aqua;
+    height: 100%;
     width : 15%;
-    background-color: red;
+    top : 0%;
+    bottom: 0%;
+}
+
+li{
+    background-color: gray;
 }
