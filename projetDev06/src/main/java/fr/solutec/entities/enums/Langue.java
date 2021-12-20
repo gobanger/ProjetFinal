@@ -1,0 +1,37 @@
+package fr.solutec.entities.enums;
+
+public enum Langue {
+	Mandarin,
+	Hindi,
+	Espagnol,
+	Arabe,
+	Bengali,
+	Russe,
+	Portugais,
+	Indonésien,
+	Ourdou,
+	Allemand,
+	Japonais,
+	Swahili,
+	Marathi,
+	Télougou,
+	Turc,
+	Cantonais,
+	Tamoul,
+	Pendjabioccidental,
+	Wu,
+	Coréen,
+	Vietnamien,
+	Haoussa,
+	Javanais,
+	Arabeégyptien,
+	Italien,
+	Thaï,
+	Gujarati,
+	Kannada,
+	Persan,
+	Bhodjpouri,
+	Minnan,
+	Philippin
+
+}
