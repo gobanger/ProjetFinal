@@ -21,11 +21,18 @@ public class Candidat {
 	private Long idCandidat;
 	@CreationTimestamp
 	private Date dateCandidature;
-	//private boolean civ;
+	private boolean civ;
 	private String nomUsage;
-	//private String nomNaissance;
+	private String nomNaissance;
 	private String prenom;
-	//private int age;
+	private int age;
+	
+	
+	
+	
+	
+	
+	
 	
 		
 }
