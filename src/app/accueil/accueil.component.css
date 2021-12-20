@@ -8,5 +8,23 @@
 }
 
 .bs_perso{
-    box-shadow: 0 20px 40px 0 rgba(red, green, blue, alpha !important)
+    box-shadow: 0 20px 40px 0 rgba(red, green, blue)
+}
+
+/* body
+{
+    background-color:#3AAFA9;
+    
+} */
+
+.text_mdp_oublie{
+    font-size: small;
+}
+
+.text-sinscrire{
+    font-size: small;
+}
+
+.btn btn-block btn-primary{
+    color: ;
 }
