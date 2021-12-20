@@ -27,12 +27,5 @@ public class Candidat {
 	private String prenom;
 	//private int age;
 	
-	
-	
-	
-	
-	
-
-	
+		
 }
-
