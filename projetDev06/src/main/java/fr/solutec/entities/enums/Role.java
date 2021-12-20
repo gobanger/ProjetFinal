@@ -1,4 +1,4 @@
-package fr.solutec.entities;
+package fr.solutec.entities.enums;
 
 public enum Role {
 
