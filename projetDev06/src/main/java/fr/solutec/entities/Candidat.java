@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+import org.hibernate.annotations.CreationTimestamp;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,15 +16,20 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor @AllArgsConstructor @Data
 @Entity
 
-public class Inscription {
+public class Candidat {
 	@Id @GeneratedValue
-	private Long idPerson;
-	//private Date dateCandidature;
+	private Long idCandidat;
+	@CreationTimestamp
+	private Date dateCandidature;
 	//private boolean civ;
 	private String nomUsage;
 	//private String nomNaissance;
 	private String prenom;
 	//private int age;
+	
+	
+	
+	
 	
 	
 
