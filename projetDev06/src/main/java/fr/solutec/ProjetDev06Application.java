@@ -32,10 +32,12 @@ public class ProjetDev06Application implements CommandLineRunner {
 		Candidat c2 = new Candidat(null, "league@mail.fr", "lol", "Yasuo", "Garen", false);
 		candiRepo.save(c2);
 		
-	}
+	
 
 	
-	//Inscription i = new Inscription(null,"bond","james");
-	//inscriRepo.save(i);  // pourquoi je ne peux pas creer comme ça ?
+	Inscription i = new Inscription(null,"bond","james");
+	inscriRepo.save(i);
+	
+	}
 	
 }
