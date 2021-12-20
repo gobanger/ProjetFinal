@@ -7,26 +7,27 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import fr.solutec.entities.Inscription;
-import fr.solutec.repository.InscriptionRepository;
+import fr.solutec.entities.Candidat;
+import fr.solutec.repository.CandidatRepository;
+
 
 @RestController 
 
 @CrossOrigin("*")  // pour dire qui a le droit d'acceder au requete de cette classe (on peut mettre une adresse ip)
 
-public class InscriptionRest {
+public class CandidatRest {
 	@Autowired
-	private InscriptionRepository inscriptionRepo;
+	private CandidatRepository inscriptionRepo;
 	
 	
-	@GetMapping("inscription")
-	public Iterable<Inscription> getAllInscription(){
+	@GetMapping("candidat")
+	public Iterable<Candidat> getAllInscription(){
 		
 		return inscriptionRepo.findAll();
 	}
 	
-	@PostMapping("inscription")
-	public Inscription createInscription (@RequestBody Inscription i) {
+	@PostMapping("candidat")
+	public Candidat createInscription (@RequestBody Candidat i) {
 		inscriptionRepo.save(i);
 		return i;
 		
