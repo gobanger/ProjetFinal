@@ -1,0 +1,34 @@
+.container{
+    padding-left : 0px;
+}
+
+#sidebar{
+    position: fixed;
+    background-color: aqua;
+    height: 100%;
+    width : 15%;
+    top : 0%;
+    bottom: 0%;
+}
+
+li{
+    background-color: gray;
+    margin-left: 5%;
+}
+
+a{
+    color : white;
+}
+
+.home{
+    position:relative;
+    width: 100%;
+    height: 100%;
+    background-color:black;
+}
+
+#deconnexion{
+    position:fixed; 
+    bottom: 5%; 
+    margin-left: 1%;
+}

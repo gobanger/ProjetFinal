@@ -11,24 +11,24 @@ import fr.solutec.entities.Candidat;
 import fr.solutec.repository.CandidatRepository;
 
 
-@RestController 
+@RestController
 
 @CrossOrigin("*")  // pour dire qui a le droit d'acceder au requete de cette classe (on peut mettre une adresse ip)
 
 public class CandidatRest {
 	@Autowired
-	private CandidatRepository inscriptionRepo;
+	private CandidatRepository candidatRepo;
 	
 	
 	@GetMapping("candidat")
 	public Iterable<Candidat> getAllInscription(){
 		
-		return inscriptionRepo.findAll();
+		return candidatRepo.findAll();
 	}
 	
 	@PostMapping("candidat")
 	public Candidat createInscription (@RequestBody Candidat i) {
-		inscriptionRepo.save(i);
+		candidatRepo.save(i);
 		return i;
 		
 	}
