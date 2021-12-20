@@ -20,8 +20,6 @@ import fr.solutec.repository.InscriptionRepository;
 public class ProjetDev06Application implements CommandLineRunner {
 	@Autowired
 	private CandidatRepository candiRepo;
-	@Autowired 
-	private InscriptionRepository inscriRepo;
 	@Autowired
 	private ConnexionRepository connexionRepo;
 	@Autowired
@@ -44,12 +42,12 @@ public class ProjetDev06Application implements CommandLineRunner {
 		candiRepo.save(c2);
 //		System.out.println(c2);
 	
-		Inscription i1 = new Inscription(null,"nicolas@yahoo.fr","james");
-		inscriRepo.save(i1);
+	//	Inscription i1 = new Inscription(null,"nicolas@yahoo.fr","james");
+	//	inscriRepo.save(i1);
 	
 	
 		
-		System.out.println(i1);
+	
 		
 		/* Connexion co1 = new Connexion(null,"burtz","nicolas", "nicolas@yahoo.fr", "11", "11");
 		connexionRepo.save(co1);
