@@ -35,13 +35,9 @@ public class Candidat {
 	private String nomUsage; 
 	private String nomNaissance;
 	private String prenom;
-	private int age;
-	
 	@Temporal(TemporalType.DATE)
 	private Date dateNaissance;
-	private int anneeNaissance;
-	private int moisNaissance;
-	private int jourNaissance;
+	private int age;
 	
 	private String lieuNaissance;
 	private String Adresse;
@@ -73,9 +69,8 @@ public class Candidat {
 	
 	private boolean poleEmploi;
 	private String identifiantPoleEmploi;
-	private int anneePoleEmploi;
-	private int moisPoleEmploi;
-	private int jourPoleEmploi;
+	@Temporal(TemporalType.DATE)
+	private Date inscriptionPoleEmploi;
 	private boolean missionLocal;
 	private String coordMissionLocal;
 	private String nomConseillerMissionLocal;
