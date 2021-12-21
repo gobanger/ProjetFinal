@@ -1,42 +1,58 @@
-.f-connect{
-    margin: auto;
-    width: 50%;
-}
-
-.marge-top-100{
-    margin-top: 100px;
-}
-
-.bs_perso{
-    box-shadow: 0 20px 40px 0 rgba(red, green, blue)
-}
-
-.accueilcommun
-{
-     /* fallback for old browsers */
-  background: #1f7a73;
-
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-linear-gradient(to right, rgba(16, 119, 90, 0.5), rgba(43, 62, 73, 0.5));
-
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: linear-gradient(to right, rgba(55, 236, 186, 0.5), rgba(114, 175, 211, 0.5))
+.page_accueilcommun {
+    font-family: "Roboto";
 }
 
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto";
+  letter-spacing: 5px;
+}
 
 
-
-h1{
-    font-family: 'Roboto';
-    font-size: medium;
+.wrapper{
+    /*position:relative; */
+    /*top: 10%; */
+    /*left: 50%; */
+    transform: translate(30%, 100%);
+    
+  }
+  
+  .a2{
+    display: block;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #333;
+    border: 2px solid #333;
+    letter-spacing: 2px;
     text-align: center;
-}
-
-
-h6{
-    font-family: 'Roboto';
-    font-size: small;
-    text-align: center;
-}
-
+    position: relative;
+    transition: all .35s;
+  }
+  
+  a span{
+    position: relative;
+    z-index: 2;
+  }
+  
+  a:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #00a2ff;
+    transition: all .35s;
+  }
+  
+  a:hover{
+    color: #fff;
+  }
+  
+  a:hover:after{
+    width: 100%;
+  }
