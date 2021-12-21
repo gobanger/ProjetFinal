@@ -1,34 +1,90 @@
-.container{
-    padding-left : 0px;
+#sidenav {
+    position: relative;
+    width:20%;
+    height: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99999;
+    background: #101010; 
 }
-
-#sidebar{
-    position: fixed;
-    background-color: aqua;
-    height: 100%;
-    width : 15%;
-    top : 0%;
-    bottom: 0%;
+#sidenav.open {
+    left: -300px; 
 }
-
-li{
-    background-color: gray;
-    margin-left: 5%;
-}
-
-a{
-    color : white;
-}
-
-.home{
-    position:relative;
+#sidenav .logo {
     width: 100%;
-    height: 100%;
-    background-color:black;
+    padding: 20px 50px;
+    background: #101010;
+    display: block; 
+}
+#sidenav .logo a {
+    color: #dadada;
+    font-size: 30px; 
+}
+#sidenav .logo a.nav-icon {
+    display: none; 
+}
+#sidenav .menu {
+    position: static; 
+}
+#sidenav .menu ul {
+    list-style: none;
+    background: #101010;
+    padding: 10% 0;
+    margin: 0; 
+}
+#sidenav .menu ul li {
+    padding: 6px 14%; 
+}
+#sidenav .menu ul li.active {
+    border-left: solid 4px red; 
+}
+#sidenav .menu ul li a {
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 300;
+    display: block; 
+}
+#sidenav .menu ul li a:hover {
+    color: black; 
+}
+#sidenav .menu ul li a.logout:hover {
+    color: red; 
+}
+#sidenav .menu ul li ul {
+    list-style: none;
+    margin: 10px auto 0;
+    padding: 10px 15px;
+    border-top: solid 1px rgba(255, 255, 255, 0.08);
+    border-bottom: solid 1px rgba(255, 255, 255, 0.08); 
+}
+#sidenav .menu ul li ul li {
+padding: 6px 3px; 
+}
+#sidenav .menu ul li ul li a {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7); 
 }
 
-#deconnexion{
-    position:fixed; 
-    bottom: 5%; 
-    margin-left: 1%;
+a {
+    text-decoration: none; 
 }
+a:hover {
+    text-decoration: none;
+    color : black; 
+}
+
+li:hover{
+    background-color: white;
+}
+
+hr{
+    color:lightgray;
+}
+
+.vl {
+    position : absolute;
+    border-left: 4px solid black;
+    height: 15%;
+    margin-left : 19.5%;
+  }
