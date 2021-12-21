@@ -9,6 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { AccueilcommunComponent } from './accueilcommun/accueilcommun.component';
+import { CompteAdminComponent } from './compte-admin/compte-admin.component';
+import { GestionFormationComponent } from './gestion-formation/gestion-formation.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { AccueilcommunComponent } from './accueilcommun/accueilcommun.component'
     HomeComponent,
     AccueilComponent,
     InscriptionComponent,
-    AccueilcommunComponent
+    AccueilcommunComponent,
+    CompteAdminComponent,
+    GestionFormationComponent
   ],
   imports: [
     BrowserModule,
