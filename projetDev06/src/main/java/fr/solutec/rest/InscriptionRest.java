@@ -7,26 +7,28 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import fr.solutec.repository.InscriptionRepository;
+import fr.solutec.entities.*;
+import org.springframework.*;
 
 @RestController 
 @CrossOrigin("*")  
-public class Inscription {
-	
+public class InscriptionRest {
+
 	@Autowired
 	private InscriptionRepository inscriRepo;
 	
 	@GetMapping("inscription")
-	public Iterable<fr.solutec.entities.Inscription> getAllInscription(){
+	public Iterable<Inscription> getAllInscription(){
 		return inscriRepo.findAll();
 	}
 	
 	@PostMapping("inscription")
-	public Inscription createInscription (@RequestBody Inscription i) {
-		inscriRepo.save(i);
-		return i;
+	public Inscription createInscription (@RequestBody Inscription in) {
+		inscriRepo.save(in);
+		return in;
 	}
-	
+}
 	
 	
 		
-}
+
