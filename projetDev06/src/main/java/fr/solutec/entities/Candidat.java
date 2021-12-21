@@ -29,7 +29,7 @@ public class Candidat {
 	private Long id;
 	private String mdp;
 	@CreationTimestamp
-	private Date dateCandidature;
+	private Date dateCandidature; //TEST
 	
 	private boolean civ;
 	private String nomUsage; 
