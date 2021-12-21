@@ -31,9 +31,6 @@
     padding: 1% 0;
     margin: 0; 
 }
-#sidenav .menu ul li {
-    /*padding: 6px 14%; */
-}
 #sidenav .menu ul li.active {
     border-left: solid 4px red; 
 }
