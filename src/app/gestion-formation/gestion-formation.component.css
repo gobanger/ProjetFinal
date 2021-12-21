@@ -1,11 +1,12 @@
 #sidenav {
+    justify-content: center;
     position: relative;
     width:20%;
-    height: auto;
-    top: 0;
+    height: 43vw ;
+    top:1%;
     bottom: 0;
     left: 0;
-    z-index: 99999;
+    /*z-index: 99999;*/
     background: white; 
 }
 #sidenav.open {
@@ -34,12 +35,13 @@
     margin: 0; 
 }
 #sidenav .menu ul li {
-    padding: 6px 14%; 
+    /*padding: 6px 14%; */
 }
 #sidenav .menu ul li.active {
     border-left: solid 4px red; 
 }
 #sidenav .menu ul li a {
+    text-align: center;
     font-size: 1vw;
     color: black;
     font-weight: 300;
@@ -67,6 +69,7 @@ padding: 6px 3px;
 }
 
 a {
+    padding: 1%;
     text-decoration: none; 
 }
 

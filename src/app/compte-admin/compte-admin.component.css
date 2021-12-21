@@ -1,7 +1,8 @@
 #sidenav {
+    justify-content: center;
     position: absolute;
     width:20%;
-    height: 40vw;
+    height: 43vw ;
     top:1%;
     bottom: 0;
     left: 0;
@@ -25,7 +26,7 @@
     display: none; 
 }
 #sidenav .menu {
-    position: static; 
+    /*position: static; */
 }
 #sidenav .menu ul {
     list-style: none;
@@ -34,12 +35,13 @@
     margin: 0; 
 }
 #sidenav .menu ul li {
-    padding: 6px 14%; 
+    /*padding: 6px 14%; */
 }
 #sidenav .menu ul li.active {
     border-left: solid 4px red; 
 }
 #sidenav .menu ul li a {
+    text-align: center;
     font-size: 1vw;
     color: black;
     font-weight: 300;
