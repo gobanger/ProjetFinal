@@ -19,7 +19,7 @@
 }
 #sidenav .logo a {
     color: #dadada;
-    font-size: 30px; 
+    font-size: 10px; 
 }
 #sidenav .logo a.nav-icon {
     display: none; 
@@ -40,7 +40,7 @@
     border-left: solid 4px red; 
 }
 #sidenav .menu ul li a {
-    font-size: 22px;
+    font-size: 1vw;
     color: rgba(255, 255, 255, 0.7);
     font-weight: 300;
     display: block; 
@@ -62,7 +62,7 @@
 padding: 6px 3px; 
 }
 #sidenav .menu ul li ul li a {
-    font-size: 18px;
+    font-size: 10px;
     color: rgba(255, 255, 255, 0.7); 
 }
 
@@ -72,6 +72,10 @@ a {
 a:hover {
     text-decoration: none;
     color : black; 
+}
+
+li{
+    font-size: 1px;;
 }
 
 li:hover{
