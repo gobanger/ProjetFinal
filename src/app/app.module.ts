@@ -12,6 +12,7 @@ import { AccueilcommunComponent } from './accueilcommun/accueilcommun.component'
 import { CompteAdminComponent } from './compte-admin/compte-admin.component';
 import { GestionFormationComponent } from './gestion-formation/gestion-formation.component';
 import { DoccandidatComponent } from './doccandidat/doccandidat.component';
+import { CandidatureComponent } from './candidature/candidature.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { DoccandidatComponent } from './doccandidat/doccandidat.component';
     AccueilcommunComponent,
     CompteAdminComponent,
     GestionFormationComponent,
-    DoccandidatComponent
+    DoccandidatComponent,
+    CandidatureComponent
   ],
   imports: [
     BrowserModule,

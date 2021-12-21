@@ -8,6 +8,7 @@ import { SidebarMenuComponent } from './sidebar-menu/sidebar-menu.component';
 import { CompteAdminComponent } from './compte-admin/compte-admin.component';
 import { GestionFormationComponent } from './gestion-formation/gestion-formation.component';
 import { DoccandidatComponent } from './doccandidat/doccandidat.component';
+import { CandidatureComponent } from './candidature/candidature.component';
 
 const routes: Routes = [
   {path : 'accueilcommun' , component : AccueilcommunComponent},
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path : 'sidenav', component : SidebarMenuComponent},
   {path : 'moncompte-admin' , component : CompteAdminComponent},
   {path : 'gestion-formation' , component : GestionFormationComponent},
-  {path : 'doccandidat' , component : DoccandidatComponent}
+  {path : 'doccandidat' , component : DoccandidatComponent},
+  {path : 'candidature' , component : CandidatureComponent}
 ];
 
 @NgModule({
