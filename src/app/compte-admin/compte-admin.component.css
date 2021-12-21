@@ -1,11 +1,11 @@
 #sidenav {
     position: absolute;
     width:20%;
-    height: 89%;
-    top: 0;
+    height: 40vw;
+    top:1%;
     bottom: 0;
     left: 0;
-    z-index: 99999;
+    /*z-index: 99999;*/
     background: white; 
 }
 #sidenav.open {
