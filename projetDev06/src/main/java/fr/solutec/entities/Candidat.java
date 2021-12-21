@@ -23,24 +23,21 @@ import lombok.NoArgsConstructor;
 @Entity
 
 public class Candidat {
-	//private Role role = Role.CANDIDAT;
+	
 	
 	@Id @GeneratedValue
 	private Long idCandidat;
-	@Temporal(TemporalType.DATE)
-	private Date dateNaissance;
-	
+	private Role role = Role.CANDIDAT;
 	@CreationTimestamp
 	private Date dateCandidature;
 	private boolean civ;
 	private String nomUsage; 
 	private String nomNaissance;
 	private String prenom;
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date dateNaissance;
 	private int age;
 
-	private int anneeNaissance;
-	private int moisNaissance;
-	private int jourNaissance;
 	
 	private String lieuNaissance;
 	private String Adresse;
