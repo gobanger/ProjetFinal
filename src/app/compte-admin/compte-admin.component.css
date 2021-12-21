@@ -1,0 +1,43 @@
+.f-connect{
+    margin: auto;
+    width: 30%;
+}
+
+.marge-top-100{
+    margin-top: 100px;
+}
+
+.bs_perso{
+    box-shadow: 0 20px 40px 0 rgba(red, green, blue)
+}
+
+.inscription
+{
+     /* fallback for old browsers */
+  background: #1f7a73;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, rgba(16, 119, 90, 0.5), rgba(43, 62, 73, 0.5));
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, rgba(55, 236, 186, 0.5), rgba(114, 175, 211, 0.5))
+}
+
+.text_mdp_oublie{
+    font-size: small;
+}
+
+.text-sinscrire{
+    font-size: small;
+}
+
+.btn btn-block btn-primary{
+    background: linear-gradient(to top, black, 20%, cyan);
+
+}
+h1{
+    font-family: 'Roboto';
+    font-size: xx-large;
+    text-align: center;
+}
+

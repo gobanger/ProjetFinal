@@ -1,4 +1,7 @@
 footer{
-    padding-left: 21%;
-    margin-left: 21%;
+    left: 50%;
+}
+
+.container{
+    padding-left: 55%;
 }
