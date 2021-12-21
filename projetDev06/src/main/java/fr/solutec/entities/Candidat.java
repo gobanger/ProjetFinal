@@ -14,6 +14,7 @@ import fr.solutec.entities.enums.Langue;
 import fr.solutec.entities.enums.NiveauLangue;
 import fr.solutec.entities.enums.Permis;
 import fr.solutec.entities.enums.Role;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -23,21 +24,20 @@ import lombok.NoArgsConstructor;
 @Entity
 
 public class Candidat {
-	
-	
+	private Role role;
 	@Id @GeneratedValue
-	private Long idCandidat;
-	private Role role = Role.CANDIDAT;
+	private Long id;
+	private String mdp;
 	@CreationTimestamp
-	private Date dateCandidature;
+	private Date dateCandidature; //TEST
+	
 	private boolean civ;
 	private String nomUsage; 
 	private String nomNaissance;
 	private String prenom;
-	@Temporal(TemporalType.TIMESTAMP)
+	@Temporal(TemporalType.DATE)
 	private Date dateNaissance;
 	private int age;
-
 	
 	private String lieuNaissance;
 	private String Adresse;
@@ -47,7 +47,6 @@ public class Candidat {
 	private String telPortable;
 	private String mail;
 	private String nationalité;
-	
 	
 	private Long numSecuSocial;
 	private String situationActuelle;
@@ -70,9 +69,8 @@ public class Candidat {
 	
 	private boolean poleEmploi;
 	private String identifiantPoleEmploi;
-	private int anneePoleEmploi;
-	private int moisPoleEmploi;
-	private int jourPoleEmploi;
+	@Temporal(TemporalType.DATE)
+	private Date inscriptionPoleEmploi;
 	private boolean missionLocal;
 	private String coordMissionLocal;
 	private String nomConseillerMissionLocal;
@@ -125,18 +123,13 @@ public class Candidat {
 	
 	private String commentaire;
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
+	public Candidat(Long id, String mail, String mdp, String nomUsage, String prenom, Date dateCandidature) {
+		this.id = id;
+		this.mail = mail;
+		this.mdp = mdp;
+		this.nomUsage = nomUsage;
+		this.prenom = prenom;
+		this.dateCandidature = dateCandidature;
+		this.role = Role.CANDIDAT;
+	}
 }
