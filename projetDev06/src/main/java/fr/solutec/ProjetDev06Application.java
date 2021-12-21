@@ -28,7 +28,6 @@ public class ProjetDev06Application implements CommandLineRunner {
 		System.out.println("lancement projet OK");
 
 	//	System.out.println(ZonedDateTime.now());
-		DateFormat d = new SimpleDateFormat("dd/MM/yyyy"); 
 		
 		//Candidat c1 = new Candidat(null,d.parse("14/07/2018"));
 		//candidatRepo.save(c1);
