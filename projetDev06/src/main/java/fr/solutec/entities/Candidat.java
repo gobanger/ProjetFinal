@@ -1,6 +1,6 @@
 package fr.solutec.entities;
 
-import java.sql.Date;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,6 +12,7 @@ import org.hibernate.annotations.CreationTimestamp;
 
 import fr.solutec.entities.enums.Langue;
 import fr.solutec.entities.enums.NiveauLangue;
+import fr.solutec.entities.enums.Permis;
 import fr.solutec.entities.enums.Role;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -22,10 +23,13 @@ import lombok.NoArgsConstructor;
 @Entity
 
 public class Candidat {
-	private Role role = Role.CANDIDAT;
+	//private Role role = Role.CANDIDAT;
 	
 	@Id @GeneratedValue
 	private Long idCandidat;
+	@Temporal(TemporalType.DATE)
+	private Date dateNaissance;
+	
 	@CreationTimestamp
 	private Date dateCandidature;
 	private boolean civ;
@@ -51,6 +55,16 @@ public class Candidat {
 	private Long numSecuSocial;
 	private String situationActuelle;
 		
+	private String nomRepresentant;
+	private String prenomRepresentant;
+	private String typeRepresentant;
+	private String adresseRepresentant;
+	private int codePostalRepresentant;
+	private String villeRepresentant;
+	private String telFixeRepresentant;
+	private String telPortableRepresentant;
+	private String emailRepresentant;
+	
 	private boolean handicap;
 	private boolean organisme;
 	private String nomOrganisme;
@@ -76,13 +90,44 @@ public class Candidat {
 	private NiveauLangue  niveauAnglais;
 	
 	private Langue langue1;
-	private NiveauLangue  niveau1;
+	private NiveauLangue niveau1;
 	private Langue langue2;
-	private NiveauLangue  niveau2;
+	private NiveauLangue niveau2;
 	private Langue langue3;
-	private NiveauLangue  niveau3;
+	private NiveauLangue niveau3;
 	private Langue langue4;
-	private NiveauLangue  niveau4;
+	private NiveauLangue niveau4;
+	
+	private boolean contactEntreprise;
+	private int nombreContactEntreprise;
+	
+	private boolean trouveEntreprise;
+	private String nomEntreprise;
+	private String adresseSiegeSocial;
+	private String adresseEntreprise;  // l'adresse ou l'étudiant va travailler
+	private boolean contratSigne;
+	@Temporal(TemporalType.DATE)
+	private Date dateDemarrageContrat;
+	private String nomContact;
+	private String prenomContact;
+	private String fonctionContact;
+	private String telContact;
+	private String mailContact;
+	private Permis permis;
+	private boolean vehicule;
+	private String connaissanceEsic;
+	
+	private String question1;
+	private String question2;
+	private String question3;
+	private String question4;
+	private String question5;
+	private String question6;
+	private String question7;
+	private String question8;
+	
+	private String commentaire;
+	
 	
 	
 	
