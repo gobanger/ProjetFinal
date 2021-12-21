@@ -1,5 +1,11 @@
 package fr.solutec.rest;
 
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import fr.solutec.repository.InscriptionRepository;
 import fr.solutec.entities.*;
-import org.springframework.*;
 
 @RestController 
 @CrossOrigin("*")  
@@ -28,7 +33,4 @@ public class InscriptionRest {
 		return in;
 	}
 }
-	
-	
-		
 
