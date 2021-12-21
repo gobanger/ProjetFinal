@@ -6,11 +6,13 @@ import javax.mail.Session;
 import javax.mail.Transport;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.rest.webmvc.ResourceNotFoundException;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -35,8 +37,6 @@ public class RdvRest {
 	private String password = "Jaavmc1J!";
 	
 	public void sendMail(String destinataire, String objet, String contenu) {
-		//final String expediteur = "juliette.pims@gmail.com";
-		//final String password = "Jaavmc1J!";
 		
 		Properties props = new Properties();
 		props.put("mail.smtp.auth", "true");
@@ -81,6 +81,17 @@ public class RdvRest {
 	@GetMapping("candidat/{id}/mes_rdv")
 	public Iterable<Rdv> dispAllRdv(@PathVariable Long id) {
 		return rdvRep.getRdvForOne(id);
+	}
+	/*
+	@PutMapping("candidat/{id}/mes_rdv")
+	public void valideRdv(@RequestBody Rdv r) throws ResourceNotFoundException {
+		Rdv rdv = rdvRep.findById(null).orElseThrow(() -> ResourceNotFoundException("RDV non existant"));
+		
+		
+	}*/
+	@PutMapping("candidat/{id}/mes_rdv")
+	public void valideRdv(@RequestBody Rdv r) {
+		r.setValider(true);
 	}
 	
 	@DeleteMapping("candidat/{id}/mes_rdv")

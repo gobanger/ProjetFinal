@@ -25,4 +25,5 @@ public class Rdv {
 	private Candidat destinataire;
 	private String lien;
 	private String message;
+	private boolean valider;
 }
