@@ -6,7 +6,7 @@
     bottom: 0;
     left: 0;
     z-index: 99999;
-    background: #17252a; 
+    background: white; 
 }
 #sidenav.open {
     left: -300px; 
@@ -14,7 +14,7 @@
 #sidenav .logo {
     width: 100%;
     padding: 20px 50px;
-    background: #17252a;
+    background: white;
     display: block; 
 }
 #sidenav .logo a {
@@ -29,7 +29,7 @@
 }
 #sidenav .menu ul {
     list-style: none;
-    background: #17252a;
+    background: white;
     padding: 10% 0;
     margin: 0; 
 }
@@ -41,11 +41,11 @@
 }
 #sidenav .menu ul li a {
     font-size: 1vw;
-    color: white;
-    font-weight: bold;
+    color: black;
+    font-weight: 300;
     display: block; 
 }
-#sidenav .menu ul li {
+#sidenav .menu ul li a:hover {
     color: black; 
 }
 #sidenav .menu ul li a.logout:hover {
@@ -63,20 +63,21 @@ padding: 6px 3px;
 }
 #sidenav .menu ul li ul li a {
     font-size: 10px;
-    color: rgba(255, 255, 255, 0.7); 
+    color: black; 
 }
 
-a{
+a {
     text-decoration: none; 
-    font-weight: bolder;
 }
 
-a:hover{
-    text-decoration: none;
+li{
+    font-size: 1px;;
 }
 
 li:hover{
+    background-color: white;
     text-decoration: none;
+    color : black;
 }
 
 hr{
@@ -92,7 +93,7 @@ hr{
   p{
       font-size: 4vw;
   }
-.item:hover{
-    background-color: lightgray;
+  .item:hover{
+    background-color: white;
     color : black;
   }
