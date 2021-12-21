@@ -11,6 +11,7 @@ import { InscriptionComponent } from './inscription/inscription.component';
 import { AccueilcommunComponent } from './accueilcommun/accueilcommun.component';
 import { CompteAdminComponent } from './compte-admin/compte-admin.component';
 import { GestionFormationComponent } from './gestion-formation/gestion-formation.component';
+import { DoccandidatComponent } from './doccandidat/doccandidat.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { GestionFormationComponent } from './gestion-formation/gestion-formation
     InscriptionComponent,
     AccueilcommunComponent,
     CompteAdminComponent,
-    GestionFormationComponent
+    GestionFormationComponent,
+    DoccandidatComponent
   ],
   imports: [
     BrowserModule,

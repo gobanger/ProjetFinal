@@ -7,6 +7,7 @@ import { InscriptionComponent } from './inscription/inscription.component';
 import { SidebarMenuComponent } from './sidebar-menu/sidebar-menu.component';
 import { CompteAdminComponent } from './compte-admin/compte-admin.component';
 import { GestionFormationComponent } from './gestion-formation/gestion-formation.component';
+import { DoccandidatComponent } from './doccandidat/doccandidat.component';
 
 const routes: Routes = [
   {path : 'accueilcommun' , component : AccueilcommunComponent},
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path : 'home' , component : HomeComponent},
   {path : 'sidenav', component : SidebarMenuComponent},
   {path : 'moncompte-admin' , component : CompteAdminComponent},
-  {path : 'gestion-formation' , component : GestionFormationComponent}
+  {path : 'gestion-formation' , component : GestionFormationComponent},
+  {path : 'doccandidat' , component : DoccandidatComponent}
 ];
 
 @NgModule({

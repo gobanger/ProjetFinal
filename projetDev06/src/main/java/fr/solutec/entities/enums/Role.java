@@ -1,9 +1,0 @@
-package fr.solutec.entities.enums;
-
-public enum Role {
-	CANDIDAT,
-	RESPONSABLE_PEDAGOGIQUE,
-	FORMATEUR,
-	CONSEILLER_DE_FORMATION,
-	ADMINISTRATEUR
-}
