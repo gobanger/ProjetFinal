@@ -4,12 +4,14 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { AccueilcommunComponent } from './accueilcommun/accueilcommun.component';
 import { HomeComponent } from './home/home.component';
 import { InscriptionComponent } from './inscription/inscription.component';
+import { SidebarMenuComponent } from './sidebar-menu/sidebar-menu.component';
 
 const routes: Routes = [
   {path : 'accueilcommun' , component : AccueilcommunComponent},
   {path : 'accueil' , component : AccueilComponent},
   {path : 'inscription' , component : InscriptionComponent},
-  {path : 'home' , component : HomeComponent}
+  {path : 'home' , component : HomeComponent},
+  {path : 'sidenav', component : SidebarMenuComponent}
 ];
 
 @NgModule({

@@ -33,6 +33,7 @@ public class ProjetDev06Application implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		System.out.println("lancement projet OK");
 
+<<<<<<< HEAD
 /*		System.out.println(ZonedDateTime.now());
 	
 		Candidat c1 = new Candidat(null, null, null, false, "chameau@mail.fr", "lama", "Chameau", 0, 0, 0, 0, "Lama", null, 0, null, null, null, null, null, null, null, true, false, null, null, null, false, null, 0, 0, 0, false, null, null, null, null, null, null, 0, null, null, null, null, null, null, null, null, null, null);
@@ -56,6 +57,9 @@ public class ProjetDev06Application implements CommandLineRunner {
 		System.out.println(ZonedDateTime.now());
 
 		DateFormat d = new SimpleDateFormat("dd/MM/yyyy"); 
+=======
+	//	System.out.println(ZonedDateTime.now());
+>>>>>>> branch 'master' of https://github.com/gobanger/ProjetFinal.git
 		
 		//Candidat c1 = new Candidat(null,d.parse("14/07/2018"));
 		//candidatRepo.save(c1);
