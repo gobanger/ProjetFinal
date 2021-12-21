@@ -15,6 +15,6 @@ import lombok.NoArgsConstructor;
 public class Formation {
 	@Id @GeneratedValue
 	private Long idFormation;
-	private String intitule; //private String intitule;
+	private Formation intitule; //private Formation intitule; 
 	private int nivcertif; //private String niveau certification;
 }

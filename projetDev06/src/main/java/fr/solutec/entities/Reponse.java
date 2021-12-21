@@ -17,7 +17,8 @@ public class Reponse {
 	@Id @GeneratedValue
 	private Long idReponse;
 	private String intitule; //private String intitule;
-	@OneToOne Long idquestion;
+	@OneToOne
+	private Questions idquestion;
 	private Boolean type;
 	
 }

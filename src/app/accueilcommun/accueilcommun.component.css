@@ -11,7 +11,7 @@
     box-shadow: 0 20px 40px 0 rgba(red, green, blue)
 }
 
-.inscription
+.accueilcommun
 {
      /* fallback for old browsers */
   background: #1f7a73;
@@ -23,21 +23,20 @@
   background: linear-gradient(to right, rgba(55, 236, 186, 0.5), rgba(114, 175, 211, 0.5))
 }
 
-.text_mdp_oublie{
-    font-size: small;
-}
 
-.text-sinscrire{
-    font-size: small;
-}
 
-.btn btn-block btn-primary{
-    background: linear-gradient(to top, black, 20%, cyan);
 
-}
+
 h1{
     font-family: 'Roboto';
-    font-size: xx-large;
+    font-size: medium;
+    text-align: center;
+}
+
+
+h6{
+    font-family: 'Roboto';
+    font-size: small;
     text-align: center;
 }
 
