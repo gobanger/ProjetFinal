@@ -1,0 +1,28 @@
+<div class="container pos">
+    <div class="my-font pt-10 pb-10 ml-20">
+        <form #connect="ngForm" (ngSubmit)="connexion(connect.value)">
+            <hr>
+            <div class="form-group">
+                <label for="" class="text-secondary">Liste des candidats</label>
+                <br>
+                <select></select>
+            </div>
+            <div class="form-group">
+                <label for="" class="text-secondary">Lien de la réunion Teams</label>
+                <input type="text" class="form-control" name="lienTeams" ngModel="">
+            </div>
+            <div class="form-group">
+                <label for="" class="text-secondary">Date et heure de la réunion</label>
+                <input type="datetime-local" class="form-control" name="date" ngModel="">
+            </div>
+            <div class="form-group">
+                <label for="" class="text-secondary">Commentaire (optionnel)</label>
+                <input type="text" class="form-control" name="commentaire" ngModel="">
+            </div>
+            <hr>
+            <button type="submit" class="btn btn-primary btn-block">Envoyer la demande</button>
+        </form>
+
+        <p class="text-danger text-center">{{ msgErr }}</p>
+    </div>
+</div>

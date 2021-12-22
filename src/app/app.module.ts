@@ -13,7 +13,11 @@ import { CompteAdminComponent } from './compte-admin/compte-admin.component';
 import { GestionFormationComponent } from './gestion-formation/gestion-formation.component';
 import { DoccandidatComponent } from './doccandidat/doccandidat.component';
 import { CandidatureComponent } from './candidature/candidature.component';
+
 import { Accueilcandidat1Component } from './accueilcandidat1/accueilcandidat1.component';
+
+import { SidebarMenuComponent } from './sidebar-menu/sidebar-menu.component';
+import { GestionEntretienComponent } from './gestion-entretien/gestion-entretien.component';
 
 
 @NgModule({
@@ -27,7 +31,8 @@ import { Accueilcandidat1Component } from './accueilcandidat1/accueilcandidat1.c
     GestionFormationComponent,
     DoccandidatComponent,
     CandidatureComponent,
-    Accueilcandidat1Component
+    SidebarMenuComponent,
+    GestionEntretienComponent
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,8 @@ import { GestionFormationComponent } from './gestion-formation/gestion-formation
 import { DoccandidatComponent } from './doccandidat/doccandidat.component';
 import { CandidatureComponent } from './candidature/candidature.component';
 import { Accueilcandidat1Component } from './accueilcandidat1/accueilcandidat1.component';
+import { GestionEntretienComponent } from './gestion-entretien/gestion-entretien.component';
+
 
 const routes: Routes = [
   {path : 'accueilcommun' , component : AccueilcommunComponent},
@@ -21,8 +23,11 @@ const routes: Routes = [
   {path : 'gestion-formation' , component : GestionFormationComponent},
   {path : 'doccandidat' , component : DoccandidatComponent},
   {path : 'candidature' , component : CandidatureComponent},
-  {path : 'accueilcandidat1' , component : Accueilcandidat1Component}
+  {path : 'accueilcandidat1' , component : Accueilcandidat1Component},
+  {path : 'gestion-entretien' , component : GestionEntretienComponent},
 ];
+
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
