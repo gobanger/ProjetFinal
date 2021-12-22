@@ -22,7 +22,7 @@
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background: linear-gradient(to right, rgba(55, 236, 186, 0.5), rgba(114, 175, 211, 0.5));
 
-  margin-left: 20%;
+  /*margin-left: 20%;*/
   position: static;
 }
 
