@@ -11,6 +11,7 @@ import { DoccandidatComponent } from './doccandidat/doccandidat.component';
 import { CandidatureComponent } from './candidature/candidature.component';
 import { Accueilcandidat1Component } from './accueilcandidat1/accueilcandidat1.component';
 import { GestionEntretienComponent } from './gestion-entretien/gestion-entretien.component';
+import { TestsComponent } from './tests/tests.component';
 
 
 const routes: Routes = [
@@ -25,6 +26,7 @@ const routes: Routes = [
   {path : 'candidature' , component : CandidatureComponent},
   {path : 'accueilcandidat1' , component : Accueilcandidat1Component},
   {path : 'gestion-entretien' , component : GestionEntretienComponent},
+  {path : 'tests', component : TestsComponent},
 ];
 
 

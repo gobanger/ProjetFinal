@@ -18,6 +18,7 @@ import { Accueilcandidat1Component } from './accueilcandidat1/accueilcandidat1.c
 
 import { SidebarMenuComponent } from './sidebar-menu/sidebar-menu.component';
 import { GestionEntretienComponent } from './gestion-entretien/gestion-entretien.component';
+import { TestsComponent } from './tests/tests.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { GestionEntretienComponent } from './gestion-entretien/gestion-entretien
     DoccandidatComponent,
     CandidatureComponent,
     SidebarMenuComponent,
-    GestionEntretienComponent
+    GestionEntretienComponent,
+    TestsComponent
   ],
   imports: [
     BrowserModule,

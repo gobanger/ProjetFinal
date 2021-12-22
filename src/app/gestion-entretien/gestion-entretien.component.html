@@ -2,10 +2,13 @@
     <div class="my-font pt-10 pb-10 ml-20">
         <form #connect="ngForm" (ngSubmit)="connexion(connect.value)">
             <hr>
-            <div class="form-group">
+            <div>
                 <label for="" class="text-secondary">Liste des candidats</label>
                 <br>
-                <select></select>
+                <select>
+                    <option>-- Veuillez sélectionner un candidat --</option>
+                    <option *ngFor="let c of candidats">{{ c.prenom }}</option>
+                </select>
             </div>
             <div class="form-group">
                 <label for="" class="text-secondary">Lien de la réunion Teams</label>
@@ -22,7 +25,7 @@
             <hr>
             <button type="submit" class="btn btn-primary btn-block">Envoyer la demande</button>
         </form>
-
+        <p class="text-danger text-center">{{ msgValidation }}</p>
         <p class="text-danger text-center">{{ msgErr }}</p>
     </div>
 </div>
