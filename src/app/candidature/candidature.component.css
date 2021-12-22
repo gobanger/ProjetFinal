@@ -89,3 +89,22 @@ h1{
 .form1{
   display: inline-flex;
 }
+
+#niveau {
+  width: 100%;
+}
+#niveau td, #niveau th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+#niveau tr:nth-child(even){background-color: #f2f2f2;}
+#niveau tr:hover {background-color: #ddd;}
+#niveau th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #65c4af;
+  color: rgb(8, 8, 8);
+  text-align: center;
+  font-weight: bold;
+}

@@ -6,13 +6,6 @@
 
               <h1>Ma candidature </h1>
               <br><br>
-              <div class="InformationEsicDocuments">
-                  Information ESIC
-                  <br>
-                  Merci de compléter les informations demandées pour poursuivre le processus de recrutement
-              </div>
-              <br><br>
-
               <!-- Bouton choix parcours -->
               <label class="pid">Parcours souhaité : </label>
               <form action="/action_page.php">
@@ -28,79 +21,419 @@
               <!-- Civilité -->
               <label class="pid">Civilité </label>
               <form action="/action_page.php">
-                <input type="radio" id="madame" name="choixcivilite">
-                <label for="r1">Madame</label> &nbsp;
-                <input type="radio" id="r2" name="choixcivilite">
-                <label for="r2">Monsieur</label><br>  
+                <input type="radio" id="r4" name="civ">
+                <label for="r4">Madame</label> &nbsp;
+                <input type="radio" id="r5" name="civ">
+                <label for="r5">Monsieur</label><br>  
               </form>
               <br>
               <!-- FIN Civilité -->
 
+              <!-- Infos candidat -->
               <label class="pid"> Informations candidat </label>
-              <div class="form1">
+            <div class="form1">
                  <div class="form-group"> 
-                <label for="">Nom</label>
-                <input type="text" class="form-control">
+                <label class="nomNaissance">Nom de naissance</label>
+                <input type="text" class="form-control" name="nomNaissance">
               </div>
               &nbsp;&nbsp;
               <div class="form-group">
-                  <label for="">Nom d'usage</label>
-                  <input type="text" class="form-control">
+                  <label class="nomUsage">Nom d'usage</label>
+                  <input type="text" class="form-control" name="nomUsage">
               </div>
               &nbsp;&nbsp;
               <div class="form-group">
-                  <label for="">Prénom</label>
-                  <input type="text" class="form-control">
+                  <label class="prenom">Prénom</label>
+                  <input type="text" class="form-control" name="prenom">
               </div>
-              
+              &nbsp;&nbsp;
+            </div>
+            <div class="form1">
+                &nbsp;&nbsp;
+                <div class="form-group">
+                    <label for="dateNaissance" class="text-secondary">Date de naissance</label>
+                    <input type="date" id="start" name="dateNaissance" class="form-control">
+                </div>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="form-group">
+                    <label class="lieuNaissance">Lieu de naissance</label>
+                    <input type="text" class="form-control" name="lieuNaissance">
+                </div>
+           </div>
 
+           <!-- FIN Infos candidat -->
 
+           <!-- Coordonnées -->
+           <label class="pid"> Coordonnées </label>
+           <label class="adresse">Adresse</label>
+           <input type="text" class="form-control">
+           <br>
+           <div class="form1">
+                <div class="form-group"> 
+                    <label class="codePostal">Code Postal</label>
+                    <input type="text" name="codePostal" class="form-control">
+                </div>
+                &nbsp;&nbsp;
+                <div class="form-group">
+                    <label class="Ville">Ville</label>
+                    <input type="text" name="Ville" class="form-control">
+                </div>
+            </div>
+            <div class="form1">
+                 <div class="form-group"> 
+                <label class="telFixe">N° de téléphone fixe</label>
+                <input type="text" name="telFixe" class="form-control">
               </div>
-             
+              &nbsp;&nbsp;
+              <div class="form-group">
+                  <label class="telPortable">N° de téléphone portable</label>
+                  <input type="text" name="telPortable" class="form-control">
+              </div>
+              &nbsp;&nbsp;
+            </div>
+           <label class="mail">Adresse mail</label>
+           <input type="text" class="form-control" name="mail">
+           <br>
 
-              
-      
+           <br>
+            <label class="pid">Numéro sécurité sociale </label>
+            <input type="text" class="form-control" name="numSecuSocial">
+            <br>
+            <label class="pid">Nationalité </label>
+            <form action="/action_page.php">
+                <input type="radio" id="r6" name="nationalité">
+                <label for="r6">Française  </label> &nbsp;
+                <input type="radio" id="r7" name="nationalité">
+                <label for="r7">Autre (à préciser) </label><br> 
+                <input type="text" class="form-control" name="nationalité">
+            </form>
+
+            <!-- FIN Coordonnées -->
 
 
-              <br><br>
-              <label class="pid">Copie recto verso de la pièce d’identité,ou titre de séjour, en cours de validité</label>
-             
-              <hr>
-              <input type="file"
-                  id="pieceid" name="pieceid"
-                  accept="image/x-png,image/gif,image/jpeg">
-              <hr>
+            <!-- Représentant légal -->
+            <hr>
+           <label class="pid"> Si candidat mineur, informations concernant le représentant légal :  </label>
+           <br>
+           <div class="form1">
+            <div class="form-group"> 
+                <label class="nomRepresentant">Nom représentant légal</label>
+                <input type="text" class="form-control" name="nomRepresentant">
+            </div>
+            &nbsp;&nbsp;
+            <div class="form-group">
+                <label class="prenomRepresentant">Prénom représentant légal</label>
+                <input type="text" class="form-control" name="prenomRepresentant">
+            </div>
+            &nbsp;&nbsp;
+            <div class="form-group">
+                <label class="typeRepresentant">Mère, Père, Tuteur (préciser) </label>
+                <input type="text" class="form-control" name="typeRepresentant">
+            </div>
+         &nbsp;&nbsp;
+            </div>
+            <label class="adresseRepresentant">Adresse représentant légal</label>
+            <input type="text" class="form-control" name="adresseRepresentant">
+            <div class="form1">
+            <div class="form-group"> 
+                <label class="codePostalRepresentant">Code Postal</label>
+             <input type="text" name="codePostalRepresentant" class="form-control">
+            </div>
+            &nbsp;&nbsp;
+            <div class="form-group">
+                <label class="villeRepresentant">Ville</label>
+                <input type="text" name="villeRepresentant" class="form-control">
+            </div>
+            &nbsp;&nbsp;
+            </div>
+            <br>
+            <div class="form1">
+                <div class="form-group"> 
+                    <label class="telFixeRepresentant">N° de téléphone fixe</label>
+                    <input type="text" name="telFixeRepresentant" class="form-control">
+                </div>
+                    &nbsp;&nbsp;
+                <div class="form-group">
+                    <label class="telPortableRepresentant">N° de téléphone portable</label>
+                    <input type="text" name="telPortableRepresentant" class="form-control">
+                </div>
+                &nbsp;&nbsp;
+                </div>
+                <label class="emailRepresentant">Adresse mail du représentant légal</label>
+                <input type="text" class="form-control" name="emailRepresentant">
+                
+                <hr>
+                <!-- FIN Représentant légal -->
+
+                 <!-- Situation -->
+                <label class="pid"> Votre situation actuelle : </label>
+                <form action="/action_page.php">&nbsp;
+                    <input type="radio" id="r8" name="situationActuelle">
+                    <label for="r8">Salarié(e)</label> &nbsp;
+                    <input type="radio" id="r9" name="situationActuelle">
+                    <label for="r9"> En recherche d'emploi</label> &nbsp;
+                    <input type="radio" id="r10" name="situationActuelle">
+                    <label for="r10"> Étudiant(e)</label> &nbsp;
+                    <input type="radio" id="r11" name="situationActuelle">
+                    <label for="r11"> Autre situation (à préciser)</label><br> 
+                    <input type="text" class="form-control" name="situationActuelle" placeholder="précisez votre situation">
+                </form>
+                <br>
+                <label class="pid"> Êtes-vous en situation de handicap ? </label>
+                <form action="/action_page.php">&nbsp;
+                    <input type="radio" id="r12" name="handicap">
+                    <label for="r12">oui</label> &nbsp;
+                    <input type="radio" id="r13" name="handicap">
+                    <label for="r13">non</label> &nbsp;
+                </form>
+                <label class="pid"> Si oui, êtes-vous suivi par un organisme ? </label>
+                <form action="/action_page.php">&nbsp;
+                    <input type="radio" id="r14" name="nomOrganisme">
+                    <label for="r14">oui</label> &nbsp;
+                    <input type="radio" id="r15" name="nomOrganisme">
+                    <label for="r15">non</label> &nbsp;
+                </form>
+                <input type="text" class="form-control" name="nomOrganisme" placeholder="Précisez le nom de l'organisme">
+                <br>
+                <input type="text" class="form-control" name="coordOrganisme" placeholder="Coordonnées de l’organisme">
+                <!-- FIN Situation -->
+
+                <br>
+                <!-- Besoin -->
+                <label class="pid"> Si oui, aurez-vous des besoins particuliers en formation au CFA ou en entreprise ?  (pédagogie, matériel, moyens techniques, humains, organisation,…) : </label>
+                <textarea id="besoinParticulier" name="besoinParticulier" rows="5" cols="33"></textarea>
+                 <!-- FIN Besoin -->
+
+                 <hr>
+
+                 <!-- Pole emploi -->
+                 <label class="pid">Inscription à Pole Emploi</label>
+                 <form action="/action_page.php">&nbsp;
+                    <input type="radio" id="r16" name="poleEmploi">
+                    <label for="r16">oui</label> &nbsp;
+                    <input type="radio" id="r17" name="poleEmploi">
+                    <label for="r17">non</label> &nbsp;
+                </form>
+
+                <div class="form1">
+                    &nbsp;&nbsp;
+                    <div class="form-group">
+                        <label class="identifiantPoleEmploi">Si oui, N° d’identifiant</label>
+                        <input type="text" class="form-control" name="identifiantPoleEmploi">
+                    </div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class="form-group">
+                        <label for="inscriptionPoleEmploi" class="text-secondary">Date d'inscription</label>
+                        <input type="date" id="start" name="inscriptionPoleEmploi" class="form-control">
+                    </div>
+               </div>
+                 <!-- FIN Pole emploi -->
 
 
-              <label class="pid">Curriculum vitae</label>
-              <input type="file"
-                  id="cv" name="cv"
-                  accept="image/x-png,image/gif,image/jpeg">
-              <hr>
-              <label class="pid">Lettre de motivation</label>
-              <input type="file"
-                  id="lm" name="lm"
-                  accept="image/x-png,image/gif,image/jpeg">
-              <hr>
-              <label class="pid">Copie du dernier diplôme obtenu  
-                  (ou attestation de comparabilité pour les diplômes étrangers)  </label>
-              <input type="file"
-                  id="ddo" name="ddo"
-                  accept="image/x-png,image/gif,image/jpeg">
-              <hr>
-              <label class="pid">Relevés de notes de la dernière année d’étude</label>
-              <input type="file"
-                  id="rn" name="rn"
-                  accept="image/x-png,image/gif,image/jpeg">
-              <hr>
-              <label class="pid">Fiche travailleur handicapé (optionnel)</label>
-              <input type="file"
-                  id="handi" name="handi"
-                  accept="image/x-png,image/gif,image/jpeg">
-              <br><br><br>
-              <label class="pid">Avez-vous des informations complémentaires à nous communiquer ?</label>
-              <textarea id="story" name="story" rows="5" cols="33">
-              </textarea>
+                  <!-- Mission locale -->
+                  <label class="pid">Inscription dans une mission locale</label>
+                  <form action="/action_page.php">&nbsp;
+                     <input type="radio" id="r18" name="missionLocal">
+                     <label for="r18">oui</label> &nbsp;
+                     <input type="radio" id="r19" name="missionLocal">
+                     <label for="r19">non</label> &nbsp;
+                 </form>
+                 <div class="form1">
+                     &nbsp;&nbsp;
+                     <div class="form-group">
+                         <label class="coordMissionLocal">Si oui, coordonnées de la mission locale</label>
+                         <input type="text" class="form-control" name="coordMissionLocal">
+                     </div>
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     <div class="form-group">
+                        <label class="nomConseillerMissionLocal">Nom du conseiller</label>
+                        <input type="text" class="form-control" name="nomConseillerMissionLocal">
+                     </div>
+                </div>
+                  <!-- FIN mission locale -->
+
+                  <hr>
+
+                  <!-- Classe fréquentées -->
+                  <label class="pid">Dernière classe fréquentée </label>
+                  <input type="text" class="form-control" name="derniereClasse">
+                  <br>
+                  <label class="pid">Diplôme(s) obtenu(s) </label>
+                  <input type="text" class="form-control" name="diplome1" placeholder="diplome 1"> <br>
+                  <input type="text" class="form-control" name="diplome2" placeholder="diplome 2"><br>
+                  <input type="text" class="form-control" name="diplome3" placeholder="diplome 3"><br>
+                  <!-- FIN classe fréquantées -->
+
+                  <!-- Niveau Français -->
+                  <label class="pid">Votre niveau de français : Merci de cocher la case adéquate </label>
+                <br>
+                  <table id="niveau">
+                    <tr>
+                        <th></th>
+                        <th>Type d’utilisateur</th>
+                        <th>Niveau </th>
+                        <th>Capacités </th>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" id="r20" name="niveauFrancais"></td>
+                        <td>A Utilisateur élémentaire</td>
+                        <td>A1 (introductif ou découverte) </td>
+                        <td>Je suis capable de comprendre et d’employer des formulations simples, de me présenter. </td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" id="r21" name="niveauFrancais"></td>
+                        <td>A Utilisateur élémentaire </td>
+                        <td>A2 (intermédiaire ou usuel) </td>
+                        <td>Je suis capable de comprendre et d’échanger sur des informations simples du quotidien. </td>
+                    </tr>
+                    
+                    <tr>
+                        <td><input type="radio" id="r22" name="niveauFrancais"></td>
+                        <td>B Utilisateur indépendant </td>
+                        <td>B1 (seuil) </td>
+                        <td>Je suis capable de comprendre les grandes lignes d’une conversation, de raconter des expériences et d’écrire un texte simple. Je suis désormais capable de me débrouiller dans de nombreuses situations. </td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" id="r23" name="niveauFrancais"></td>
+                        <td>B Utilisateur indépendant </td>
+                        <td>B2 (avancé ou indépendant) </td>
+                        <td>Je suis capable de développer un point de vue et d’écrire un texte plus complexe. </td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" id="r24" name="niveauFrancais"></td>
+                        <td>C Utilisateur expériment</td>
+                        <td>C1 (autonome) </td>
+                        <td>Je suis capable de tenir une conversation sans difficulté et de m’exprimer spontanément. Je communique avec fluidité et aisance, sans trop chercher mes mots.</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" id="r25" name="niveauFrancais"></td>
+                        <td>C Utilisateur expérimenté </td>
+                        <td>C2 (maîtrise) </td>
+                        <td>Je maîtrise totalement la langue. Il s’agit de ma langue maternelle ou de la langue d’un pays étranger dans lequel j’ai vécu longtemps </td>
+                    </tr>
+                  </table>
+
+                  <!-- FIN Niveau Français -->
+
+                  <br><br><br>
+
+                   <!-- Niveau Anglais -->
+                   <label class="pid">Votre niveau de français : Merci de cocher la case adéquate </label>
+                   <br>
+                     <table id="niveau">
+                       <tr>
+                           <th></th>
+                           <th>Type d’utilisateur</th>
+                           <th>Niveau </th>
+                           <th>Capacités </th>
+                       </tr>
+                       <tr>
+                           <td><input type="radio" id="r27" name="niveauAnglais"></td>
+                           <td>A Utilisateur élémentaire</td>
+                           <td>A1 (introductif ou découverte) </td>
+                           <td>Je suis capable de comprendre et d’employer des formulations simples, de me présenter. </td>
+                       </tr>
+                       <tr>
+                           <td><input type="radio" id="r28" name="niveauAnglais"></td>
+                           <td>A Utilisateur élémentaire </td>
+                           <td>A2 (intermédiaire ou usuel) </td>
+                           <td>Je suis capable de comprendre et d’échanger sur des informations simples du quotidien. </td>
+                       </tr>
+                       
+                       <tr>
+                           <td><input type="radio" id="r29" name="niveauAnglais"></td>
+                           <td>B Utilisateur indépendant </td>
+                           <td>B1 (seuil) </td>
+                           <td>Je suis capable de comprendre les grandes lignes d’une conversation, de raconter des expériences et d’écrire un texte simple. Je suis désormais capable de me débrouiller dans de nombreuses situations. </td>
+                       </tr>
+                       <tr>
+                           <td><input type="radio" id="r30" name="niveauAnglais"></td>
+                           <td>B Utilisateur indépendant </td>
+                           <td>B2 (avancé ou indépendant) </td>
+                           <td>Je suis capable de développer un point de vue et d’écrire un texte plus complexe. </td>
+                       </tr>
+                       <tr>
+                           <td><input type="radio" id="r31" name="niveauAnglais"></td>
+                           <td>C Utilisateur expériment</td>
+                           <td>C1 (autonome) </td>
+                           <td>Je suis capable de tenir une conversation sans difficulté et de m’exprimer spontanément. Je communique avec fluidité et aisance, sans trop chercher mes mots.</td>
+                       </tr>
+                       <tr>
+                           <td><input type="radio" id="r32" name="niveauAnglais"></td>
+                           <td>C Utilisateur expérimenté </td>
+                           <td>C2 (maîtrise) </td>
+                           <td>Je maîtrise totalement la langue. Il s’agit de ma langue maternelle ou de la langue d’un pays étranger dans lequel j’ai vécu longtemps </td>
+                       </tr>
+                     </table>
+                     <input type="text" class="form-control" name="langue1" placeholder="Autres langues ?">
+                     <input type="text" class="form-control" name="niveau1" placeholder="Merci de préciser le niveau"><br>
+
+                     <!-- FIN Niveau Anglais -->
+
+                   
+                     <label class="pid">Avez-vous déjà contacté des entreprises ? </label>
+                     <form action="/action_page.php">&nbsp;
+                        <input type="radio" id="r34" name="contactEntreprise">
+                        <label for="r34">oui</label> &nbsp;
+                        <input type="radio" id="r35" name="contactEntreprise">
+                        <label for="r35">non</label> &nbsp;
+                    </form>
+    
+                    <div class="form1">
+                        &nbsp;&nbsp;
+                        <div class="form-group">
+                            <label class="identifiantPoleEmploi">Si oui, combien ?</label>
+                            <input type="text" class="form-control" name="identifiantPoleEmploi">
+                        </div>
+                        &nbsp;&nbsp;&nbsp;
+                        <div class="form-group">
+                            <label class="identifiantPoleEmploi">Si oui, Nom de l’entreprise ? </label>
+                            <input type="text" class="form-control" name="identifiantPoleEmploi">
+                        </div>
+                   </div>
+
+                    <label class="identifiantPoleEmploi">Adresse du siège social : </label>
+                    <input type="text" class="form-control" name="adresseSiegeSocial">
+                    <br>
+                    <label class="identifiantPoleEmploi">Adresse du site de rattachement de l’alternant(e) </label>
+                    <input type="text" class="form-control" name="adresseEntreprise">
+
+                    <label class="pid">Le contrat de travail a-t-il été signé  </label>
+                     <form action="/action_page.php">&nbsp;
+                        <input type="radio" id="r37" name="contratSigne">
+                        <label for="r37">oui</label> &nbsp;
+                        <input type="radio" id="r38" name="contratSigne">
+                        <label for="r38">non</label> &nbsp;
+                        <input type="radio" id="r39" name="contratSigne">
+                        <label for="r39">en cours</label> &nbsp;
+                        
+                    </form>
+                    <div class="form-group">
+                        <label class="text-secondary">Date de démarrage du contrat de travail </label>
+                        <input type="date" id="start" name="dateDemarrageContrat" class="form-control">
+                    </div>
+
+
+                   
+   
+                     
+   
+   
+                  
+                   
+
+
+                  
+
+
+               
+                
+
+                
+        
+            
+
+
               <br>
               <button name="Enregistrer" class="btn1" onclick="window.location.href='/home'">Soumettre mes documents</button>
               
