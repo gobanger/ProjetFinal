@@ -12,4 +12,8 @@ export class SidebarMenuComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  deconnexion(){
+    sessionStorage.removeItem("prenom");
+  }
+
 }
