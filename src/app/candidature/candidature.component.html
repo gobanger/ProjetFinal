@@ -1,47 +1,122 @@
-<!-- === File Upload ===
-Design a file upload element. Is it the loading screen and icon? A progress element? Are folders being uploaded by flying across the screen like Ghostbusters? ;)  
--->
+<!-- Formulaire -->
+<div class="candidature">
+  <br><br><br><br>
+      <div class="f-connect">
+          <div class="card p-5 bs_perso" >
 
-<div id="FileUpload">
-    <div class="wrapper">
-      <div class="upload">
-        <p>Drag files here or <span class="upload__button">Browse</span></p>
+              <h1>Ma candidature </h1>
+              <br><br>
+              <div class="InformationEsicDocuments">
+                  Information ESIC
+                  <br>
+                  Merci de compléter les informations demandées pour poursuivre le processus de recrutement
+              </div>
+              <br><br>
+
+              <!-- Bouton choix parcours -->
+              <label class="pid">Parcours souhaité : </label>
+              <form action="/action_page.php">
+                <input type="radio" id="r1" name="choixparcours">
+                <label for="r1">En continu</label><br>
+                <input type="radio" id="r2" name="choixparcours">
+                <label for="r2">Contrat de professionnalisation</label><br>  
+                <input type="radio" id="r3" name="choixparcours">
+                <label for="r3">Contrat d’apprentissage </label><br><br>
+              </form>
+              <!-- FIN Bouton choix parcours -->
+
+              <!-- Civilité -->
+              <label class="pid">Civilité </label>
+              <form action="/action_page.php">
+                <input type="radio" id="madame" name="choixcivilite">
+                <label for="r1">Madame</label> &nbsp;
+                <input type="radio" id="r2" name="choixcivilite">
+                <label for="r2">Monsieur</label><br>  
+              </form>
+              <br>
+              <!-- FIN Civilité -->
+
+              <label class="pid"> Informations candidat </label>
+              <div class="form1">
+                 <div class="form-group"> 
+                <label for="">Nom</label>
+                <input type="text" class="form-control">
+              </div>
+              &nbsp;&nbsp;
+              <div class="form-group">
+                  <label for="">Nom d'usage</label>
+                  <input type="text" class="form-control">
+              </div>
+              &nbsp;&nbsp;
+              <div class="form-group">
+                  <label for="">Prénom</label>
+                  <input type="text" class="form-control">
+              </div>
+              
+
+
+              </div>
+             
+
+              
+      
+
+
+              <br><br>
+              <label class="pid">Copie recto verso de la pièce d’identité,ou titre de séjour, en cours de validité</label>
+             
+              <hr>
+              <input type="file"
+                  id="pieceid" name="pieceid"
+                  accept="image/x-png,image/gif,image/jpeg">
+              <hr>
+
+
+              <label class="pid">Curriculum vitae</label>
+              <input type="file"
+                  id="cv" name="cv"
+                  accept="image/x-png,image/gif,image/jpeg">
+              <hr>
+              <label class="pid">Lettre de motivation</label>
+              <input type="file"
+                  id="lm" name="lm"
+                  accept="image/x-png,image/gif,image/jpeg">
+              <hr>
+              <label class="pid">Copie du dernier diplôme obtenu  
+                  (ou attestation de comparabilité pour les diplômes étrangers)  </label>
+              <input type="file"
+                  id="ddo" name="ddo"
+                  accept="image/x-png,image/gif,image/jpeg">
+              <hr>
+              <label class="pid">Relevés de notes de la dernière année d’étude</label>
+              <input type="file"
+                  id="rn" name="rn"
+                  accept="image/x-png,image/gif,image/jpeg">
+              <hr>
+              <label class="pid">Fiche travailleur handicapé (optionnel)</label>
+              <input type="file"
+                  id="handi" name="handi"
+                  accept="image/x-png,image/gif,image/jpeg">
+              <br><br><br>
+              <label class="pid">Avez-vous des informations complémentaires à nous communiquer ?</label>
+              <textarea id="story" name="story" rows="5" cols="33">
+              </textarea>
+              <br>
+              <button name="Enregistrer" class="btn1" onclick="window.location.href='/home'">Soumettre mes documents</button>
+              
+              <br>
+
+          </div>
       </div>
-      <div class="uploaded uploaded--one">
-        <i class="far fa-file-pdf"></i>
-        <div class="file">
-          <div class="file__name">
-            <p>lorem_ipsum.pdf</p>
-            <i class="fas fa-times"></i>
-          </div>
-          <div class="progress">
-            <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width:100%"></div>
-          </div>
-        </div>
-      </div>
-      <div class="uploaded uploaded--two">
-        <i class="far fa-file-pdf"></i>
-        <div class="file">
-          <div class="file__name">
-            <p>dolor_sit.pdf</p>
-            <i class="fas fa-times"></i>
-          </div>
-          <div class="progress">
-            <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width:80%"></div>
-          </div>
-        </div>
-      </div>
-      <div class="uploaded uploaded--three">
-        <i class="far fa-file-pdf"></i>
-        <div class="file">
-          <div class="file__name">
-            <p>amet_consectetur.pdf</p>
-            <i class="fas fa-times"></i>
-          </div>
-          <div class="progress">
-            <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width:60%"></div>
-          </div>
-        </div>
-      </div>
-    </div>
+      <br>
   </div>
+
+
+
+
+
+
+
+
+
+
