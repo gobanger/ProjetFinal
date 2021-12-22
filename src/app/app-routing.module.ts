@@ -9,6 +9,7 @@ import { CompteAdminComponent } from './compte-admin/compte-admin.component';
 import { GestionFormationComponent } from './gestion-formation/gestion-formation.component';
 import { DoccandidatComponent } from './doccandidat/doccandidat.component';
 import { CandidatureComponent } from './candidature/candidature.component';
+import { GestionEntretienComponent } from './gestion-entretien/gestion-entretien.component';
 
 const routes: Routes = [
   {path : 'accueilcommun' , component : AccueilcommunComponent},
@@ -19,7 +20,8 @@ const routes: Routes = [
   {path : 'moncompte-admin' , component : CompteAdminComponent},
   {path : 'gestion-formation' , component : GestionFormationComponent},
   {path : 'doccandidat' , component : DoccandidatComponent},
-  {path : 'candidature' , component : CandidatureComponent}
+  {path : 'candidature' , component : CandidatureComponent},
+  {path : 'gestion-entretien' , component : GestionEntretienComponent},
 ];
 
 @NgModule({
