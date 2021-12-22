@@ -9,8 +9,10 @@ import { CompteAdminComponent } from './compte-admin/compte-admin.component';
 import { GestionFormationComponent } from './gestion-formation/gestion-formation.component';
 import { DoccandidatComponent } from './doccandidat/doccandidat.component';
 import { CandidatureComponent } from './candidature/candidature.component';
+import { Accueilcandidat1Component } from './accueilcandidat1/accueilcandidat1.component';
 import { GestionEntretienComponent } from './gestion-entretien/gestion-entretien.component';
 import { TestsComponent } from './tests/tests.component';
+
 
 const routes: Routes = [
   {path : 'accueilcommun' , component : AccueilcommunComponent},
@@ -22,9 +24,12 @@ const routes: Routes = [
   {path : 'gestion-formation' , component : GestionFormationComponent},
   {path : 'doccandidat' , component : DoccandidatComponent},
   {path : 'candidature' , component : CandidatureComponent},
+  {path : 'accueilcandidat1' , component : Accueilcandidat1Component},
   {path : 'gestion-entretien' , component : GestionEntretienComponent},
   {path : 'tests', component : TestsComponent},
 ];
+
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
