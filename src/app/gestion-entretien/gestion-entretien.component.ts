@@ -20,7 +20,7 @@ export class GestionEntretienComponent implements OnInit {
     this.lesCandidats();
   }
 
-  connexion(informations: any): any{
+  envoi(informations: any): any{
     this.http.post('', informations).subscribe({
       next: (data) => { 
         this.informations = data;

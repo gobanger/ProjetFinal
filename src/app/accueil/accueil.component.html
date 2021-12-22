@@ -1,5 +1,6 @@
 <div class="accueil">
     <br><br><br><br><br>
+    <form #connectForm="ngForm" (ngSubmit)="connexion(connectForm.value )">
         <div class="f-connect">
             <div class="card p-5 bs_perso">
 
@@ -10,17 +11,17 @@
 
                 <div class="form-group">
                     <label for="" class="grey-text">Email</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="mail" ngModel="" required>
                 </div>
 
                 <div class="form-group">
                     <label for="" class="grey-text">Mot de passe</label>
-                    <input type="password" class="form-control">
+                    <input type="password" class="form-control" name="mdp" ngModel="" required>
                 </div>
                 <br>
-                <button class="btn btn-block btn-primary">Se connecter</button>
-                
+                <button class="btn btn-block btn-primary" type="submit">Se connecter</button>
                 <br>
+                <p class="text-danger text-center">{{ retour }}</p>
                 <div class="text_mdp_oublie" style="text-align: center;">
                     <label for="" class="grey-text" style="text-align: center">Mot de passe oublié ?</label>
                     <a href="#" class="btn-footer"> cliquez ici </a><br>
@@ -33,6 +34,7 @@
             </div>
              
         </div>
+    </form>
  
     <br><br><br><br><br><br><br><br><br><br><br><br>
 
