@@ -29,6 +29,7 @@ const routes: Routes = [
   {path : 'gestion-entretien' , component : GestionEntretienComponent},
   {path : 'tests', component : TestsComponent},
   {path : 'tentative', component : TentativeUsurpComponent},
+  { path: '', redirectTo: 'accueilcommun', pathMatch: 'full' },
 ];
 
 
