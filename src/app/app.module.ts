@@ -21,6 +21,7 @@ import { GestionEntretienComponent } from './gestion-entretien/gestion-entretien
 import { TestsComponent } from './tests/tests.component';
 import { TentativeUsurpComponent } from './tentative-usurp/tentative-usurp.component';
 import { ChoixformationComponent } from './choixformation/choixformation.component';
+import { TestcandidatComponent } from './testcandidat/testcandidat.component';
 
 
 
@@ -39,7 +40,8 @@ import { ChoixformationComponent } from './choixformation/choixformation.compone
     GestionEntretienComponent,
     TestsComponent,
     TentativeUsurpComponent,
-    ChoixformationComponent
+    ChoixformationComponent,
+    TestcandidatComponent
   ],
   imports: [
     BrowserModule,
