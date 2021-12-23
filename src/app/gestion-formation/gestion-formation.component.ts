@@ -95,9 +95,8 @@ export class GestionFormationComponent implements OnInit {
   }
 
   modifyFormation(info:any){
-    /*this.formationToModify = this.http.get('http')
-    this.http.put('http://localhost:8086/formation/' + , info).subscribe(data => {
+    this.http.put('http://localhost:8086/formation/' + info.id , info).subscribe(data => {
       console.log(info);
-    });*/
+    });
   }
 }

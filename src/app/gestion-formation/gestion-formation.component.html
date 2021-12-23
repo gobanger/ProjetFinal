@@ -11,10 +11,15 @@
                 <div id="info{{f.id}}" hidden> <br>
                     <p>Niveau de certification : {{ f.nivCertif }} </p> <br>
                     <p>Intitulé de la formation : {{ f.intitule }} </p> <br>
-                    <button (click)="showModify(f.id)">Modifier la formation</button> <br>
-                    <div id="{{f.id}}" hidden>
+                    <button (click)="showModify(f.id)">Modifier la formation</button>
+                    <br><br>
+                    <div class="modifFormation" id="{{f.id}}" hidden>
                         <!-- Modification formation -->
                         <form #connectFormulair="ngForm" (ngSubmit)="modifyFormation(connectFormulair.value)">
+                            <div class="form-group">
+                                <label for="" class="text-secondary">id de la formation</label>
+                                <input  type="text" class="form-control" name="id" ngModel="{{ f.id }}" disabled>
+                            </div>
                             <div class="form-group">
                                 <label for="" class="text-secondary">Nom de la formation</label>
                                 <input  type="text" class="form-control" name="nomComplet" ngModel="{{ f.nomComplet }}">
