@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -8,12 +9,10 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private route: Router) { }
+  constructor(private route: Router, private auth: AuthService) { }
 
   ngOnInit(): void {
-    if(sessionStorage.getItem("prenom") == null){
-      this.route.navigateByUrl("accueilcommun");
-    }
+    this.auth.canActive();
   }
 
 }

@@ -1,7 +1,7 @@
 <div>
    <div class="wrapper">
       <!-- Sidebar  -->
-      <nav id="sidebar">
+      <nav id="sidebar" *ngIf="auth.isConnected()">
          <div class="sidebar-header">
             <h3>ESIC-SCHOOL</h3>
             <strong>ESIC</strong>
@@ -30,7 +30,7 @@
                      <a href="#">Yanis</a>
                   </li>
                   <li>
-                     <a routerLink='doccandidat' >document candidat</a>
+                     <a routerLink='doccandidat'>document candidat</a>
                   </li>
                </ul>
             </li>
@@ -38,14 +38,27 @@
       </nav>
       <!-- Page Content  -->
       <div class="content">
-         <nav class="navbar navbar-expand-lg navbar-light w3-bar w3-white w3-padding w3-card" style="margin-bottom: 0;">
+         <div>
+            <nav class="navbar navbar-expand-lg navbar-light w3-bar w3-white w3-padding w3-card" style="margin-bottom: 0;"
+            >
             <div class="container-fluid">
-               <button type="button" id="sidebarCollapse" class="btn btn-info">
+               <button type="button" id="sidebarCollapse" class="btn btn-info" >
                   <i class="fas fa-align-left"></i>
-                  <span>Menu</span>
+                  <span *ngIf="auth.isConnected()">Menu</span>
                </button>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent" *ngIf="auth.isConnected()">
+                  <ul class="nav navbar-nav ml-auto">
+                     <li class="nav-item">
+                        <a class="nav-link white-text" (click)="auth.deconnexion()"><span style="color: tomato;"
+                            class="material-icons">
+                            power_settings_new
+                          </span></a>
+                      </li>
+                  </ul>
+              </div>
             </div>
          </nav>
+         </div>
          <router-outlet></router-outlet>
       </div>
    </div>
