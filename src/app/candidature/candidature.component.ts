@@ -13,12 +13,9 @@ export class CandidatureComponent implements OnInit {
   msgValidation: any;
 
   constructor(private auth: AuthService, private http: HttpClient) { }
-
-
   ngOnInit(): void {
     this.auth.canActive();
   }
-
   candidat(info:any): any{
     this.http.post('http://localhost:8086/candidature',info).subscribe({
       next:(data) => {
@@ -29,8 +26,6 @@ export class CandidatureComponent implements OnInit {
       error:(err) => {
         console.log(info);
       },
-
-
     })
   }
 
