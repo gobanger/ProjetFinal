@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'projetFront';
+  adminNavbar = true;
+
+  setAdminNavBar(visibility : any){
+    this.adminNavbar == visibility;
+  }
 }
