@@ -1,108 +1,7 @@
-#sidenav {
-    justify-content: center;
-    position: absolute;
-    width:20%;
-    height: 43vw ;
-    top:1%;
-    bottom: 0;
-    left: 0;
-    /*z-index: 99999;*/
-    background: white; 
-}
-#sidenav.open {
-    left: -300px; 
-}
-#sidenav .logo {
-    width: 100%;
-    padding: 20px 50px;
-    background: white;
-    display: block; 
-}
-#sidenav .logo a {
-    color: #dadada;
-    font-size: 10px; 
-}
-#sidenav .logo a.nav-icon {
-    display: none; 
-}
-#sidenav .menu {
-    /*position: static; */
-}
-#sidenav .menu ul {
-    list-style: none;
-    background: white;
-    padding: 10% 0;
-    margin: 0; 
-}
-#sidenav .menu ul li {
-    /*padding: 6px 14%; */
-}
-#sidenav .menu ul li.active {
-    border-left: solid 4px red; 
-}
-#sidenav .menu ul li a {
-    text-align: center;
-    font-size: 1vw;
-    color: black;
-    font-weight: 300;
-    display: block; 
-}
-#sidenav .menu ul li a:hover {
-    color: black; 
-}
-#sidenav .menu ul li a.logout:hover {
-    color: red; 
-}
-#sidenav .menu ul li ul {
-    list-style: none;
-    margin: 10px auto 0;
-    padding: 10px 15px;
-    border-top: solid 1px rgba(255, 255, 255, 0.08);
-    border-bottom: solid 1px rgba(255, 255, 255, 0.08); 
-}
-#sidenav .menu ul li ul li {
-padding: 6px 3px; 
-}
-#sidenav .menu ul li ul li a {
-    font-size: 10px;
-    color: black; 
-}
-
-a {
-    text-decoration: none; 
-}
-
-li{
-    font-size: 1px;;
-}
-
-li:hover{
-    background-color: white;
-    text-decoration: none;
-    color : black;
-}
-
-hr{
-    color:lightgray;
-}
-
-.vl {
-    position : absolute;
-    border-left: 4px solid black;
-    height: 15%;
-    margin-left : 19.5%;
-  }
-  p{
-      font-size: 4vw;
-  }
-  .item:hover{
-    background-color: white;
-    color : black;
-  }
-
 .f-connect{
     margin: auto;
-    width: 30%;
+    width: 50%;
+    height : 100vh;
 }
 
 .marge-top-100{
@@ -124,8 +23,8 @@ hr{
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background: linear-gradient(to right, rgba(55, 236, 186, 0.5), rgba(114, 175, 211, 0.5));
 
-  margin-left: 20%;
-  position: static;
+  /*margin-left: 20%;*/
+  /*position: static;*/
 }
 
 .text_mdp_oublie{

@@ -1,30 +1,41 @@
 <div class="container pos">
-    <div class="my-font pt-10 pb-10 ml-20">
+    <div class="my-font ptb-3 plr-5">
         <form #connect="ngForm" (ngSubmit)="envoi(connect.value)">
             <hr>
             <div>
                 <label for="" class="text-secondary">Liste des candidats</label>
                 <br>
-                <select>
+                <select ngModel="" name="destinataire">
                     <option>-- Veuillez sélectionner un candidat --</option>
-                    <option *ngFor="let c of candidats">{{ c.prenom }}  {{ c.nomUsage }} {{ c.mail }}</option>
+                    <option *ngFor="let c of candidats" name="nom" name="prenom"> {{ c.nomUsage }} {{ c.prenom }} </option>
+                    <p class="text-danger">{{ msgErrCandidat }}</p>
                 </select>
             </div>
+            <div>
+                <label for="" class="text-secondary">qui envoi</label>
+                <br>
+                <select type="array" name="emetteur" ngModel="selected">
+                    <option>-- Veuillez sélectionner un candidat --</option>
+                    <option *ngFor="let c of candidats" name="id" ngModel=""> {{ c.id }} </option>
+                    <p class="text-danger">{{ msgErrCandidat }}</p>
+                </select>
+            </div>
+            <br>
             <div class="form-group">
                 <label for="" class="text-secondary">Objet</label>
                 <input type="text" class="form-control" name="objet" ngModel="Entretien candidature">
             </div>
             <div class="form-group">
                 <label for="" class="text-secondary">Lien de la réunion Teams</label>
-                <input type="text" class="form-control" name="lienTeams" ngModel="">
+                <input type="text" class="form-control" name="lien" ngModel="">
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label for="" class="text-secondary">Date et heure de la réunion</label>
                 <input type="datetime-local" class="form-control" name="date" ngModel="">
-            </div>
+            </div> -->
             <div class="form-group">
                 <label for="" class="text-secondary">Commentaire (optionnel)</label>
-                <input type="text" class="form-control" name="commentaire" ngModel="">
+                <input type="text" class="form-control" name="message" ngModel="">
             </div>
             <hr>
             <button type="submit" class="btn btn-primary btn-block">Envoyer la demande</button>

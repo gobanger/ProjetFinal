@@ -1,28 +1,22 @@
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">        <!-- Google Fonts -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">        <!-- Bootstrap core CSS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">        <!-- Material Design Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">        <!-- JQuery -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>        <!-- Bootstrap tooltips -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>        <!-- Bootstrap core JavaScript -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>        <!-- MDB core JavaScript -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
-
-
-
-
-<div class="container">
+<div class="container mt-5">
     <div class="row">
-        <div class="col-sm-2" style="text-align: center;">
-            <div class="card" *ngFor="let f of formations">
-                <p>
-                    {{ f.nom }} : 
+        <div class="col-sm-6" style="text-align: center;" *ngFor="let f of formations">
+            <div class="card">
+                <button style="border: none;" (click)="afficherCacher(f.id)">
+                    <p class="my-font">
+                        id de la formation : {{ f.id }}
+                    </p>
+                </button>
+                <p id="info{{f.id}}" hidden>
+                    Niveau de certification : {{ f.nivCertif }}
                 </p>
             </div>
+            <br>
         </div>
     </div>
     <br>
-</div>
-
-<div>
-    <button type="button" style="position: absolute;">Ajouter une formation</button>
+    <div class="d-flex justify-content-center my-font">
+        <button type="button" class="btn btn-success font-size">Ajouter une formation</button>
+        <button type="button" class="btn btn-danger font-size" disabled>Supprimer une formation</button>
+    </div>
 </div>
