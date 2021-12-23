@@ -9,29 +9,27 @@
                     </div>
                     <br>
 
+                    <form #connect="ngForm" (ngSubmit)="modifier(connect.value)">
+                        <div class="form-group">
+                            <label for="" class="grey-text">Ancien mot de passe</label>
+                            <input type="password" class="form-control" placeholder="Entrez votre ancien mot de passe">
+                        </div>
 
-                    <div class="form-group">
-                        <label for="" class="grey-text">Ancien mot de passe</label>
-                        <input type="password" class="form-control" placeholder="Entrez votre ancien mot de passe">
-                    </div>
+                        <div class="form-group">
+                            <label for="" class="grey-text">Nouveau mot de passe</label>
+                            <input type="text" class="form-control" placeholder="Entrez votre nouveau mot de passe">
+                        </div>
 
-                    <div class="form-group">
-                        <label for="" class="grey-text">Nouveau mot de passe</label>
-                        <input type="text" class="form-control" placeholder="Entrez votre nouveau mot de passe">
-                    </div>
+                        <div class="form-group">
+                            <label for="" class="grey-text">Confirmation mot de passe</label>
+                            <input type="password" class="form-control" placeholder="Confirmez votre nouveau mot de passe">
+                        </div>
 
-                    <div class="form-group">
-                        <label for="" class="grey-text">Confirmation mot de passe</label>
-                        <input type="password" class="form-control" placeholder="Confirmez votre nouveau mot de passe">
-                    </div>
-
-                    <br>
-                    <button name="Enregistrer" class="btn btn-block btn-primary" onclick="window.location.href='/home'">Enregistrer</button>
-                    <br>
-                    <button name="Annuler" class="btn btn-block btn-primary" onclick="window.location.href='/home'">Annuler</button>
-                    
-                    <br>
-
+                        <br>
+                        <button type="submit" name="Enregistrer" class="btn btn-block btn-primary" onclick="window.location.href='/home'">Enregistrer</button>
+                        <br><br>
+                        <button name="Annuler" class="btn btn-block btn-primary" onclick="window.location.href='/home'">Annuler</button>
+                    </form>
                 </div>
             </div>
             <br>

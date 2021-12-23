@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-gestion-entretien',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GestionEntretienComponent implements OnInit {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private auth: AuthService) { }
 
   msgErr:any;
   informations: any;
@@ -19,6 +20,7 @@ export class GestionEntretienComponent implements OnInit {
 
   ngOnInit(): void {
     this.lesCandidats();
+    this.auth.canActive();
   }
 
   envoi(informations: any): any{

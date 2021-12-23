@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ɵɵqueryRefresh } from '@angular/core';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-gestion-formation',
@@ -9,11 +10,15 @@ import { Component, OnInit } from '@angular/core';
 export class GestionFormationComponent implements OnInit {
 
   formations : any;
+  msgConfirmation: any;
+  infoCreate:any;
+  infoDelete:any;
   etat=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 
-  constructor(private http : HttpClient) { }
+  constructor(private http : HttpClient, private auth: AuthService) { }
 
   ngOnInit(): void {
+    this.auth.canActive();
     this.lesFormations();
   }
 
@@ -44,8 +49,29 @@ export class GestionFormationComponent implements OnInit {
     }
   }
 
-  
+  createFormation(info:any){
+    this.http.post('http://localhost:8086/formation', info).subscribe({
+      next: (data) =>{
+        this.infoCreate = data
+      },
+      error: (err) => {
+        console.log(err);
+      }
+    })
+  }
+  ajoutShow(){
+    document.getElementById("ajout")?.removeAttribute("hidden")
+  }
+  ajoutHide(){
+    document.getElementById("ajout")?.setAttribute("hidden", "");
+    this.msgConfirmation = "Formation enregistrer";
+    window.location.reload();
+  }
+  cancelAjout(){
+    document.getElementById("ajout")?.setAttribute("hidden", "");
+  }
 
-  infoFormation(niv:any){
+  deleteFormation(info:any){
+    
   }
 }

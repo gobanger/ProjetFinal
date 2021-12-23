@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-inscription',
@@ -8,8 +9,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class InscriptionComponent implements OnInit {
 
+
   information : any;
   msgValidation: any;
+
   constructor(private http: HttpClient) {
     
    }
@@ -21,6 +24,7 @@ export class InscriptionComponent implements OnInit {
     this.http.post('http://localhost:8086/inscription',information).subscribe({
       next:(data) => {
         information = data;
+        console.log(information);
         this.msgValidation="inscription complete";
       },
 

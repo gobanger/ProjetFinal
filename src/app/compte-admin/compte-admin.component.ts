@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-compte-admin',
@@ -9,10 +10,22 @@ import { HttpClient } from '@angular/common/http';
 export class CompteAdminComponent implements OnInit {
 
   formations : any;
+  informations:any;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private auth: AuthService) { }
 
   ngOnInit(): void {
+    this.auth.canActive();
+  }
 
+  modifier(informations: any): any{
+    this.http.post('http://localhost:8086/', informations).subscribe({
+      next: (data) => { 
+        this.informations = data;
+      },
+      error : (err) => {
+        console.log(err);
+    }
+    })
   }
 }

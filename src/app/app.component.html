@@ -1,7 +1,66 @@
 <div>
    <div class="wrapper">
       <!-- Sidebar  -->
-      <nav id="sidebar" *ngIf="auth.isConnected()">
+      <nav id="sidebar" *ngIf="auth.candidatSideNav()">
+         <div class="sidebar-header">
+            <h3>ESIC-SCHOOL</h3>
+            <strong>ESIC</strong>
+         </div>
+         <ul class="list-unstyled components">
+            <li>
+               <a routerLink="">
+                  <i class="fas fa-home"></i>
+                  Home
+               </a>
+            </li>
+            <li>
+               <a routerLink="">
+                  <i class="fas fa-file-signature"></i>
+                  Mes info perso
+               </a>
+            </li>
+            <li>
+               <a routerLink="">
+                  <i class="far fa-clipboard"></i>
+                  Mes documents
+               </a>
+            </li>
+            <li>
+               <a routerLink="">
+                  <i class="fas fa-calendar-alt"></i>
+                  Ma candidature
+               </a>
+            </li>
+            <li>
+               <a routerLink="">
+                  <i class="fas fa-calendar-alt"></i>
+                  Mon compte
+               </a>
+            </li>
+            <li>
+               <a routerLink="">
+                  <i class="fa fa-user"></i>
+                  Mon test
+               </a>
+               <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                  <i class="fas fa-copy"></i>
+                  Autres
+               </a>
+               <ul class="collapse list-unstyled" id="pageSubmenu">
+                  <li>
+                     <a routerLink="#">MDR</a>
+                  </li>
+                  <li>
+                     <a routerLink="#">Yanis</a>
+                  </li>
+                  <li>
+                     <a routerLink='doccandidat'>document candidat</a>
+                  </li>
+               </ul>
+            </li>
+         </ul>
+      </nav>
+      <nav id="sidebar" *ngIf="auth.adminSideNav()">
          <div class="sidebar-header">
             <h3>ESIC-SCHOOL</h3>
             <strong>ESIC</strong>
@@ -81,6 +140,8 @@
       </div>
    </div>
 </div>
+
+
 
 <div>
    <footer id="footer" class="container-fluid bg-grey py-5"
