@@ -14,6 +14,7 @@ import { GestionEntretienComponent } from './gestion-entretien/gestion-entretien
 import { TestsComponent } from './tests/tests.component';
 import { TentativeUsurpComponent } from './tentative-usurp/tentative-usurp.component';
 import { ChoixformationComponent } from './choixformation/choixformation.component';
+import { TestcandidatComponent } from './testcandidat/testcandidat.component';
 
 
 const routes: Routes = [
@@ -31,6 +32,8 @@ const routes: Routes = [
   {path : 'tests', component : TestsComponent},
   {path : 'tentative', component : TentativeUsurpComponent},
   {path : 'choixformation', component : ChoixformationComponent},
+  {path : 'testcandidat', component : TestcandidatComponent},
+
   { path: '', redirectTo: 'accueilcommun', pathMatch: 'full' },
 ];
 

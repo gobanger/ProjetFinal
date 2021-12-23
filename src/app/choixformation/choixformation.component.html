@@ -6,7 +6,7 @@
                 <h1 class="grey-text"> Ma candidature </h1>
                 <br><br>
             </div>
-            <form #connect="ngForm" (ngSubmit)="choixformation(connect.value)">
+            <form #connectForm="ngForm" (ngSubmit)="choixformation(connectForm.value)">
                 <div class="choix"> 
                     <label for="">Choisissez votre formation</label>
                     <select name="formation" id="formation">
@@ -23,15 +23,10 @@
 
                     <label for="">Choisissez votre session de formation</label>
                     <br>
-                    <select name="formation" id="formation">
-                        <option value="s1">--Choisissez une option--</option>
-                        <option value="s2"></option>
-                        <option value="s3"></option>
-                        <option value="s4"></option>
-                        <option value="s5"></option>
-                        <option value="s6"></option>
-                        <option value="s7"></option>
-                        <option value="s8">Session du 12/02/2022 au 20/06/2022 - Technicien superieur systeme et reseau</option>
+                    <select type="array" name="emetteur" ngModel="selected">
+                        <option>-- Veuillez sélectionner un candidat --</option>
+                        <option *ngFor="let s of session" name="session" ngModel=""> {{ s.session }} </option>
+                        <p class="text-danger">{{ msgErrSession }}</p>
                     </select>
                 </div>
             </form>

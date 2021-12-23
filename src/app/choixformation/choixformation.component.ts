@@ -10,10 +10,15 @@ import { AppComponent } from '../app.component';
 export class ChoixformationComponent implements OnInit {
   information : any;
   msgValidation: any;
+  msgErr:any;
+  msgErrSession:any;
+  session: any;
+
 
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+    this.lesSessions();
   }
 
 
@@ -27,6 +32,22 @@ export class ChoixformationComponent implements OnInit {
       error:(err) => {
         console.log(information);
       },
+    })
+  }
+
+  lesSessions(){
+    this.http.get('http://localhost:8086/session').subscribe({
+      next: (data) => {
+        this.session = data;
+        console.log(data);
+        if(this.session.Session == null){
+          this.msgErrSession = "Veuillez sélectionner une formation";
+        }
+      },
+      error: (err) => {
+        this.msgErr = err;
+        console.log(err);
+    }
     })
   }
 

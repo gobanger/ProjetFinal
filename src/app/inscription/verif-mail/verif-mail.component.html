@@ -1,0 +1,19 @@
+<div>
+    <div class="inscription">
+        <div class="f-connect">
+            <div class="p-5 bs_perso">
+                <div class="text">
+                    <h1 class="grey-text"> Validez votre mail </h1>
+                </div>
+                <form #connect="ngForm" (ngSubmit)="validerMail(connect.value)">
+                    <div class="form-group">
+                        <label for="" class="grey-text">Saisir le code reçu par mail : </label>
+                        <input type="text" ngModel="" required name="code" class="form-control">
+                    </div>
+                    <button class="btn btn-block btn-primary btn-sm">valider</button>
+                </form>
+                <p class="text-center text-danger">{{  msgErr}}</p>
+            </div>
+        </div>
+    </div>
+</div>
