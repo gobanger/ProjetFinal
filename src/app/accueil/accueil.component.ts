@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-accueil',
@@ -10,31 +11,48 @@ import { Router } from '@angular/router';
 
 export class AccueilComponent implements OnInit {
 
-  constructor(private http : HttpClient, private route: Router) { }
+  constructor(private http : HttpClient, private route: Router, public auth: AuthService) { }
 
   retour : any;
   user:any;
 
   ngOnInit(): void {
+    this.auth.redirectToHomeIfConnect();
   }
 
   connexion(val:any): void{
-    this.http.post("http://localhost:8086/connexion", val).subscribe({
+    this.http.post(this.auth.lienApi + "connexion", val).subscribe({
       next: (data) => {
-        console.log(data);
-        this.user = data;
-        if(data == null){
-          this.retour = "Soit c'est faux soit tu t'fous d'ma gueule";
-        }else{
-          this.route.navigateByUrl('home');
-          alert("Bienvenue " + this.user.prenom + this.user.nomUsage);
-          sessionStorage.setItem("id", this.user.id);
-          sessionStorage.setItem("prenom", this.user.prenom);
-          sessionStorage.setItem("nom", this.user.nomUsage);
-          sessionStorage.setItem("mail", this.user.mail);
-        }
+        // console.log(data);
+       this.verif(data);     
       },
       error: (err) => {console.log(err)}
     })
-  } 
+  }
+  
+  verif(val: any): void {
+    if (val != null) {
+      // console.log('connexion ok');
+      this.auth.setUserInSession(val);
+      switch (this.auth.getUserConnect().role) {
+        case 'CANDIDAT':
+          this.route.navigateByUrl('accueilcandidat1');
+          break;
+          case 'ADMIN':
+          this.route.navigateByUrl('home');
+          break;
+      
+        default:
+          this.auth.deconnexion();
+          break;
+      }
+    }
+    else {
+      //  console.log('bad credentials')
+      this.auth.connect = true;
+      // this.msgErr = 'Bad credentials';
+      this.auth.msgErr = 'Bad credentials';
+    }
+  }
+
 }
