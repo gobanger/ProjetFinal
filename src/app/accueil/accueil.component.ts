@@ -27,7 +27,7 @@ export class AccueilComponent implements OnInit {
           this.retour = "Soit c'est faux soit tu t'fous d'ma gueule";
         }else{
           this.route.navigateByUrl('home');
-          alert("Bienvenue " + this.user.prenom);
+          alert("Bienvenue " + this.user.prenom + this.user.nomUsage);
           sessionStorage.setItem("id", this.user.id);
           sessionStorage.setItem("prenom", this.user.prenom);
           sessionStorage.setItem("nom", this.user.nomUsage);

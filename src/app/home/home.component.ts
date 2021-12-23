@@ -11,9 +11,6 @@ export class HomeComponent implements OnInit {
   constructor(private route: Router) { }
 
   ngOnInit(): void {
-    if(sessionStorage.getItem("prenom") == null){
-      this.route.navigateByUrl("accueilcommun");
-    }
   }
 
 }
