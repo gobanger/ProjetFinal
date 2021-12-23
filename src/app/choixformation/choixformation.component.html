@@ -1,0 +1,43 @@
+<div class="inscription">
+    <br><br><br><br><br>
+    <div class="f-connect">
+        <div class="card p-5 bs_perso">
+            <div class="text">
+                <h1 class="grey-text"> Ma candidature </h1>
+                <br><br>
+            </div>
+            <form #connect="ngForm" (ngSubmit)="choixformation(connect.value)">
+                <div class="choix"> 
+                    <label for="">Choisissez votre formation</label>
+                    <select name="formation" id="formation">
+                        <option value="f1">--Choisissez une option--</option>
+                        <option value="f2">Technicien superieur systeme et reseau (TSSR)</option>
+                        <option value="f3">Administrateur reseau (AR) </option>
+                        <option value="f4">Expert en systemes d'information (ESI)</option>
+                        <option value="f5">Concepteur developpeur d'application (CEA)</option>
+                        <option value="f6">Solutions logicielles et applications métier (BTSS LAM)</option>
+                        <option value="f7">Ingenieur affaire (IA) </option>
+                        <option value="f8">Responsable commercial et marketing (RCM)</option>
+                    </select>
+                    <br><br>
+
+                    <label for="">Choisissez votre session de formation</label>
+                    <br>
+                    <select name="formation" id="formation">
+                        <option value="s1">--Choisissez une option--</option>
+                        <option value="s2"></option>
+                        <option value="s3"></option>
+                        <option value="s4"></option>
+                        <option value="s5"></option>
+                        <option value="s6"></option>
+                        <option value="s7"></option>
+                        <option value="s8">Solutions logicielles et applications métier (BTSS LAM)</option>
+                    </select>
+                </div>
+            </form>
+            <br><br>
+            <button class="btn btn-block btn-primary" type="submit">Postuler</button>
+        </div>
+    </div>
+    <br>
+</div>

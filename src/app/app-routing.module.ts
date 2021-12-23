@@ -13,6 +13,7 @@ import { Accueilcandidat1Component } from './accueilcandidat1/accueilcandidat1.c
 import { GestionEntretienComponent } from './gestion-entretien/gestion-entretien.component';
 import { TestsComponent } from './tests/tests.component';
 import { TentativeUsurpComponent } from './tentative-usurp/tentative-usurp.component';
+import { ChoixformationComponent } from './choixformation/choixformation.component';
 
 
 const routes: Routes = [
@@ -29,6 +30,7 @@ const routes: Routes = [
   {path : 'gestion-entretien' , component : GestionEntretienComponent},
   {path : 'tests', component : TestsComponent},
   {path : 'tentative', component : TentativeUsurpComponent},
+  {path : 'choixformation', component : ChoixformationComponent},
   { path: '', redirectTo: 'accueilcommun', pathMatch: 'full' },
 ];
 

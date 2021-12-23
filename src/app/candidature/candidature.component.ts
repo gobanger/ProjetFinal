@@ -12,12 +12,29 @@ export class CandidatureComponent implements OnInit {
   info: any;
   msgValidation: any;
 
-  constructor(private auth: AuthService) { }
+  constructor(private auth: AuthService, private http: HttpClient) { }
 
   
 
   ngOnInit(): void {
     this.auth.canActive();
+  }
+
+
+
+  candidat(information:any): any{
+    this.http.post('http://localhost:8086/inscription',information).subscribe({
+      next:(data) => {
+        information = data;
+        console.log(information);
+        this.msgValidation="inscription complete";
+      },
+      error:(err) => {
+        console.log(information);
+      },
+
+
+    })
   }
 
 }

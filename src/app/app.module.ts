@@ -20,6 +20,8 @@ import { SidebarMenuComponent } from './sidebar-menu/sidebar-menu.component';
 import { GestionEntretienComponent } from './gestion-entretien/gestion-entretien.component';
 import { TestsComponent } from './tests/tests.component';
 import { TentativeUsurpComponent } from './tentative-usurp/tentative-usurp.component';
+import { ChoixformationComponent } from './choixformation/choixformation.component';
+
 
 
 @NgModule({
@@ -36,7 +38,8 @@ import { TentativeUsurpComponent } from './tentative-usurp/tentative-usurp.compo
     SidebarMenuComponent,
     GestionEntretienComponent,
     TestsComponent,
-    TentativeUsurpComponent
+    TentativeUsurpComponent,
+    ChoixformationComponent
   ],
   imports: [
     BrowserModule,
