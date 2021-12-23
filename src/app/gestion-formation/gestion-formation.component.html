@@ -1,3 +1,4 @@
+<!-- Info formations -->
 <div class="container mt-5">
     <div class="row">
         <div class="col-sm-6" style="text-align: center;" *ngFor="let f of formations">
@@ -18,15 +19,23 @@
     <br>
     <div class="d-flex justify-content-center my-font">
         <button type="button" class="btn btn-success font-size" (click)="ajoutShow()">Ajouter une formation</button>
-        <button type="button" class="btn btn-danger font-size" disabled>Supprimer une formation</button>
+        <button type="button" class="btn btn-danger font-size" (click)="deleteShow()">Supprimer une formation</button>
     </div>
-    <div class="container text-center p-5 ">
+
+    <!-- S
+        uppression formation-->
+    <div class="container text-center p-5 " id="delete" hidden>
         <form #connect="ngForm" (ngSubmit)="deleteFormation(connect.value)">
             <select class="text-center">
                 <option *ngFor="let f of formations">{{ f.nomComplet }}</option>
             </select>
+            <p></p>
+            <br>
+            <button type="submit" class="btn btn-primary btn-block" (click)="deleteHide()">Valider</button>
         </form>
     </div>
+
+    <!-- Ajout formation-->
     <div class="container" id="ajout" hidden>
         <form #connect="ngForm" (ngSubmit)="createFormation(connect.value)">
             <div class="form-group">

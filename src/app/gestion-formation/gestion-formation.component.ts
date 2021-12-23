@@ -9,6 +9,7 @@ import { AuthService } from '../services/auth.service';
 })
 export class GestionFormationComponent implements OnInit {
 
+  formationToDelete : any;
   formations : any;
   msgConfirmation: any;
   infoCreate:any;
@@ -71,7 +72,17 @@ export class GestionFormationComponent implements OnInit {
     document.getElementById("ajout")?.setAttribute("hidden", "");
   }
 
+
+  deleteShow(){
+    document.getElementById("delete")?.removeAttribute("hidden")
+  }
+  deleteHide(){
+    document.getElementById("delete")?.setAttribute("hidden", "");
+    this.msgConfirmation = "Formation supprimer";
+    window.location.reload();
+  }
   deleteFormation(info:any){
-    
+    this.formationToDelete = this.http.get(this.auth.lienApi+ "/formation/" + info);
+    this.http.delete(this.auth.lienApi + "/formation/" + this.formationToDelete.intitule);
   }
 }
