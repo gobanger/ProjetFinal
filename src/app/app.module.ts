@@ -25,6 +25,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { VerifMailComponent } from './inscription/verif-mail/verif-mail.component';
 import { ChoixformationComponent } from './choixformation/choixformation.component';
 import { TestcandidatComponent } from './testcandidat/testcandidat.component';
+import { MoncompteComponent } from './moncompte/moncompte.component';
 
 
 
@@ -45,7 +46,8 @@ import { TestcandidatComponent } from './testcandidat/testcandidat.component';
     TentativeUsurpComponent,
     VerifMailComponent,
     ChoixformationComponent,
-    TestcandidatComponent
+    TestcandidatComponent,
+    MoncompteComponent
   ],
   imports: [
     BrowserModule,
