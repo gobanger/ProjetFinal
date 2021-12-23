@@ -26,6 +26,7 @@ import { VerifMailComponent } from './inscription/verif-mail/verif-mail.componen
 import { ChoixformationComponent } from './choixformation/choixformation.component';
 import { TestcandidatComponent } from './testcandidat/testcandidat.component';
 import { ListeCandidatsComponent } from './liste-candidats/liste-candidats.component';
+import { MoncompteComponent } from './moncompte/moncompte.component';
 
 
 
@@ -47,7 +48,8 @@ import { ListeCandidatsComponent } from './liste-candidats/liste-candidats.compo
     VerifMailComponent,
     ChoixformationComponent,
     TestcandidatComponent,
-    ListeCandidatsComponent
+    ListeCandidatsComponent,
+    MoncompteComponent
   ],
   imports: [
     BrowserModule,
