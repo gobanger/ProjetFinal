@@ -41,3 +41,9 @@ h1{
     text-align: center;
 }
 
+.ng-valid[required]{
+    border-left: 4px solid green;
+}
+.ng-invalid:not(form){
+    border-left: 4px solid red;
+}

@@ -20,6 +20,9 @@ import { SidebarMenuComponent } from './sidebar-menu/sidebar-menu.component';
 import { GestionEntretienComponent } from './gestion-entretien/gestion-entretien.component';
 import { TestsComponent } from './tests/tests.component';
 import { TentativeUsurpComponent } from './tentative-usurp/tentative-usurp.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatDialogModule} from '@angular/material/dialog';
+import { VerifMailComponent } from './inscription/verif-mail/verif-mail.component';
 
 
 @NgModule({
@@ -36,13 +39,16 @@ import { TentativeUsurpComponent } from './tentative-usurp/tentative-usurp.compo
     SidebarMenuComponent,
     GestionEntretienComponent,
     TestsComponent,
-    TentativeUsurpComponent
+    TentativeUsurpComponent,
+    VerifMailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
