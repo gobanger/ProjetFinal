@@ -23,6 +23,9 @@ import { TentativeUsurpComponent } from './tentative-usurp/tentative-usurp.compo
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material/dialog';
 import { VerifMailComponent } from './inscription/verif-mail/verif-mail.component';
+import { ChoixformationComponent } from './choixformation/choixformation.component';
+import { TestcandidatComponent } from './testcandidat/testcandidat.component';
+
 
 
 @NgModule({
@@ -40,7 +43,9 @@ import { VerifMailComponent } from './inscription/verif-mail/verif-mail.componen
     GestionEntretienComponent,
     TestsComponent,
     TentativeUsurpComponent,
-    VerifMailComponent
+    VerifMailComponent,
+    ChoixformationComponent,
+    TestcandidatComponent
   ],
   imports: [
     BrowserModule,

@@ -11,8 +11,11 @@ export class HomeComponent implements OnInit {
 
   constructor(private route: Router, private auth: AuthService) { }
 
+  msgBienvenu : any;
+
   ngOnInit(): void {
     this.auth.canActive();
+    this.msgBienvenu = "Bienvenue " + this.auth.getUserConnect().nomUsage + " " + this.auth.getUserConnect().prenom; 
   }
 
 }

@@ -8,10 +8,30 @@
                         Formation : <br>{{ f.nomComplet }}
                     </p>
                 </button>
-                <p id="info{{f.id}}" hidden>
-                    Niveau de certification : {{ f.nivCertif }} <br>
-                    Intitulé de la formation : {{ f.intitule }}
-                </p>
+                <div id="info{{f.id}}" hidden> <br>
+                    <p>Niveau de certification : {{ f.nivCertif }} </p> <br>
+                    <p>Intitulé de la formation : {{ f.intitule }} </p> <br>
+                    <button (click)="showModify(f.id)">Modifier la formation</button> <br>
+                    <div id="{{f.id}}" hidden>
+                        <!-- Modification formation -->
+                        <form #connectFormulair="ngForm" (ngSubmit)="modifyFormation(connectFormulair.value)">
+                            <div class="form-group">
+                                <label for="" class="text-secondary">Nom de la formation</label>
+                                <input  type="text" class="form-control" name="nomComplet" ngModel="{{ f.nomComplet }}">
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="text-secondary">Intitulé de la formation</label>
+                                <input  type="text" class="form-control" name="intitule" ngModel="{{ f.intitule }}">
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="text-secondary">Niveau de certification requis</label>
+                                <input  type="text" class="form-control" name="nivCertif" ngModel="{{ f.nivCertif}}">
+                            </div>
+                            <button type="submit" > Modifier </button>
+                        </form> <br>
+                        <button (click)="modifyCancel(f.id)">Annuler</button>
+                    </div> <br>
+                </div>
             </div>
             <br>
         </div>
@@ -22,17 +42,18 @@
         <button type="button" class="btn btn-danger font-size" (click)="deleteShow()">Supprimer une formation</button>
     </div>
 
-    <!-- S
-        uppression formation-->
+    <!-- Suppression formation-->
     <div class="container text-center p-5 " id="delete" hidden>
-        <form #connect="ngForm" (ngSubmit)="deleteFormation(connect.value)">
-            <select class="text-center">
-                <option *ngFor="let f of formations">{{ f.nomComplet }}</option>
+        <form #connectForm="ngForm" (ngSubmit)="deleteFormation(connectForm.value)">
+            <select class="text-center" ngModel="" name="intitule">
+                <option *ngFor="let f of formations">{{ f.intitule }}</option>
             </select>
             <p></p>
             <br>
             <button type="submit" class="btn btn-primary btn-block" (click)="deleteHide()">Valider</button>
         </form>
+        <br>
+        <button type="submit" class="btn btn-primary btn-block" (click)="cancelDelete()">Annuler</button>
     </div>
 
     <!-- Ajout formation-->
@@ -40,21 +61,20 @@
         <form #connect="ngForm" (ngSubmit)="createFormation(connect.value)">
             <div class="form-group">
                 <label for="" class="text-secondary">Nom de la formation</label>
-                <input id="nomAjout" type="text" class="form-control" name="nomComplet" ngModel="">
+                <input  type="text" class="form-control" name="nomComplet" ngModel="">
             </div>
             <div class="form-group">
                 <label for="" class="text-secondary">Intitulé de la formation</label>
-                <input id="intituleAjout" type="text" class="form-control" name="intitule" ngModel="">
+                <input  type="text" class="form-control" name="intitule" ngModel="">
             </div>
             <div class="form-group">
                 <label for="" class="text-secondary">Niveau de certification requis</label>
-                <input id="nivCertifAjout" type="text" class="form-control" name="nivCertif" ngModel="">
+                <input  type="text" class="form-control" name="nivCertif" ngModel="">
             </div>
             <br>
             <button type="submit" class="btn btn-primary btn-block" (click)="ajoutHide()">Créer</button> <br><br>
         </form>
-        <button type="submit" class="btn btn-primary btn-block" (click)="cancelAjout()">Annuler</button>
-        <p class="text-center text-succes">{{ msgConfirmation }}</p>
+        <button class="btn btn-primary btn-block" (click)="cancelAjout()">Annuler</button>
     </div>
 </div>
 <br>

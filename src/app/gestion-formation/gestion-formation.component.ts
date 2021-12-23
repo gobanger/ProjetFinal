@@ -9,7 +9,7 @@ import { AuthService } from '../services/auth.service';
 })
 export class GestionFormationComponent implements OnInit {
 
-  formationToDelete : any;
+  formationToModify : any;
   formations : any;
   msgConfirmation: any;
   infoCreate:any;
@@ -53,7 +53,8 @@ export class GestionFormationComponent implements OnInit {
   createFormation(info:any){
     this.http.post('http://localhost:8086/formation', info).subscribe({
       next: (data) =>{
-        this.infoCreate = data
+        info = data;
+        console.log(info);
       },
       error: (err) => {
         console.log(err);
@@ -65,7 +66,6 @@ export class GestionFormationComponent implements OnInit {
   }
   ajoutHide(){
     document.getElementById("ajout")?.setAttribute("hidden", "");
-    this.msgConfirmation = "Formation enregistrer";
     window.location.reload();
   }
   cancelAjout(){
@@ -78,11 +78,26 @@ export class GestionFormationComponent implements OnInit {
   }
   deleteHide(){
     document.getElementById("delete")?.setAttribute("hidden", "");
-    this.msgConfirmation = "Formation supprimer";
     window.location.reload();
   }
   deleteFormation(info:any){
-    this.formationToDelete = this.http.get(this.auth.lienApi+ "/formation/" + info);
-    this.http.delete(this.auth.lienApi + "/formation/" + this.formationToDelete.intitule);
+    this.http.delete(this.auth.lienApi + "formation/" +  info.intitule ).subscribe({next: (data) => {console.log(info)} });
+  }
+  cancelDelete(){
+    document.getElementById("delete")?.setAttribute("hidden", "");
+  }
+
+  showModify(id:any){
+    document.getElementById(id)?.removeAttribute("hidden");
+  }
+  modifyCancel(id:any){
+    document.getElementById(id)?.setAttribute("hidden", "");
+  }
+
+  modifyFormation(info:any){
+    /*this.formationToModify = this.http.get('http')
+    this.http.put('http://localhost:8086/formation/' + , info).subscribe(data => {
+      console.log(info);
+    });*/
   }
 }
