@@ -1,171 +1,161 @@
 <!-- Formulaire -->
 <div class="candidature">
-  <br><br><br><br>
-      <div class="f-connect">
-          <div class="card p-5 bs_perso" >
-              <h1>Ma candidature </h1>
-              <br><br>
-              <!-- Bouton choix parcours -->
-              <label class="pid">Parcours souhaité : </label>
-              <form action="/action_page.php">
-                <input type="radio" id="r1" name="choixparcours">
-                <label for="r1">En continu</label><br>
-                <input type="radio" id="r2" name="choixparcours">
-                <label for="r2">Contrat de professionnalisation</label><br>  
-                <input type="radio" id="r3" name="choixparcours">
-                <label for="r3">Contrat d’apprentissage </label><br><br>
-              </form>
-              <!-- FIN Bouton choix parcours -->
-
-              <!-- Civilité -->
-              <label class="pid">Civilité </label>
-              <form action="/action_page.php">
-                <input type="radio" id="r4" name="civ">
-                <label for="r4">Madame</label> &nbsp;
-                <input type="radio" id="r5" name="civ">
-                <label for="r5">Monsieur</label><br>  
-              </form>
-              <br>
-              <!-- FIN Civilité -->
-
-              
-              <!-- Infos candidat -->
-              <label class="pid"> Informations candidat </label>
-            <div class="form1">
-                 <div class="form-group"> 
-                <label class="nomNaissance">Nom de naissance</label>
-                <input type="text" class="form-control" name="nomNaissance">
-              </div>
-              &nbsp;&nbsp;
-              <div class="form-group">
-                  <label class="nomUsage">Nom d'usage</label>
-                  <input type="text" class="form-control" name="nomUsage">
-              </div>
-              &nbsp;&nbsp;
-              <div class="form-group">
-                  <label class="prenom">Prénom</label>
-                  <input type="text" class="form-control" name="prenom">
-              </div>
-              &nbsp;&nbsp;
-            </div>
-            <div class="form1">
-                &nbsp;&nbsp;
-                <div class="form-group">
-                    <label for="dateNaissance" class="text-secondary">Date de naissance</label>
-                    <input type="date" id="start" name="dateNaissance" class="form-control">
-                </div>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <div class="form-group">
-                    <label class="lieuNaissance">Lieu de naissance</label>
-                    <input type="text" class="form-control" name="lieuNaissance">
-                </div>
-           </div>
-
-           <!-- FIN Infos candidat -->
-
-           <!-- Coordonnées -->
-           <label class="pid"> Coordonnées </label>
-           <label class="adresse">Adresse</label>
-           <input type="text" class="form-control">
-           <br>
-           <div class="form1">
-                <div class="form-group"> 
-                    <label class="codePostal">Code Postal</label>
-                    <input type="text" name="codePostal" class="form-control">
-                </div>
-                &nbsp;&nbsp;
-                <div class="form-group">
-                    <label class="Ville">Ville</label>
-                    <input type="text" name="Ville" class="form-control">
-                </div>
-            </div>
-            <div class="form1">
-                 <div class="form-group"> 
-                <label class="telFixe">N° de téléphone fixe</label>
-                <input type="text" name="telFixe" class="form-control">
-              </div>
-              &nbsp;&nbsp;
-              <div class="form-group">
-                  <label class="telPortable">N° de téléphone portable</label>
-                  <input type="text" name="telPortable" class="form-control">
-              </div>
-              &nbsp;&nbsp;
-            </div>
-           <label class="mail">Adresse mail</label>
-           <input type="text" class="form-control" name="mail">
-           <br>
-
-           <br>
-            <label class="pid">Numéro sécurité sociale </label>
-            <input type="text" class="form-control" name="numSecuSocial">
-            <br>
-            <label class="pid">Nationalité </label>
-            <form action="/action_page.php">
-                <input type="radio" id="r6" name="nationalité">
-                <label for="r6">Française  </label> &nbsp;
-                <input type="radio" id="r7" name="nationalité">
-                <label for="r7">Autre (à préciser) </label><br> 
-                <input type="text" class="form-control" name="nationalité">
-            </form>
-
-            <!-- FIN Coordonnées -->
-
-
-            <!-- Représentant légal -->
-            <hr>
-           <label class="pid"> Si candidat mineur, informations concernant le représentant légal :  </label>
-           <br>
-           <div class="form1">
-            <div class="form-group"> 
-                <label class="nomRepresentant">Nom représentant légal</label>
-                <input type="text" class="form-control" name="nomRepresentant">
-            </div>
-            &nbsp;&nbsp;
-            <div class="form-group">
-                <label class="prenomRepresentant">Prénom représentant légal</label>
-                <input type="text" class="form-control" name="prenomRepresentant">
-            </div>
-            &nbsp;&nbsp;
-            <div class="form-group">
-                <label class="typeRepresentant">Mère, Père, Tuteur (préciser) </label>
-                <input type="text" class="form-control" name="typeRepresentant">
-            </div>
-         &nbsp;&nbsp;
-            </div>
-            <label class="adresseRepresentant">Adresse représentant légal</label>
-            <input type="text" class="form-control" name="adresseRepresentant">
-            <div class="form1">
-            <div class="form-group"> 
-                <label class="codePostalRepresentant">Code Postal</label>
-             <input type="text" name="codePostalRepresentant" class="form-control">
-            </div>
-            &nbsp;&nbsp;
-            <div class="form-group">
-                <label class="villeRepresentant">Ville</label>
-                <input type="text" name="villeRepresentant" class="form-control">
-            </div>
-            &nbsp;&nbsp;
-            </div>
-            <br>
-            <div class="form1">
-                <div class="form-group"> 
-                    <label class="telFixeRepresentant">N° de téléphone fixe</label>
-                    <input type="text" name="telFixeRepresentant" class="form-control">
-                </div>
+    <br><br><br><br>
+    <form #connect="ngForm" (ngSubmit)="candidature(connect.value)">
+        <div class="f-connect">
+            <div class="card p-5 bs_perso">
+                <h1>Ma candidature </h1>
+                <br><br>
+                <!-- Bouton choix parcours -->
+                <label class="pid">Parcours souhaité : </label>
+                <form action="/action_page.php">
+                    <input type="radio" id="r1" name="choixparcours">
+                    <label for="r1">En continu</label><br>
+                    <input type="radio" id="r2" name="choixparcours">
+                    <label for="r2">Contrat de professionnalisation</label><br>
+                    <input type="radio" id="r3" name="choixparcours">
+                    <label for="r3">Contrat d’apprentissage </label><br><br>
+                </form>
+                <!-- FIN Bouton choix parcours -->
+                <!-- Civilité -->
+                <label class="pid">Civilité </label>
+                <form action="/action_page.php">
+                    <input type="radio" id="r4" name="civ">
+                    <label for="r4">Madame</label> &nbsp;
+                    <input type="radio" id="r5" name="civ">
+                    <label for="r5">Monsieur</label><br>
+                </form>
+                <br>
+                <!-- FIN Civilité -->
+                <!-- Infos candidat -->
+                <label class="pid"> Informations candidat </label>
+                <div class="form1">
+                    <div class="form-group">
+                        <label class="nomNaissance">Nom de naissance</label>
+                        <input type="text" class="form-control" name="nomNaissance" ngModel="">
+                    </div>
                     &nbsp;&nbsp;
-                <div class="form-group">
-                    <label class="telPortableRepresentant">N° de téléphone portable</label>
-                    <input type="text" name="telPortableRepresentant" class="form-control">
+                    <div class="form-group">
+                        <label class="nomUsage">Nom d'usage</label>
+                        <input type="text" class="form-control" name="nomUsage" ngModel="">
+                    </div>
+                    &nbsp;&nbsp;
+                    <div class="form-group">
+                        <label class="prenom">Prénom</label>
+                        <input type="text" class="form-control" name="prenom" ngModel="">
+                    </div>
+                    &nbsp;&nbsp;
                 </div>
-                &nbsp;&nbsp;
+                <div class="form1">
+                    &nbsp;&nbsp;
+                    <div class="form-group">
+                        <label for="dateNaissance" class="text-secondary">Date de naissance</label>
+                        <input type="date" id="start" name="dateNaissance" class="form-control" ngModel="">
+                    </div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class="form-group">
+                        <label class="lieuNaissance">Lieu de naissance</label>
+                        <input type="text" class="form-control" name="lieuNaissance" ngModel="">
+                    </div>
+                </div>
+                <!-- FIN Infos candidat -->
+                <!-- Coordonnées -->
+                <label class="pid"> Coordonnées </label>
+                <label class="adresse">Adresse</label>
+                <input type="text" class="form-control" name="adresse" ngModel="">
+                <br>
+                <div class="form1">
+                    <div class="form-group">
+                        <label class="codePostal">Code Postal</label>
+                        <input type="text" name="codePostal" class="form-control" ngModel="">
+                    </div>
+                    &nbsp;&nbsp;
+                    <div class="form-group">
+                        <label class="Ville">Ville</label>
+                        <input type="text" name="Ville" class="form-control" ngModel="">
+                    </div>
+                </div>
+                <div class="form1">
+                    <div class="form-group">
+                        <label class="telFixe">N° de téléphone fixe</label>
+                        <input type="text" name="telFixe" class="form-control" ngModel="">
+                    </div>
+                    &nbsp;&nbsp;
+                    <div class="form-group">
+                        <label class="telPortable">N° de téléphone portable</label>
+                        <input type="text" name="telPortable" class="form-control" ngModel="">
+                    </div>
+                    &nbsp;&nbsp;
+                </div>
+                <label class="mail">Adresse mail</label>
+                <input type="text" class="form-control" name="mail" ngModel="">
+                <br>
+                <br>
+                <label class="pid">Numéro sécurité sociale </label>
+                <input type="text" class="form-control" name="numSecuSocial" ngModel="">
+                <br>
+                <label class="pid">Nationalité </label>
+                <form action="/action_page.php">
+                    <input type="radio" id="r6" name="nationalité">
+                    <label for="r6">Française  </label> &nbsp;
+                    <input type="radio" id="r7" name="nationalité">
+                    <label for="r7">Autre (à préciser) </label><br>
+                    <input type="text" class="form-control" name="nationalité">
+                </form>
+                <!-- FIN Coordonnées -->
+                <!-- Représentant légal -->
+                <hr>
+                <label class="pid"> Si candidat mineur, informations concernant le représentant légal : </label>
+                <br>
+                <div class="form1">
+                    <div class="form-group">
+                        <label class="nomRepresentant">Nom représentant légal</label>
+                        <input type="text" class="form-control" name="nomRepresentant" ngModel="">
+                    </div>
+                    &nbsp;&nbsp;
+                    <div class="form-group">
+                        <label class="prenomRepresentant">Prénom représentant légal</label>
+                        <input type="text" class="form-control" name="prenomRepresentant" ngModel="">
+                    </div>
+                    &nbsp;&nbsp;
+                    <div class="form-group">
+                        <label class="typeRepresentant">Mère, Père, Tuteur (préciser) </label>
+                        <input type="text" class="form-control" name="typeRepresentant" ngModel="">
+                    </div>
+                    &nbsp;&nbsp;
+                </div>
+                <label class="adresseRepresentant">Adresse représentant légal</label>
+                <input type="text" class="form-control" name="adresseRepresentant" ngModel="">
+                <div class="form1">
+                    <div class="form-group">
+                        <label class="codePostalRepresentant">Code Postal</label>
+                        <input type="text" name="codePostalRepresentant" class="form-control" ngModel="">
+                    </div>
+                    &nbsp;&nbsp;
+                    <div class="form-group">
+                        <label class="villeRepresentant">Ville</label>
+                        <input type="text" name="villeRepresentant" class="form-control" ngModel="">
+                    </div>
+                    &nbsp;&nbsp;
+                </div>
+                <br>
+                <div class="form1">
+                    <div class="form-group">
+                        <label class="telFixeRepresentant">N° de téléphone fixe</label>
+                        <input type="text" name="telFixeRepresentant" class="form-control" ngModel="">
+                    </div>
+                    &nbsp;&nbsp;
+                    <div class="form-group">
+                        <label class="telPortableRepresentant">N° de téléphone portable</label>
+                        <input type="text" name="telPortableRepresentant" class="form-control" ngModel="">
+                    </div>
+                    &nbsp;&nbsp;
                 </div>
                 <label class="emailRepresentant">Adresse mail du représentant légal</label>
-                <input type="text" class="form-control" name="emailRepresentant">
-                
+                <input type="text" class="form-control" name="emailRepresentant" ngModel="">
                 <hr>
                 <!-- FIN Représentant légal -->
-
-                 <!-- Situation -->
+                <!-- Situation -->
                 <label class="pid"> Votre situation actuelle : </label>
                 <form action="/action_page.php">&nbsp;
                     <input type="radio" id="r8" name="situationActuelle">
@@ -175,8 +165,9 @@
                     <input type="radio" id="r10" name="situationActuelle">
                     <label for="r10"> Étudiant(e)</label> &nbsp;
                     <input type="radio" id="r11" name="situationActuelle">
-                    <label for="r11"> Autre situation (à préciser)</label><br> 
-                    <input type="text" class="form-control" name="situationActuelle" placeholder="précisez votre situation">
+                    <label for="r11"> Autre situation (à préciser)</label><br>
+                    <input type="text" class="form-control" name="situationActuelle"
+                        placeholder="précisez votre situation">
                 </form>
                 <br>
                 <label class="pid"> Êtes-vous en situation de handicap ? </label>
@@ -193,22 +184,22 @@
                     <input type="radio" id="r15" name="nomOrganisme">
                     <label for="r15">non</label> &nbsp;
                 </form>
-                <input type="text" class="form-control" name="nomOrganisme" placeholder="Précisez le nom de l'organisme">
+                <input type="text" class="form-control" name="nomOrganisme" placeholder="Précisez le nom de l'organisme"
+                    ngModel="">
                 <br>
-                <input type="text" class="form-control" name="coordOrganisme" placeholder="Coordonnées de l’organisme">
+                <input type="text" class="form-control" name="coordOrganisme" placeholder="Coordonnées de l’organisme"
+                    ngModel="">
                 <!-- FIN Situation -->
-
                 <br>
                 <!-- Besoin -->
-                <label class="pid"> Si oui, aurez-vous des besoins particuliers en formation au CFA ou en entreprise ?  (pédagogie, matériel, moyens techniques, humains, organisation,…) : </label>
-                <textarea id="besoinParticulier" name="besoinParticulier" rows="5" cols="33"></textarea>
-                 <!-- FIN Besoin -->
-
-                 <hr>
-
-                 <!-- Pole emploi -->
-                 <label class="pid">Inscription à Pole Emploi</label>
-                 <form action="/action_page.php">&nbsp;
+                <label class="pid"> Si oui, aurez-vous des besoins particuliers en formation au CFA ou en entreprise ?
+                    (pédagogie, matériel, moyens techniques, humains, organisation,…) : </label>
+                <textarea id="besoinParticulier" name="besoinParticulier" rows="5" cols="33" ngModel=""></textarea>
+                <!-- FIN Besoin -->
+                <hr>
+                <!-- Pole emploi -->
+                <label class="pid">Inscription à Pole Emploi</label>
+                <form action="/action_page.php">&nbsp;
                     <input type="radio" id="r16" name="poleEmploi">
                     <label for="r16">oui</label> &nbsp;
                     <input type="radio" id="r17" name="poleEmploi">
@@ -219,55 +210,50 @@
                     &nbsp;&nbsp;
                     <div class="form-group">
                         <label class="identifiantPoleEmploi">Si oui, N° d’identifiant</label>
-                        <input type="text" class="form-control" name="identifiantPoleEmploi">
+                        <input type="text" class="form-control" name="identifiantPoleEmploi" ngModel="">
                     </div>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <div class="form-group">
                         <label for="inscriptionPoleEmploi" class="text-secondary">Date d'inscription</label>
-                        <input type="date" id="start" name="inscriptionPoleEmploi" class="form-control">
+                        <input type="date" id="start" name="inscriptionPoleEmploi" class="form-control" ngModel="">
                     </div>
-               </div>
-                 <!-- FIN Pole emploi -->
-
-
-                  <!-- Mission locale -->
-                  <label class="pid">Inscription dans une mission locale</label>
-                  <form action="/action_page.php">&nbsp;
-                     <input type="radio" id="r18" name="missionLocal">
-                     <label for="r18">oui</label> &nbsp;
-                     <input type="radio" id="r19" name="missionLocal">
-                     <label for="r19">non</label> &nbsp;
-                 </form>
-                 <div class="form1">
-                     &nbsp;&nbsp;
-                     <div class="form-group">
-                         <label class="coordMissionLocal">Si oui, coordonnées de la mission locale</label>
-                         <input type="text" class="form-control" name="coordMissionLocal">
-                     </div>
-                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                     <div class="form-group">
-                        <label class="nomConseillerMissionLocal">Nom du conseiller</label>
-                        <input type="text" class="form-control" name="nomConseillerMissionLocal">
-                     </div>
                 </div>
-                  <!-- FIN mission locale -->
-
-                  <hr>
-
-                  <!-- Classe fréquentées -->
-                  <label class="pid">Dernière classe fréquentée </label>
-                  <input type="text" class="form-control" name="derniereClasse">
-                  <br>
-                  <label class="pid">Diplôme(s) obtenu(s) </label>
-                  <input type="text" class="form-control" name="diplome1" placeholder="diplome 1"> <br>
-                  <input type="text" class="form-control" name="diplome2" placeholder="diplome 2"><br>
-                  <input type="text" class="form-control" name="diplome3" placeholder="diplome 3"><br>
-                  <!-- FIN classe fréquantées -->
-
-                  <!-- Niveau Français -->
-                  <label class="pid">Votre niveau de français : Merci de cocher la case adéquate </label>
+                <!-- FIN Pole emploi -->
+                <!-- Mission locale -->
+                <label class="pid">Inscription dans une mission locale</label>
+                <form action="/action_page.php">&nbsp;
+                    <input type="radio" id="r18" name="missionLocal">
+                    <label for="r18">oui</label> &nbsp;
+                    <input type="radio" id="r19" name="missionLocal">
+                    <label for="r19">non</label> &nbsp;
+                </form>
+                <div class="form1">
+                    &nbsp;&nbsp;
+                    <div class="form-group">
+                        <label class="coordMissionLocal">Si oui, coordonnées de la mission locale</label>
+                        <input type="text" class="form-control" name="coordMissionLocal" ngModel="">
+                    </div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class="form-group">
+                        <label class="nomConseillerMissionLocal">Nom du conseiller</label>
+                        <input type="text" class="form-control" name="nomConseillerMissionLocal" ngModel="">
+                    </div>
+                </div>
+                <!-- FIN mission locale -->
+                <hr>
+                <!-- Classe fréquentées -->
+                <label class="pid">Dernière classe fréquentée </label>
+                <input type="text" class="form-control" name="derniereClasse" ngModel="">
                 <br>
-                  <table id="niveau">
+                <label class="pid">Diplôme(s) obtenu(s) </label>
+                <input type="text" class="form-control" name="diplome1" placeholder="diplome 1" ngModel=""> <br>
+                <input type="text" class="form-control" name="diplome2" placeholder="diplome 2" ngModel=""><br>
+                <input type="text" class="form-control" name="diplome3" placeholder="diplome 3" ngModel=""><br>
+                <!-- FIN classe fréquantées -->
+                <!-- Niveau Français -->
+                <label class="pid">Votre niveau de français : Merci de cocher la case adéquate </label>
+                <br>
+                <table id="niveau">
                     <tr>
                         <th></th>
                         <th>Type d’utilisateur</th>
@@ -286,12 +272,15 @@
                         <td>A2 (intermédiaire ou usuel) </td>
                         <td>Je suis capable de comprendre et d’échanger sur des informations simples du quotidien. </td>
                     </tr>
-                    
+
                     <tr>
                         <td><input type="radio" id="r22" name="niveauFrancais"></td>
                         <td>B Utilisateur indépendant </td>
                         <td>B1 (seuil) </td>
-                        <td>Je suis capable de comprendre les grandes lignes d’une conversation, de raconter des expériences et d’écrire un texte simple. Je suis désormais capable de me débrouiller dans de nombreuses situations. </td>
+                        <td>Je suis capable de comprendre les grandes lignes d’une conversation, de raconter des
+                            expériences
+                            et d’écrire un texte simple. Je suis désormais capable de me débrouiller dans de nombreuses
+                            situations. </td>
                     </tr>
                     <tr>
                         <td><input type="radio" id="r23" name="niveauFrancais"></td>
@@ -303,177 +292,171 @@
                         <td><input type="radio" id="r24" name="niveauFrancais"></td>
                         <td>C Utilisateur expériment</td>
                         <td>C1 (autonome) </td>
-                        <td>Je suis capable de tenir une conversation sans difficulté et de m’exprimer spontanément. Je communique avec fluidité et aisance, sans trop chercher mes mots.</td>
+                        <td>Je suis capable de tenir une conversation sans difficulté et de m’exprimer spontanément. Je
+                            communique avec fluidité et aisance, sans trop chercher mes mots.</td>
                     </tr>
                     <tr>
                         <td><input type="radio" id="r25" name="niveauFrancais"></td>
                         <td>C Utilisateur expérimenté </td>
                         <td>C2 (maîtrise) </td>
-                        <td>Je maîtrise totalement la langue. Il s’agit de ma langue maternelle ou de la langue d’un pays étranger dans lequel j’ai vécu longtemps </td>
+                        <td>Je maîtrise totalement la langue. Il s’agit de ma langue maternelle ou de la langue d’un
+                            pays
+                            étranger dans lequel j’ai vécu longtemps </td>
                     </tr>
-                  </table>
+                </table>
+                <!-- FIN Niveau Français -->
+                <br><br><br>
+                <!-- Niveau Anglais -->
+                <label class="pid">Votre niveau de français : Merci de cocher la case adéquate </label>
+                <br>
+                <table id="niveau">
+                    <tr>
+                        <th></th>
+                        <th>Type d’utilisateur</th>
+                        <th>Niveau </th>
+                        <th>Capacités </th>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" id="r27" name="niveauAnglais"></td>
+                        <td>A Utilisateur élémentaire</td>
+                        <td>A1 (introductif ou découverte) </td>
+                        <td>Je suis capable de comprendre et d’employer des formulations simples, de me présenter. </td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" id="r28" name="niveauAnglais"></td>
+                        <td>A Utilisateur élémentaire </td>
+                        <td>A2 (intermédiaire ou usuel) </td>
+                        <td>Je suis capable de comprendre et d’échanger sur des informations simples du quotidien. </td>
+                    </tr>
 
-                  <!-- FIN Niveau Français -->
-
-                  <br><br><br>
-
-                   <!-- Niveau Anglais -->
-                   <label class="pid">Votre niveau de français : Merci de cocher la case adéquate </label>
-                   <br>
-                     <table id="niveau">
-                       <tr>
-                           <th></th>
-                           <th>Type d’utilisateur</th>
-                           <th>Niveau </th>
-                           <th>Capacités </th>
-                       </tr>
-                       <tr>
-                           <td><input type="radio" id="r27" name="niveauAnglais"></td>
-                           <td>A Utilisateur élémentaire</td>
-                           <td>A1 (introductif ou découverte) </td>
-                           <td>Je suis capable de comprendre et d’employer des formulations simples, de me présenter. </td>
-                       </tr>
-                       <tr>
-                           <td><input type="radio" id="r28" name="niveauAnglais"></td>
-                           <td>A Utilisateur élémentaire </td>
-                           <td>A2 (intermédiaire ou usuel) </td>
-                           <td>Je suis capable de comprendre et d’échanger sur des informations simples du quotidien. </td>
-                       </tr>
-                       
-                       <tr>
-                           <td><input type="radio" id="r29" name="niveauAnglais"></td>
-                           <td>B Utilisateur indépendant </td>
-                           <td>B1 (seuil) </td>
-                           <td>Je suis capable de comprendre les grandes lignes d’une conversation, de raconter des expériences et d’écrire un texte simple. Je suis désormais capable de me débrouiller dans de nombreuses situations. </td>
-                       </tr>
-                       <tr>
-                           <td><input type="radio" id="r30" name="niveauAnglais"></td>
-                           <td>B Utilisateur indépendant </td>
-                           <td>B2 (avancé ou indépendant) </td>
-                           <td>Je suis capable de développer un point de vue et d’écrire un texte plus complexe. </td>
-                       </tr>
-                       <tr>
-                           <td><input type="radio" id="r31" name="niveauAnglais"></td>
-                           <td>C Utilisateur expériment</td>
-                           <td>C1 (autonome) </td>
-                           <td>Je suis capable de tenir une conversation sans difficulté et de m’exprimer spontanément. Je communique avec fluidité et aisance, sans trop chercher mes mots.</td>
-                       </tr>
-                       <tr>
-                           <td><input type="radio" id="r32" name="niveauAnglais"></td>
-                           <td>C Utilisateur expérimenté </td>
-                           <td>C2 (maîtrise) </td>
-                           <td>Je maîtrise totalement la langue. Il s’agit de ma langue maternelle ou de la langue d’un pays étranger dans lequel j’ai vécu longtemps </td>
-                       </tr>
-                     </table>
-                     <input type="text" class="form-control" name="langue1" placeholder="Autres langues ?">
-                     <input type="text" class="form-control" name="niveau1" placeholder="Merci de préciser le niveau"><br>
-
-                     <!-- FIN Niveau Anglais -->
-
-                     <!-- Contact entreprise -->
-
-                     <label class="pid">Avez-vous déjà contacté des entreprises ? </label>
-                     <form action="/action_page.php">&nbsp;
-                        <input type="radio" id="r34" name="contactEntreprise">
-                        <label for="r34">oui</label> &nbsp;
-                        <input type="radio" id="r35" name="contactEntreprise">
-                        <label for="r35">non</label> &nbsp;
-                    </form>
-    
-                    <div class="form1">
-                        &nbsp;&nbsp;
-                        <div class="form-group">
-                            <label class="nombreContactEntreprise">Si oui, combien ?</label>
-                            <input type="text" class="form-control" name="nombreContactEntreprise">
-                        </div>
-                        &nbsp;&nbsp;&nbsp;
-                        <div class="form-group">
-                            <label class="nomEntreprise">Si oui, Nom de l’entreprise ? </label>
-                            <input type="text" class="form-control" name="nomEntreprise">
-                        </div>
-                   </div>
-
-                    <label class="adresseSiegeSocial">Adresse du siège social : </label>
-                    <input type="text" class="form-control" name="adresseSiegeSocial">
-                    <br>
-                    <label class="adresseEntreprise">Adresse du site de rattachement de l’alternant(e) </label>
-                    <input type="text" class="form-control" name="adresseEntreprise">
-                    <br>
-                    <label class="pid">Le contrat de travail a-t-il été signé  </label>
-                     <form action="/action_page.php">&nbsp;
-                        <input type="radio" id="r37" name="contratSigne">
-                        <label for="r37">oui</label> &nbsp;
-                        <input type="radio" id="r38" name="contratSigne">
-                        <label for="r38">non</label> &nbsp;
-                        <input type="radio" id="r39" name="contratSigne">
-                        <label for="r39">en cours</label> &nbsp;
-                    </form>
-
+                    <tr>
+                        <td><input type="radio" id="r29" name="niveauAnglais"></td>
+                        <td>B Utilisateur indépendant </td>
+                        <td>B1 (seuil) </td>
+                        <td>Je suis capable de comprendre les grandes lignes d’une conversation, de raconter des
+                            expériences
+                            et d’écrire un texte simple. Je suis désormais capable de me débrouiller dans de nombreuses
+                            situations. </td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" id="r30" name="niveauAnglais"></td>
+                        <td>B Utilisateur indépendant </td>
+                        <td>B2 (avancé ou indépendant) </td>
+                        <td>Je suis capable de développer un point de vue et d’écrire un texte plus complexe. </td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" id="r31" name="niveauAnglais"></td>
+                        <td>C Utilisateur expériment</td>
+                        <td>C1 (autonome) </td>
+                        <td>Je suis capable de tenir une conversation sans difficulté et de m’exprimer spontanément. Je
+                            communique avec fluidité et aisance, sans trop chercher mes mots.</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" id="r32" name="niveauAnglais"></td>
+                        <td>C Utilisateur expérimenté </td>
+                        <td>C2 (maîtrise) </td>
+                        <td>Je maîtrise totalement la langue. Il s’agit de ma langue maternelle ou de la langue d’un
+                            pays
+                            étranger dans lequel j’ai vécu longtemps </td>
+                    </tr>
+                </table>
+                <input type="text" class="form-control" name="langue1" placeholder="Autres langues ?">
+                <input type="text" class="form-control" name="niveau1" placeholder="Merci de préciser le niveau"><br>
+                <!-- FIN Niveau Anglais -->
+                <!-- Contact entreprise -->
+                <label class="pid">Avez-vous déjà contacté des entreprises ? </label>
+                <form action="/action_page.php">&nbsp;
+                    <input type="radio" id="r34" name="contactEntreprise">
+                    <label for="r34">oui</label> &nbsp;
+                    <input type="radio" id="r35" name="contactEntreprise">
+                    <label for="r35">non</label> &nbsp;
+                </form>
+                <div class="form1">
+                    &nbsp;&nbsp;
                     <div class="form-group">
-                        <label class="text-secondary">Date de démarrage du contrat de travail </label>
-                        <input type="date" id="start" name="dateDemarrageContrat" class="form-control">
+                        <label class="nombreContactEntreprise">Si oui, combien ?</label>
+                        <input type="text" class="form-control" name="nombreContactEntreprise" ngModel="">
                     </div>
-
-                    <label class="text-secondary">Personne à contacter dans l’entreprise :  </label>
-                    <div class="form1">
-                        <div class="form-group"> 
-                            <label class="nomContact">Nom</label>
-                            <input type="text" class="form-control" name="nomContact">
-                        </div>
-                     &nbsp;&nbsp;
-                        <div class="form-group">
-                            <label class="prenomContact">Prénom</label>
-                            <input type="text" class="form-control" name="prenomContact">
-                        </div>
-                     &nbsp;&nbsp;
-                     <div class="form-group">
-                         <label class="fonctionContact">Fonction</label>
-                         <input type="text" class="form-control" name="fonctionContact">
-                     </div>
-                     &nbsp;&nbsp;
-                   </div>
-                   <div class="form1">
-                    <div class="form-group"> 
+                    &nbsp;&nbsp;&nbsp;
+                    <div class="form-group">
+                        <label class="nomEntreprise">Si oui, Nom de l’entreprise ? </label>
+                        <input type="text" class="form-control" name="nomEntreprise" ngModel="">
+                    </div>
+                </div>
+                <label class="adresseSiegeSocial">Adresse du siège social : </label>
+                <input type="text" class="form-control" name="adresseSiegeSocial">
+                <br>
+                <label class="adresseEntreprise">Adresse du site de rattachement de l’alternant(e) </label>
+                <input type="text" class="form-control" name="adresseEntreprise">
+                <br>
+                <label class="pid">Le contrat de travail a-t-il été signé  </label>
+                <form action="/action_page.php">&nbsp;
+                    <input type="radio" id="r37" name="contratSigne">
+                    <label for="r37">oui</label> &nbsp;
+                    <input type="radio" id="r38" name="contratSigne">
+                    <label for="r38">non</label> &nbsp;
+                    <input type="radio" id="r39" name="contratSigne">
+                    <label for="r39">en cours</label> &nbsp;
+                </form>
+                <div class="form-group">
+                    <label class="text-secondary">Date de démarrage du contrat de travail </label>
+                    <input type="date" id="start" name="dateDemarrageContrat" class="form-control">
+                </div>
+                <label class="text-secondary">Personne à contacter dans l’entreprise :  </label>
+                <div class="form1">
+                    <div class="form-group">
+                        <label class="nomContact">Nom</label>
+                        <input type="text" class="form-control" name="nomContact" ngModel="">
+                    </div>
+                    &nbsp;&nbsp;
+                    <div class="form-group">
+                        <label class="prenomContact">Prénom</label>
+                        <input type="text" class="form-control" name="prenomContact" ngModel="">
+                    </div>
+                    &nbsp;&nbsp;
+                    <div class="form-group">
+                        <label class="fonctionContact">Fonction</label>
+                        <input type="text" class="form-control" name="fonctionContact" ngModel="">
+                    </div>
+                    &nbsp;&nbsp;
+                </div>
+                <div class="form1">
+                    <div class="form-group">
                         <label class="telContact">N° telephone</label>
-                        <input type="text" class="form-control" name="telContact">
+                        <input type="text" class="form-control" name="telContact" ngModel="">
                     </div>
                     &nbsp;&nbsp;
                     <div class="form-group">
                         <label class="mailContact">Adresse mail</label>
-                        <input type="text" class="form-control" name="mailContact">
+                        <input type="text" class="form-control" name="mailContact" ngModel="">
                     </div>
-                     &nbsp;&nbsp;
-                    </div>
+                    &nbsp;&nbsp;
+                </div>
                 <!-- FIN Contact entreprise -->
-
                 <!-- Permis de conduire -->
-
-
                 <label class="pid">Permis de conduire </label>
                 <form action="/action_page.php">&nbsp;
-                   <input type="radio" id="r40" name="permis">
-                   <label for="r40">oui</label> &nbsp;
-                   <input type="radio" id="r41" name="permis">
-                   <label for="r41">non</label> &nbsp;
-               </form>
-
-               <label class="pid">Êtes-vous véhiculé ?</label>
+                    <input type="radio" id="r40" name="permis">
+                    <label for="r40">oui</label> &nbsp;
+                    <input type="radio" id="r41" name="permis">
+                    <label for="r41">non</label> &nbsp;
+                </form>
+                <label class="pid">Êtes-vous véhiculé ?</label>
                 <form action="/action_page.php">&nbsp;
-                   <input type="radio" id="r42" name="vehicule">
-                   <label for="r42">oui</label> &nbsp;
-                   <input type="radio" id="r43" name="vehicule">
-                   <label for="r43">non</label> &nbsp;
-               </form>
-
-                 <!-- FIN Permis de conduire -->
+                    <input type="radio" id="r42" name="vehicule">
+                    <label for="r42">oui</label> &nbsp;
+                    <input type="radio" id="r43" name="vehicule">
+                    <label for="r43">non</label> &nbsp;
+                </form>
+                <!-- FIN Permis de conduire -->
                 <hr>
-                 <!-- Connaissance ESIC -->
+                <!-- Connaissance ESIC -->
                 <label class="pid">Comment avez-vous connu ESIC ? </label>
                 <form action="/action_page.php">
                     <input type="radio" id="r50" name="connaissanceEsic">
                     <label for="r50">Internet</label><br>
                     <input type="radio" id="r51" name="connaissanceEsic">
-                    <label for="r51">Presse</label><br>  
+                    <label for="r51">Presse</label><br>
                     <input type="radio" id="r52" name="connaissanceEsic">
                     <label for="r52"> Par relation </label><br>
                     <input type="radio" id="r53" name="connaissanceEsic">
@@ -485,44 +468,36 @@
                     <input type="radio" id="r56" name="connaissanceEsic">
                     <label for="r56">Mission locale</label><br>
                 </form>
-                   <!-- FIN Connaissance ESIC -->
-                   <hr>
-                    <!-- QUESTIONS -->
-                   <label class="pid">  Merci de répondre à chacune des questions :  </label>
-                   <label class="text-secondary" > 1 – Quelles sont vos attentes par rapport à la formation ?  </label>
-                   <textarea id="story" name="question1" rows="5" cols="33">  </textarea>
-                    <br>
-                   <label class="text-secondary"> 2 – Quelles sont vos attentes par rapport à l’entreprise ?   </label>
-                   <textarea id="story" name="question2" rows="5" cols="33"> </textarea>
-                   <br>
-                   <label class="text-secondary"> 3 – Quelles sont vos motivations professionnelles ? </label>
-                   <textarea id="story" name="question3" rows="5" cols="33"> </textarea>
-                   <br>
-                   <label class="text-secondary"> 4 – Dans quel secteur d’activité aimeriez-vous travailler ? Pourquoi ? </label>
-                   <textarea id="story" name="question4" rows="5" cols="33"> </textarea>
-                   <br>
-                   <label class="text-secondary"> 5 – Quels sont vos objectifs à long terme ?   </label>
-                   <textarea id="story" name="question5" rows="5" cols="33"> </textarea>
-                   <br>
-                   <label class="text-secondary"> 6 – Parmi vos emplois précédents, lequel vous a le plus intéressé (le cas échéant) ? Pourquoi ?   </label>
-                   <textarea id="story" name="question6" rows="5" cols="33"> </textarea>
-              <br><br>
-                     <!-- FIN QUESTIONS -->
-              <button name="Enregistrer" class="btn1" onclick="window.location.href='/home'">Soumettre ma candidature</button>
-              
-              <br>
-
-          </div>
-      </div>
-      <br>
-  </div>
-
-
-
-
-
-
-
-
-
-
+                <!-- FIN Connaissance ESIC -->
+                <hr>
+                <!-- QUESTIONS -->
+                <label class="pid"> Merci de répondre à chacune des questions : </label>
+                <label class="text-secondary"> 1 – Quelles sont vos attentes par rapport à la formation ?  </label>
+                <textarea id="story" name="question1" rows="5" cols="33" ngModel="">  </textarea>
+                <br>
+                <label class="text-secondary"> 2 – Quelles sont vos attentes par rapport à l’entreprise ?  </label>
+                <textarea id="story" name="question2" rows="5" cols="33" ngModel=""> </textarea>
+                <br>
+                <label class="text-secondary"> 3 – Quelles sont vos motivations professionnelles ? </label>
+                <textarea id="story" name="question3" rows="5" cols="33" ngModel=""> </textarea>
+                <br>
+                <label class="text-secondary"> 4 – Dans quel secteur d’activité aimeriez-vous travailler ? Pourquoi ?
+                </label>
+                <textarea id="story" name="question4" rows="5" cols="33" ngModel=""> </textarea>
+                <br>
+                <label class="text-secondary"> 5 – Quels sont vos objectifs à long terme ?  </label>
+                <textarea id="story" name="question5" rows="5" cols="33" ngModel=""> </textarea>
+                <br>
+                <label class="text-secondary"> 6 – Parmi vos emplois précédents, lequel vous a le plus intéressé (le cas
+                    échéant) ? Pourquoi ?  </label>
+                <textarea id="story" name="question6" rows="5" cols="33" ngModel=""> </textarea>
+                <br><br>
+                <!-- FIN QUESTIONS -->
+                <button name="Enregistrer" class="btn1" onclick="window.location.href='/home'" type="submit">Soumettre
+                    ma
+                    candidature</button>
+                <br>
+            </div>
+        </div><br>
+    </form>
+</div>
