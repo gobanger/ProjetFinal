@@ -370,7 +370,8 @@
 
                      <!-- FIN Niveau Anglais -->
 
-                   
+                     <!-- Contact entreprise -->
+
                      <label class="pid">Avez-vous déjà contacté des entreprises ? </label>
                      <form action="/action_page.php">&nbsp;
                         <input type="radio" id="r34" name="contactEntreprise">
@@ -382,22 +383,22 @@
                     <div class="form1">
                         &nbsp;&nbsp;
                         <div class="form-group">
-                            <label class="identifiantPoleEmploi">Si oui, combien ?</label>
-                            <input type="text" class="form-control" name="identifiantPoleEmploi">
+                            <label class="nombreContactEntreprise">Si oui, combien ?</label>
+                            <input type="text" class="form-control" name="nombreContactEntreprise">
                         </div>
                         &nbsp;&nbsp;&nbsp;
                         <div class="form-group">
-                            <label class="identifiantPoleEmploi">Si oui, Nom de l’entreprise ? </label>
-                            <input type="text" class="form-control" name="identifiantPoleEmploi">
+                            <label class="nomEntreprise">Si oui, Nom de l’entreprise ? </label>
+                            <input type="text" class="form-control" name="nomEntreprise">
                         </div>
                    </div>
 
-                    <label class="identifiantPoleEmploi">Adresse du siège social : </label>
+                    <label class="adresseSiegeSocial">Adresse du siège social : </label>
                     <input type="text" class="form-control" name="adresseSiegeSocial">
                     <br>
-                    <label class="identifiantPoleEmploi">Adresse du site de rattachement de l’alternant(e) </label>
+                    <label class="adresseEntreprise">Adresse du site de rattachement de l’alternant(e) </label>
                     <input type="text" class="form-control" name="adresseEntreprise">
-
+                    <br>
                     <label class="pid">Le contrat de travail a-t-il été signé  </label>
                      <form action="/action_page.php">&nbsp;
                         <input type="radio" id="r37" name="contratSigne">
@@ -406,36 +407,108 @@
                         <label for="r38">non</label> &nbsp;
                         <input type="radio" id="r39" name="contratSigne">
                         <label for="r39">en cours</label> &nbsp;
-                        
                     </form>
+
                     <div class="form-group">
                         <label class="text-secondary">Date de démarrage du contrat de travail </label>
                         <input type="date" id="start" name="dateDemarrageContrat" class="form-control">
                     </div>
 
+                    <label class="text-secondary">Personne à contacter dans l’entreprise :  </label>
+                    <div class="form1">
+                        <div class="form-group"> 
+                            <label class="nomContact">Nom</label>
+                            <input type="text" class="form-control" name="nomContact">
+                        </div>
+                     &nbsp;&nbsp;
+                        <div class="form-group">
+                            <label class="prenomContact">Prénom</label>
+                            <input type="text" class="form-control" name="prenomContact">
+                        </div>
+                     &nbsp;&nbsp;
+                     <div class="form-group">
+                         <label class="fonctionContact">Fonction</label>
+                         <input type="text" class="form-control" name="fonctionContact">
+                     </div>
+                     &nbsp;&nbsp;
+                   </div>
+                   <div class="form1">
+                    <div class="form-group"> 
+                        <label class="telContact">N° telephone</label>
+                        <input type="text" class="form-control" name="telContact">
+                    </div>
+                    &nbsp;&nbsp;
+                    <div class="form-group">
+                        <label class="mailContact">Adresse mail</label>
+                        <input type="text" class="form-control" name="mailContact">
+                    </div>
+                     &nbsp;&nbsp;
+                    </div>
+                <!-- FIN Contact entreprise -->
 
-                   
-   
-                     
-   
-   
-                  
-                   
+                <!-- Permis de conduire -->
 
 
-                  
+                <label class="pid">Permis de conduire </label>
+                <form action="/action_page.php">&nbsp;
+                   <input type="radio" id="r40" name="permis">
+                   <label for="r40">oui</label> &nbsp;
+                   <input type="radio" id="r41" name="permis">
+                   <label for="r41">non</label> &nbsp;
+               </form>
 
+               <label class="pid">Êtes-vous véhiculé ?</label>
+                <form action="/action_page.php">&nbsp;
+                   <input type="radio" id="r42" name="vehicule">
+                   <label for="r42">oui</label> &nbsp;
+                   <input type="radio" id="r43" name="vehicule">
+                   <label for="r43">non</label> &nbsp;
+               </form>
 
-               
-                
-
-                
-        
-            
-
-
-              <br>
-              <button name="Enregistrer" class="btn1" onclick="window.location.href='/home'">Soumettre mes documents</button>
+                 <!-- FIN Permis de conduire -->
+                <hr>
+                 <!-- Connaissance ESIC -->
+                <label class="pid">Comment avez-vous connu ESIC ? </label>
+                <form action="/action_page.php">
+                    <input type="radio" id="r50" name="connaissanceEsic">
+                    <label for="r50">Internet</label><br>
+                    <input type="radio" id="r51" name="connaissanceEsic">
+                    <label for="r51">Presse</label><br>  
+                    <input type="radio" id="r52" name="connaissanceEsic">
+                    <label for="r52"> Par relation </label><br>
+                    <input type="radio" id="r53" name="connaissanceEsic">
+                    <label for="r53">Portes ouvertes</label><br>
+                    <input type="radio" id="r54" name="connaissanceEsic">
+                    <label for="r54">Salon </label><br>
+                    <input type="radio" id="r55" name="connaissanceEsic">
+                    <label for="r55">Pole emploi</label><br>
+                    <input type="radio" id="r56" name="connaissanceEsic">
+                    <label for="r56">Mission locale</label><br>
+                </form>
+                   <!-- FIN Connaissance ESIC -->
+                   <hr>
+                    <!-- QUESTIONS -->
+                   <label class="pid">  Merci de répondre à chacune des questions :  </label>
+                   <label class="text-secondary" > 1 – Quelles sont vos attentes par rapport à la formation ?  </label>
+                   <textarea id="story" name="question1" rows="5" cols="33">  </textarea>
+                    <br>
+                   <label class="text-secondary"> 2 – Quelles sont vos attentes par rapport à l’entreprise ?   </label>
+                   <textarea id="story" name="question2" rows="5" cols="33"> </textarea>
+                   <br>
+                   <label class="text-secondary"> 3 – Quelles sont vos motivations professionnelles ? </label>
+                   <textarea id="story" name="question3" rows="5" cols="33"> </textarea>
+                   <br>
+                   <label class="text-secondary"> 4 – Dans quel secteur d’activité aimeriez-vous travailler ? Pourquoi ? </label>
+                   <textarea id="story" name="question4" rows="5" cols="33"> </textarea>
+                   <br>
+                   <label class="text-secondary"> 5 – Quels sont vos objectifs à long terme ?   </label>
+                   <textarea id="story" name="question5" rows="5" cols="33"> </textarea>
+                   <br>
+                   <label class="text-secondary"> 6 – Parmi vos emplois précédents, lequel vous a le plus intéressé (le cas échéant) ? Pourquoi ?   </label>
+                   <textarea id="story" name="question6" rows="5" cols="33"> </textarea>
+              <br><br>
+                     <!-- FIN QUESTIONS -->
+              <button name="Enregistrer" class="btn1" onclick="window.location.href='/home'">Soumettre ma candidature</button>
               
               <br>
 
