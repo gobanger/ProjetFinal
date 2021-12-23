@@ -1,6 +1,6 @@
 <!-- Info formations -->
-<div class="container mt-5">
-    <div class="row">
+<div class="container mt-5 mlr-15">
+    <div class="row fs">
         <div class="col-sm-6" style="text-align: center;" *ngFor="let f of formations">
             <div class="card">
                 <button style="border: none;" (click)="afficherCacher(f.id)">
@@ -8,7 +8,7 @@
                         Formation : <br>{{ f.nomComplet }}
                     </p>
                 </button>
-                <div id="info{{f.id}}" hidden> <br>
+                <div class="info" id="info{{f.id}}" hidden> <br>
                     <p>Niveau de certification : {{ f.nivCertif }} </p> <br>
                     <p>Intitulé de la formation : {{ f.intitule }} </p> <br>
                     <button (click)="showModify(f.id)">Modifier la formation</button>
@@ -16,9 +16,9 @@
                     <div class="modifFormation" id="{{f.id}}" hidden>
                         <!-- Modification formation -->
                         <form #connectFormulair="ngForm" (ngSubmit)="modifyFormation(connectFormulair.value)">
-                            <div class="form-group">
+                            <div class="form-group" hidden>
                                 <label for="" class="text-secondary">id de la formation</label>
-                                <input  type="text" class="form-control" name="id" ngModel="{{ f.id }}" disabled>
+                                <input  type="text" class="form-control" name="id" ngModel="{{ f.id }}">
                             </div>
                             <div class="form-group">
                                 <label for="" class="text-secondary">Nom de la formation</label>
@@ -43,8 +43,8 @@
     </div>
     <br>
     <div class="d-flex justify-content-center my-font">
-        <button type="button" class="btn btn-success font-size" (click)="ajoutShow()">Ajouter une formation</button>
-        <button type="button" class="btn btn-danger font-size" (click)="deleteShow()">Supprimer une formation</button>
+        <button type="button" class="noselect patate"  (click)="ajoutShow()"><span class='text'>Add</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/></svg></span></button> <br><br> <br>
+        <button type="button" class="noselect patate" style="background: red; background: #e62222;" (click)="deleteShow()"><span class='text'>Delete</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/></svg></span></button>
     </div>
 
     <!-- Suppression formation-->

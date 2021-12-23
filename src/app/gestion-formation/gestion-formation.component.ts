@@ -1,4 +1,5 @@
 import { HttpClient } from '@angular/common/http';
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit, ViewChild, ɵɵqueryRefresh } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 
@@ -59,14 +60,16 @@ export class GestionFormationComponent implements OnInit {
       error: (err) => {
         console.log(err);
       }
-    })
+    });
+    this.lesFormations();
+    this.ngOnInit();
   }
   ajoutShow(){
     document.getElementById("ajout")?.removeAttribute("hidden")
   }
   ajoutHide(){
     document.getElementById("ajout")?.setAttribute("hidden", "");
-    window.location.reload();
+    this.lesFormations();
   }
   cancelAjout(){
     document.getElementById("ajout")?.setAttribute("hidden", "");
@@ -78,10 +81,13 @@ export class GestionFormationComponent implements OnInit {
   }
   deleteHide(){
     document.getElementById("delete")?.setAttribute("hidden", "");
-    window.location.reload();
+    this.lesFormations();
+    this.ngOnInit();
   }
   deleteFormation(info:any){
     this.http.delete(this.auth.lienApi + "formation/" +  info.intitule ).subscribe({next: (data) => {console.log(info)} });
+    this.lesFormations();
+    this.ngOnInit();
   }
   cancelDelete(){
     document.getElementById("delete")?.setAttribute("hidden", "");
@@ -92,11 +98,15 @@ export class GestionFormationComponent implements OnInit {
   }
   modifyCancel(id:any){
     document.getElementById(id)?.setAttribute("hidden", "");
+    this.lesFormations();
   }
 
   modifyFormation(info:any){
-    this.http.put('http://localhost:8086/formation/' + info.id , info).subscribe(data => {
-      console.log(info);
+    this.http.put('http://localhost:8086/formation/' + info.id , info).subscribe({
+      error: (err) => {console.log(info)},
+      next: (data) => {console.log(data)}
     });
+    this.lesFormations();
+    this.ngOnInit();
   }
 }
