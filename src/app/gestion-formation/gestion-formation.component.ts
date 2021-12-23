@@ -53,7 +53,9 @@ export class GestionFormationComponent implements OnInit {
   createFormation(info:any){
     this.http.post('http://localhost:8086/formation', info).subscribe({
       next: (data) =>{
-        this.infoCreate = data
+        info = data;
+        console.log(data);
+        alert("Formation créée")
       },
       error: (err) => {
         console.log(err);
@@ -65,7 +67,6 @@ export class GestionFormationComponent implements OnInit {
   }
   ajoutHide(){
     document.getElementById("ajout")?.setAttribute("hidden", "");
-    this.msgConfirmation = "Formation enregistrer";
     window.location.reload();
   }
   cancelAjout(){
@@ -82,7 +83,28 @@ export class GestionFormationComponent implements OnInit {
     window.location.reload();
   }
   deleteFormation(info:any){
-    this.formationToDelete = this.http.get(this.auth.lienApi+ "/formation/" + info);
-    this.http.delete(this.auth.lienApi + "/formation/" + this.formationToDelete.intitule);
+    this.formationToDelete = this.http.get(this.auth.lienApi+ "/formation/" + "{" + info.nomComplet + "}");
+    this.http.delete(this.auth.lienApi + "/formation/" + this.formationToDelete.intitule).subscribe({
+      next: (data) => {
+        info = data;
+      },
+      error : (err) =>{
+        console.log(err)
+      }
+    });
+  }
+  cancelDelete(){
+    document.getElementById("delete")?.setAttribute("hidden", "");
+  }
+
+  modifyFormation(info:any){
+    this.http.put(this.auth.lienApi + '/formation/' + info.id, info).subscribe({
+      next : (data) => {
+        info =data;
+      },
+      error : (err) => {
+        console.log(err);
+      }
+    });
   }
 }
