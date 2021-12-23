@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, ViewChild, ɵɵqueryRefresh } from '@angular/core';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-gestion-formation',
@@ -14,9 +15,10 @@ export class GestionFormationComponent implements OnInit {
   infoDelete:any;
   etat=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 
-  constructor(private http : HttpClient) { }
+  constructor(private http : HttpClient, private auth: AuthService) { }
 
   ngOnInit(): void {
+    this.auth.canActive();
     this.lesFormations();
   }
 

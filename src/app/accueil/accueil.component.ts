@@ -38,7 +38,16 @@ export class AccueilComponent implements OnInit {
         case 'CANDIDAT':
           this.route.navigateByUrl('accueilcandidat1');
           break;
-          case 'ADMIN':
+          case 'ADMINISTRATEUR':
+          this.route.navigateByUrl('home');
+          break;
+          case 'FORMATEUR':
+          this.route.navigateByUrl('home');
+          break;
+          case 'RESPONSABLE_PEDAGOGIQUE':
+          this.route.navigateByUrl('home');
+          break;
+          case 'CONSEILLER_DE_FORMATION':
           this.route.navigateByUrl('home');
           break;
       

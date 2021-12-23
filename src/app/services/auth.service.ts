@@ -33,7 +33,7 @@ export class AuthService {
 
   isConnected(): boolean {
     if (this.getUserConnect() != null) {
-      return true;
+        return true;
     }
     else {
       return false;
@@ -83,6 +83,34 @@ export class AuthService {
 
   IfAdminConnected(): boolean {
     if(this.getUserConnect().role.roleName === 'ADMINISTRATEUR') { return true; } else {
+      return false;
+    }
+  }
+
+  adminSideNav() : boolean{
+    if(this.isConnected()){
+      if(this.getUserConnect().role == 'CANDIDAT'){
+        return false;
+      }
+      else{
+        return true;
+      }
+    }
+    else{
+      return false;
+    }
+  }
+
+  candidatSideNav() : boolean{
+    if(this.isConnected()){
+      if(this.getUserConnect().role == 'CANDIDAT'){
+        return true;
+      }
+      else{
+        return false;
+      }
+    }
+    else{
       return false;
     }
   }
