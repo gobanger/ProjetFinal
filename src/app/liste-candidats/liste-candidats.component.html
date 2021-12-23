@@ -1,0 +1,17 @@
+<div class="container">
+    <table class="center" id="customers">
+        <tr>
+          <th>Prénom</th>
+          <th>Nom</th>
+          <th>Adresse mail</th>
+          <th>Formation</th>
+        </tr>
+        <tr *ngFor="let c of candidats">
+          <td>{{ c.prenom }}</td>
+          <td>{{ c.nomUsage }}</td>
+          <td>{{ c.mail }}</td>
+          <td>{{ c.formation }}</td>
+          <hr>
+        </tr>
+      </table>
+</div>

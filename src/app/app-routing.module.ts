@@ -15,6 +15,7 @@ import { TestsComponent } from './tests/tests.component';
 import { TentativeUsurpComponent } from './tentative-usurp/tentative-usurp.component';
 import { ChoixformationComponent } from './choixformation/choixformation.component';
 import { TestcandidatComponent } from './testcandidat/testcandidat.component';
+import { ListeCandidatsComponent } from './liste-candidats/liste-candidats.component';
 
 
 const routes: Routes = [
@@ -33,6 +34,7 @@ const routes: Routes = [
   {path : 'tentative', component : TentativeUsurpComponent},
   {path : 'choixformation', component : ChoixformationComponent},
   {path : 'testcandidat', component : TestcandidatComponent},
+  {path : 'listeCandidats', component : ListeCandidatsComponent},
 
   { path: '', redirectTo: 'accueilcommun', pathMatch: 'full' },
 ];
