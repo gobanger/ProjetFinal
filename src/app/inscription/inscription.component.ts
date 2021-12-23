@@ -9,7 +9,6 @@ import { AppComponent } from '../app.component';
 })
 export class InscriptionComponent implements OnInit {
 
-  visibleNav: AppComponent = new AppComponent;
 
   information : any;
   msgValidation: any;
@@ -19,7 +18,6 @@ export class InscriptionComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.visibleNav.setAdminNavBar(false);
   }
 
   inscription(information:any): any{
