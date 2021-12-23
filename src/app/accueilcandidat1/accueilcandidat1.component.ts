@@ -10,11 +10,11 @@ export class Accueilcandidat1Component implements OnInit {
 
   constructor(private auth: AuthService) { }
 
-  msgBienvenu : any;
+  msgBienvenue : any;
 
   ngOnInit(): void {
     this.auth.canActive();
-    this.msgBienvenu = "Bienvenue " + this.auth.getUserConnect().nomUsage + " " + this.auth.getUserConnect().prenom; 
+    this.msgBienvenue = "Bienvenue " + this.auth.getUserConnect().nomUsage + " " + this.auth.getUserConnect().prenom; 
   }
 
 }
