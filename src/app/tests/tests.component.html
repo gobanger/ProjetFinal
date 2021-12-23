@@ -1,4 +1,77 @@
-<p style="margin-top: 3%;margin-left: 25%; position: relative; padding : 10%">ok</p>
-<div class="container">
-    
+<div class="container" id="questionParFormation">
+    <label for="" class="text-secondary">Sélectionnez la formation : </label> 
+    <select class="slt-rep" id="formationAAfficher" [(ngModel)]="selectedOne">
+        <option>-- Sélectionner formation --</option>
+        <option *ngFor="let f of formations">{{ f.nomComplet }}</option>
+    </select>
+    <p hidden>{{ fofo }}</p>
+    <br><br>
+    <table class="center" id="customers">
+        <tr>
+          <th>Question</th>
+          <th>Choix 1</th>
+          <th>Choix 2</th>
+          <th>Choix 3</th>
+          <th>Choix 4</th>
+          <th>Réponse</th>
+        </tr>
+        <tr *ngFor="let q of question">
+          <td>{{ q.txt }}</td>
+          <td>{{ q.p1 }}</td>
+          <td>{{ q.p2 }}</td>
+          <td>{{ q.p3 }}</td>
+          <td>{{ q.p4 }}</td>
+          <td>{{ q.reponse }}</td>
+          <hr>
+        </tr>
+      </table>
+</div>
+<br><br>
+<button type="button" class="noselect patate"  (click)="ajoutShow()"><span class='text'>Add</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/></svg></span></button> <br><br> <br>
+<div class="container plr-15" id="creationQuestion" hidden>
+    <form #connect="ngForm" (ngSubmit)="creationQCM(connect.value)">
+        <div class="form-group">
+            <label for="" class="text-secondary">Entrez la question</label>
+            <input type="text" class="form-control" name="txt" ngModel="">
+        </div>
+        <hr>
+        <div class="listeQuestion">
+            <div class="form-group">
+                <label for="" class="text-secondary">Entrez le premier choix</label>
+                <input type="text" class="form-control" name="p1" ngModel="">
+            </div>
+            <div class="form-group">
+                <label for="" class="text-secondary">Entrez le deuxieme choix</label>
+                <input type="text" class="form-control" name="p2" ngModel="">
+            </div>
+            <div class="form-group">
+                <label for="" class="text-secondary">Entrez le troisieme choix</label>
+                <input type="text" class="form-control" name="p3" ngModel="">
+            </div>
+            <div class="form-group">
+                <label for="" class="text-secondary">Entrez le quatrieme choix</label>
+                <input type="text" class="form-control" name="p4" ngModel="">
+            </div>
+        </div>
+        <hr>
+        <div class="form-group">
+            <label for="" class="text-secondary">Sélectionnez la répone  : </label> 
+            <select class="slt-rep" name="reponse" ngModel="">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="" class="text-secondary">Sélectionnez la formation : </label> 
+            <select class="slt-rep" ngModel="" name="formation">
+                <option *ngFor="let f of formations">{{ f.nomComplet }}</option>
+            </select>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary btn-block">Enregistrer la question</button>
+    </form>
+    <br>
+    <button type="submit" class="btn btn-primary btn-block" (click)="cancelCreation()">Annuler</button>
 </div>

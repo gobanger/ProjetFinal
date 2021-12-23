@@ -15,12 +15,14 @@ export class GestionEntretienComponent implements OnInit {
   informations: any;
   msgValidation:any;
   msgErrCandidat:any;
+  emetteur:any;
 
   candidats: any;
 
   ngOnInit(): void {
     this.lesCandidats();
     this.auth.canActive();
+    this.emetteur = JSON.stringify(this.auth.getUserConnect());
   }
 
   envoi(informations: any): any{
@@ -38,7 +40,7 @@ export class GestionEntretienComponent implements OnInit {
   }
 
   lesCandidats(){
-    this.http.get('http://localhost:8086/admin/utilisateurs').subscribe({
+    this.http.get('http://localhost:8086/candidats').subscribe({
       next: (data) => {
         this.candidats = data;
         console.log(data);
