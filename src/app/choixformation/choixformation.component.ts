@@ -27,9 +27,10 @@ export class ChoixformationComponent implements OnInit {
       error:(err) => {
         console.log(information);
       },
-
-
     })
   }
+
+
+
 
 }
