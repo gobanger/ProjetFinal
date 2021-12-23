@@ -9,7 +9,7 @@ import { AuthService } from '../services/auth.service';
 })
 export class GestionFormationComponent implements OnInit {
 
-  formationToDelete : any;
+  formationToModify : any;
   formations : any;
   msgConfirmation: any;
   infoCreate:any;
@@ -54,8 +54,7 @@ export class GestionFormationComponent implements OnInit {
     this.http.post('http://localhost:8086/formation', info).subscribe({
       next: (data) =>{
         info = data;
-        console.log(data);
-        alert("Formation créée")
+        console.log(info);
       },
       error: (err) => {
         console.log(err);
@@ -79,32 +78,26 @@ export class GestionFormationComponent implements OnInit {
   }
   deleteHide(){
     document.getElementById("delete")?.setAttribute("hidden", "");
-    this.msgConfirmation = "Formation supprimer";
     window.location.reload();
   }
   deleteFormation(info:any){
-    this.formationToDelete = this.http.get(this.auth.lienApi+ "/formation/" + "{" + info.nomComplet + "}");
-    this.http.delete(this.auth.lienApi + "/formation/" + this.formationToDelete.intitule).subscribe({
-      next: (data) => {
-        info = data;
-      },
-      error : (err) =>{
-        console.log(err)
-      }
-    });
+    this.http.delete(this.auth.lienApi + "formation/" +  info.intitule ).subscribe({next: (data) => {console.log(info)} });
   }
   cancelDelete(){
     document.getElementById("delete")?.setAttribute("hidden", "");
   }
 
+  showModify(id:any){
+    document.getElementById(id)?.removeAttribute("hidden");
+  }
+  modifyCancel(id:any){
+    document.getElementById(id)?.setAttribute("hidden", "");
+  }
+
   modifyFormation(info:any){
-    this.http.put(this.auth.lienApi + '/formation/' + info.id, info).subscribe({
-      next : (data) => {
-        info =data;
-      },
-      error : (err) => {
-        console.log(err);
-      }
-    });
+    /*this.formationToModify = this.http.get('http')
+    this.http.put('http://localhost:8086/formation/' + , info).subscribe(data => {
+      console.log(info);
+    });*/
   }
 }
