@@ -1,0 +1,139 @@
+<br>
+<h1> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Information de l'inscrit</h1>
+
+<div class="container mt-5 mlr-15">
+    <div class="row fs">
+        <div class="col-sm-6"  *ngFor="let c of candidats">
+            <table width="150%" style="text-align:left">
+                <tbody>
+                    
+                    <p style="text-align: center;"> Candidats :</p>  
+                
+                    <tr>
+                        <td>Civilité : {{c.civilite}}</td>
+                        <td>Nom d'usage {{c.nomUsage}}</td>
+                        <td>Prenom : {{ c.prenom }}</td>
+                    </tr>
+                    <br>
+                     <tr>
+                        <td>Nom de naissance : {{ c.nomUsage }}</td>
+                        <td>Date de naissance : {{c.dateNaissance}}</td>
+                        <td>Lieu de naissance : {{ c.lieuNaissance }}</td>
+                     </tr>
+                     <br>
+                     <p style="text-align: center;"> Coordonnées :</p>  
+                     
+                    <tr>
+                        <td > Adresse : {{ c.adresse}}</td>
+                        <td> Code Postal : {{ c.codePostal}}</td>
+                        <td> Ville : {{ c.ville}}</td>
+                    </tr>
+                     <br>
+                     <tr>
+                        <td > N° téléphone fixe : {{ c.telFixe}}</td>
+                        <td> N° téléphone portable : {{ c.telPortable}}</td>
+                        <td> Adresse mail : {{ c.mail}}</td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <td> Nationalité : {{ c.nationalite}}</td>
+                       <td colspan="2"> Numéro de sécurité sociale :  {{ c.numSecuSocial}}</td>
+                    </tr>
+                    <br>
+                    <p style="text-align: center;"> Représentant :</p>
+                    
+                    <tr>
+                        <td>Nom : {{c.nomRepresentant}}</td>
+                        <td>Prenom : {{c.prenomRepresentant}}</td>
+                        <td>Type : {{ c.typeRepresentant }}</td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <td>Adresse : {{c.adresseRepresentant}}</td>
+                        <td>Code Postal : {{c.codePostalRepresentant}}</td>
+                        <td>Ville : {{ c.villeRepresentant }}</td>
+                    </tr>
+                    <br>
+                    <tr>
+                       <td > N° téléphone fixe : {{ c.telFixeRepresentant}}</td>
+                       <td> N° téléphone portable : {{ c.telPortableRepresentant}}</td>
+                       <td> Adresse mail : {{ c.emailRepresentant}}</td>
+                   </tr>
+                   <br>
+                   <tr>
+                      <td > Niveau français : {{ c.niveauFrancais}}</td>
+                      <td> Niveau anglais : {{ c.niveauAnglais}}</td>
+                      <td> Permis : {{ c.permis}}</td>
+                  </tr>
+                  <br>
+                   <tr>
+                      <td > Langue 3: {{ c.langueautre1}}</td>
+                      <td> Niveau langue 3: {{ c.niveauLangue1}}</td>
+                      <td> Langue 4 : {{ c.permis}}</td>
+                  </tr>
+                   <br>
+                    <tr>
+                    <td > Situation actuelle du candidat </td>
+                    <td colspan="2"> {{ c.situationActuelle}}</td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <td> Dernière classe fréquentée : {{ c.nomConseillerMissionLocal}} </td>
+                        <td> Dernier diplôme obtenu : {{c.diplome1}} </td>
+                        <td> Autre diplôme : {{c.diplome1}}</td>
+                    </tr>
+                    <br>
+                    <p style="text-align: center;"> Handicap :</p>
+                    
+                    <tr>
+                       <td > Nom de l'organisme : {{ c.nomOrganisme}}</td>
+                       <td> Coordonnées de l'organisme : {{ c.coordOrganisme}}</td>
+                       <td> Besoin particulier : {{ c.besoinParticulier}}</td>
+                   </tr>
+                   <br>
+                   <p style="text-align: center;"> Pole Emploi :</p>
+                   <tr>
+                    <td colspan="2"> N° identifiant : {{ c.identifiantPoleEmploi}}</td>
+                    <td>  Date d'Inscription : {{ c.inscriptionPoleEmploi}}</td>
+                    </tr>
+                    <br>
+                    <p style="text-align: center;"> Mission local :</p>
+                    <tr>
+                        <td colspan="2"> Coordonnées de la mission locale : {{ c.coordMissionLocal}}</td>
+                        <td> nom du conseiller : {{ c.nomConseillerMissionLocal}}</td>
+                    </tr>
+                    <br>
+                    <p style="text-align: center;"> Questions :</p>
+                    <p>1 – Quelles sont vos attentes par rapport à la formation ?</p>
+                    <tr>
+                        <td colspan="3">{{ c.question1}}</td>
+                    </tr>
+                    <p>2 – Quelles sont vos attentes par rapport à l’entreprise ?</p>
+                    <tr>
+                        <td colspan="3">{{ c.question2}}</td>
+                    </tr>
+                    <p>3 – Quelles sont vos motivations professionnelles ?</p>
+                    <tr>
+                        <td colspan="3">{{ c.question3}}</td>
+                    </tr>
+                    <p>4 – Dans quel secteur d’activité aimeriez-vous travailler ? Pourquoi ?</p>
+                    <tr>
+                        <td colspan="3">{{ c.question4}}</td>
+                    </tr>
+                    <p>5 – Quels sont vos objectifs à long terme ?</p>
+                    <tr>
+                        <td colspan="3">{{ c.question5}}</td>
+                    </tr>
+                    <p>6 – Parmi vos emplois précédents, lequel vous a le plus intéressé ? Pourquoi ?</p>
+                    <tr>
+                        <td colspan="3">{{ c.question6}}</td>
+                    </tr>
+                </tbody>
+
+            </table>
+           
+               
+        </div>
+    </div>
+</div>
+

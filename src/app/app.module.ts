@@ -29,6 +29,7 @@ import { ListeCandidatsComponent } from './liste-candidats/liste-candidats.compo
 import { MoncompteComponent } from './moncompte/moncompte.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
+import { GestionInscriptionComponent } from './gestion-inscription/gestion-inscription.component';
 
 
 
@@ -53,7 +54,8 @@ import {MatButtonModule} from '@angular/material/button';
     ChoixformationComponent,
     TestcandidatComponent,
     ListeCandidatsComponent,
-    MoncompteComponent
+    MoncompteComponent,
+    GestionInscriptionComponent
   ],
   imports: [
     BrowserModule,
