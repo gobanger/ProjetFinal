@@ -3,11 +3,11 @@
 
 <div class="container mt-5 mlr-15">
     <div class="row fs">
-        <div class="col-sm-6"  *ngFor="let c of candidats">
+        <div class="col-sm-6">
             <table width="150%" style="text-align:left">
                 <tbody>
                     
-                    <p style="text-align: center;"> Candidats :</p>  
+                    <p style="text-align: center;"> Candidats : {{ c.nomUsage }} </p>  
                 
                     <tr>
                         <td>Civilité : {{c.civilite}}</td>

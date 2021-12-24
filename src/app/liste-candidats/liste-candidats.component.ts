@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-liste-candidats',
@@ -8,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ListeCandidatsComponent implements OnInit {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private route: Router, private auth: AuthService) { }
 
   candidats:any;
 
@@ -23,5 +25,10 @@ export class ListeCandidatsComponent implements OnInit {
       },
       error: (err) => {console.log(err)}
     });
+  }
+
+  goToDetail(info: any){
+    this.auth.candidatChoisi = info;
+    this.route.navigateByUrl("gestion-inscription");
   }
 }

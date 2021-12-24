@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-gestion-inscription',
@@ -8,18 +9,19 @@ import { HttpClient } from '@angular/common/http';
 })
 export class GestionInscriptionComponent implements OnInit {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private auth: AuthService) { }
 
-  candidats:any;
+  c:any;
 
   ngOnInit(): void {
     this.lesCandidats();
   }
 
   lesCandidats(){
-    this.http.get("http://localhost:8086/candidats").subscribe({
+    console.log('candidat ', this.auth.candidatChoisi)
+    this.http.get(this.auth.lienApi + 'admin/utilisateurs/' + this.auth.candidatChoisi.id).subscribe({
       next: (data) => {
-        this.candidats = data;
+        this.c = data;
       },
       error: (err) => {console.log(err)}
     });

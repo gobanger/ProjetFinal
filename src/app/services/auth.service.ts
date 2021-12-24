@@ -12,6 +12,8 @@ export class AuthService {
   user: any;
   msgErr = '';
 
+  candidatChoisi: any;
+
   connect = false;
   constructor(private route: Router) { }
 

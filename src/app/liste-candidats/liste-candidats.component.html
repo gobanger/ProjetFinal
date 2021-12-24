@@ -12,7 +12,7 @@
           <td>{{ c.nomUsage }}</td>
           <td>{{ c.mail }}</td>
           <td>{{ c.formation }}</td>
-          <td><button class="btn  pull-right" ><a routerLink="/gestion-inscription">Information</a></button></td>
+          <td><button (click)="goToDetail(c)" class="btn  pull-right" >Information</button></td>
           <hr>
         </tr>
        
