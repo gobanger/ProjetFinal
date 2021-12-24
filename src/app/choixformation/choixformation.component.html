@@ -6,6 +6,23 @@
                 <h1 class="grey-text"> Ma candidature </h1>
                 <br><br>
             </div>
+
+
+            <form #connectForm="ngForm" (ngSubmit)="choixformation(connectForm.value)">
+                <label for="">Choisissez votre formation</label>
+                <br>
+                <select type="array" name="formation" ngModel="">
+                    <option>-- Veuillez selectionner une formation --</option>
+                    <option *ngFor="let f of formation"> {{ f.nomComplet }}
+                    </option>
+                    <p class="text-danger">{{ msgErrFormation}}</p>
+                </select>
+                <br><br>
+                <button class="btn btn-block btn-primary" type="submit">Postuler à la formation </button>
+            </form>
+            <p>{{msgValidation}}</p>
+
+
           
 
             <form #connectForm="ngForm" (ngSubmit)="choixsession(connectForm.value)">
