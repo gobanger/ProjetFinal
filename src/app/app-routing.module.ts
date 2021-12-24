@@ -17,7 +17,7 @@ import { ChoixformationComponent } from './choixformation/choixformation.compone
 import { TestcandidatComponent } from './testcandidat/testcandidat.component';
 import { ListeCandidatsComponent } from './liste-candidats/liste-candidats.component';
 import { MoncompteComponent } from './moncompte/moncompte.component';
-
+import { GestionInscriptionComponent } from './gestion-inscription/gestion-inscription.component';
 
 const routes: Routes = [
   {path : 'accueilcommun' , component : AccueilcommunComponent},
@@ -37,6 +37,7 @@ const routes: Routes = [
   {path : 'testcandidat', component : TestcandidatComponent},
   {path : 'listeCandidats', component : ListeCandidatsComponent},
 
+  {path : 'gestion-inscription', component : GestionInscriptionComponent},
   {path : 'moncompte', component : MoncompteComponent},
   { path: '', redirectTo: 'accueilcommun', pathMatch: 'full' },
 ];
