@@ -1,13 +1,12 @@
 <!-- Formulaire -->
 <div class="candidature">
     <br><br><br><br>
-
-    <div class="f-connect">
-        <div class="card p-5 bs_perso">
-            <h1>Mes informations </h1>
-            <br><br>
-            <form #connect="ngForm" (ngSubmit)="candidat(connect.value)">
-
+    <form #connect="ngForm" (ngSubmit)="candidat(connect.value)">
+        
+        <div class="f-connect">
+            <div class="card p-5 bs_perso">
+                <h1>Mes informations </h1>
+                <br><br>
                 <!-- Bouton choix parcours -->
                 <label class="pid">Parcours souhaité : </label>
                 <form action="/action_page.php">
@@ -37,20 +36,17 @@
                         <input type="text" class="form-control" name="nomNaissance" ngModel="">
                     </div>
                     &nbsp;&nbsp;
-
-
                     <div class="form-group">
                         <label class="nomUsage">Nom d'usage</label>
-                        <input type="text" class="form-control" name="" ngModel="">
+                        <input type="text" class="form-control" name="nomUsage" ngModel="">
                     </div>
                     &nbsp;&nbsp;
                     <div class="form-group">
                         <label class="prenom">Prénom</label>
-                        <input type="text" class="form-control" name="" ngModel="">
+                        <input type="text" class="form-control" name="prenom" ngModel="">
                     </div>
                     &nbsp;&nbsp;
                 </div>
-
                 <div class="form1">
                     &nbsp;&nbsp;
                     <div class="form-group">
@@ -92,11 +88,9 @@
                     </div>
                     &nbsp;&nbsp;
                 </div>
-
                 <label class="mail">Adresse mail</label>
-                <input type="text" class="form-control" name="" ngModel="">
+                <input type="text" class="form-control" name="mail" ngModel="">
                 <br>
-
                 <br>
                 <label class="pid">Numéro sécurité sociale </label>
                 <input type="text" class="form-control" name="numSecuSocial" ngModel="">
@@ -213,49 +207,159 @@
                     <label for="r17">non</label> &nbsp;
                 </form>
 
-                <!-- Civilité -->
-                <label class="pid">Civilité </label>
-                <div>
-                    <input type="radio" id="Madame" name="Civ" value="Madame" ngModel="true" checked>
-                    <label for="Madame">Madame</label>
+                <div class="form1">
+                    &nbsp;&nbsp;
+                    <div class="form-group">
+                        <label class="identifiantPoleEmploi">Si oui, N° d’identifiant</label>
+                        <input type="text" class="form-control" name="identifiantPoleEmploi" ngModel="">
+                    </div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class="form-group">
+                        <label for="inscriptionPoleEmploi" class="text-secondary">Date d'inscription</label>
+                        <input type="date" id="start" name="inscriptionPoleEmploi" class="form-control" ngModel="">
+                    </div>
                 </div>
-                <div>
-                    <input type="radio" id="Monsieur" name="Civ" value="Monsieur" ngModel="true" checked>
-                    <label for="Monsieur">Monsieur</label>
+                <!-- FIN Pole emploi -->
+                <!-- Mission locale -->
+                <label class="pid">Inscription dans une mission locale</label>
+                <form action="/action_page.php">&nbsp;
+                    <input type="radio" id="r18" name="missionLocal">
+                    <label for="r18">oui</label> &nbsp;
+                    <input type="radio" id="r19" name="missionLocal">
+                    <label for="r19">non</label> &nbsp;
+                </form>
+                <div class="form1">
+                    &nbsp;&nbsp;
+                    <div class="form-group">
+                        <label class="coordMissionLocal">Si oui, coordonnées de la mission locale</label>
+                        <input type="text" class="form-control" name="coordMissionLocal" ngModel="">
+                    </div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class="form-group">
+                        <label class="nomConseillerMissionLocal">Nom du conseiller</label>
+                        <input type="text" class="form-control" name="nomConseillerMissionLocal" ngModel="">
+                    </div>
                 </div>
+                <!-- FIN mission locale -->
+                <hr>
+                <!-- Classe fréquentées -->
+                <label class="pid">Dernière classe fréquentée </label>
+                <input type="text" class="form-control" name="derniereClasse" ngModel="">
+                <br>
+                <label class="pid">Diplôme(s) obtenu(s) </label>
+                <input type="text" class="form-control" name="diplome1" placeholder="diplome 1" ngModel=""> <br>
+                <input type="text" class="form-control" name="diplome2" placeholder="diplome 2" ngModel=""><br>
+                <input type="text" class="form-control" name="diplome3" placeholder="diplome 3" ngModel=""><br>
+                <!-- FIN classe fréquantées -->
+                <!-- Niveau Français -->
+                <label class="pid">Votre niveau de français : Merci de cocher la case adéquate </label>
+                <br>
+                <table id="niveau">
+                    <tr>
+                        <th></th>
+                        <th>Type d’utilisateur</th>
+                        <th>Niveau </th>
+                        <th>Capacités </th>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" id="r20" name="niveauFrancais"></td>
+                        <td>A Utilisateur élémentaire</td>
+                        <td>A1 (introductif ou découverte) </td>
+                        <td>Je suis capable de comprendre et d’employer des formulations simples, de me présenter. </td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" id="r21" name="niveauFrancais"></td>
+                        <td>A Utilisateur élémentaire </td>
+                        <td>A2 (intermédiaire ou usuel) </td>
+                        <td>Je suis capable de comprendre et d’échanger sur des informations simples du quotidien. </td>
+                    </tr>
 
-                <!-- FIN Civilité -->
+                    <tr>
+                        <td><input type="radio" id="r22" name="niveauFrancais"></td>
+                        <td>B Utilisateur indépendant </td>
+                        <td>B1 (seuil) </td>
+                        <td>Je suis capable de comprendre les grandes lignes d’une conversation, de raconter des
+                            expériences
+                            et d’écrire un texte simple. Je suis désormais capable de me débrouiller dans de nombreuses
+                            situations. </td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" id="r23" name="niveauFrancais"></td>
+                        <td>B Utilisateur indépendant </td>
+                        <td>B2 (avancé ou indépendant) </td>
+                        <td>Je suis capable de développer un point de vue et d’écrire un texte plus complexe. </td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" id="r24" name="niveauFrancais"></td>
+                        <td>C Utilisateur expériment</td>
+                        <td>C1 (autonome) </td>
+                        <td>Je suis capable de tenir une conversation sans difficulté et de m’exprimer spontanément. Je
+                            communique avec fluidité et aisance, sans trop chercher mes mots.</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" id="r25" name="niveauFrancais"></td>
+                        <td>C Utilisateur expérimenté </td>
+                        <td>C2 (maîtrise) </td>
+                        <td>Je maîtrise totalement la langue. Il s’agit de ma langue maternelle ou de la langue d’un
+                            pays
+                            étranger dans lequel j’ai vécu longtemps </td>
+                    </tr>
+                </table>
+                <!-- FIN Niveau Français -->
+                <br><br><br>
+                <!-- Niveau Anglais -->
+                <label class="pid">Votre niveau de français : Merci de cocher la case adéquate </label>
+                <br>
+                <table id="niveau">
+                    <tr>
+                        <th></th>
+                        <th>Type d’utilisateur</th>
+                        <th>Niveau </th>
+                        <th>Capacités </th>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" id="r27" name="niveauAnglais"></td>
+                        <td>A Utilisateur élémentaire</td>
+                        <td>A1 (introductif ou découverte) </td>
+                        <td>Je suis capable de comprendre et d’employer des formulations simples, de me présenter. </td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" id="r28" name="niveauAnglais"></td>
+                        <td>A Utilisateur élémentaire </td>
+                        <td>A2 (intermédiaire ou usuel) </td>
+                        <td>Je suis capable de comprendre et d’échanger sur des informations simples du quotidien. </td>
+                    </tr>
 
-                <tr>
-                    <td><input type="radio" id="r29" name="niveauAnglais"></td>
-                    <td>B Utilisateur indépendant </td>
-                    <td>B1 (seuil) </td>
-                    <td>Je suis capable de comprendre les grandes lignes d’une conversation, de raconter des
-                        expériences
-                        et d’écrire un texte simple. Je suis désormais capable de me débrouiller dans de nombreuses
-                        situations. </td>
-                </tr>
-                <tr>
-                    <td><input type="radio" id="r30" name="niveauAnglais"></td>
-                    <td>B Utilisateur indépendant </td>
-                    <td>B2 (avancé ou indépendant) </td>
-                    <td>Je suis capable de développer un point de vue et d’écrire un texte plus complexe. </td>
-                </tr>
-                <tr>
-                    <td><input type="radio" id="r31" name="niveauAnglais"></td>
-                    <td>C Utilisateur expériment</td>
-                    <td>C1 (autonome) </td>
-                    <td>Je suis capable de tenir une conversation sans difficulté et de m’exprimer spontanément. Je
-                        communique avec fluidité et aisance, sans trop chercher mes mots.</td>
-                </tr>
-                <tr>
-                    <td><input type="radio" id="r32" name="niveauAnglais"></td>
-                    <td>C Utilisateur expérimenté </td>
-                    <td>C2 (maîtrise) </td>
-                    <td>Je maîtrise totalement la langue. Il s’agit de ma langue maternelle ou de la langue d’un
-                        pays
-                        étranger dans lequel j’ai vécu longtemps </td>
-                </tr>
+                    <tr>
+                        <td><input type="radio" id="r29" name="niveauAnglais"></td>
+                        <td>B Utilisateur indépendant </td>
+                        <td>B1 (seuil) </td>
+                        <td>Je suis capable de comprendre les grandes lignes d’une conversation, de raconter des
+                            expériences
+                            et d’écrire un texte simple. Je suis désormais capable de me débrouiller dans de nombreuses
+                            situations. </td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" id="r30" name="niveauAnglais"></td>
+                        <td>B Utilisateur indépendant </td>
+                        <td>B2 (avancé ou indépendant) </td>
+                        <td>Je suis capable de développer un point de vue et d’écrire un texte plus complexe. </td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" id="r31" name="niveauAnglais"></td>
+                        <td>C Utilisateur expériment</td>
+                        <td>C1 (autonome) </td>
+                        <td>Je suis capable de tenir une conversation sans difficulté et de m’exprimer spontanément. Je
+                            communique avec fluidité et aisance, sans trop chercher mes mots.</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" id="r32" name="niveauAnglais"></td>
+                        <td>C Utilisateur expérimenté </td>
+                        <td>C2 (maîtrise) </td>
+                        <td>Je maîtrise totalement la langue. Il s’agit de ma langue maternelle ou de la langue d’un
+                            pays
+                            étranger dans lequel j’ai vécu longtemps </td>
+                    </tr>
                 </table>
                 <input type="text" class="form-control" name="langue1" placeholder="Autres langues ?">
                 <input type="text" class="form-control" name="niveau1" placeholder="Merci de préciser le niveau"><br>
@@ -280,15 +384,11 @@
                         <input type="text" class="form-control" name="nomEntreprise" ngModel="">
                     </div>
                 </div>
-                <div class="form-group">
-                    <label class="adresseSiegeSocial">Adresse du siège social :</label>
-                    <input type="text" class="form-control" name="adresseSiegeSocial" ngModel="">
-                </div>
+                <label class="adresseSiegeSocial">Adresse du siège social : </label>
+                <input type="text" class="form-control" name="adresseSiegeSocial">
                 <br>
-                <div class="form-group">
-                    <label class="adresseEntreprise">Adresse du site de rattachement de l’alternant(e)</label>
-                    <input type="text" class="form-control" name="adresseEntreprise" ngModel="">
-                </div>
+                <label class="adresseEntreprise">Adresse du site de rattachement de l’alternant(e) </label>
+                <input type="text" class="form-control" name="adresseEntreprise">
                 <br>
                 <label class="pid">Le contrat de travail a-t-il été signé  </label>
                 <form action="/action_page.php">&nbsp;
@@ -398,7 +498,7 @@
                     ma
                     candidature</button>
                 <br>
-        </div>
-    </div><br>
+            </div>
+        </div><br>
     </form>
 </div>
