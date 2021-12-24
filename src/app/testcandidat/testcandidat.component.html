@@ -1,6 +1,6 @@
 <div class="container">
 </div>
-<div class="inscription">
+<div class="inscription" id="infoWelcome">
     <br><br><br><br><br>
     <div class="f-connect">
         <div class="card p-5 bs_perso">
@@ -27,4 +27,37 @@
         </div>
     </div>
     <br>
+    <div class="container">
+        <form #connectForm="ngForm" (ngSubmit)="check(connectForm.value)">
+            <table class="center" id="customers">
+                <tr>
+                  <th>Question</th>
+                  <th>Choix 1</th>
+                  <th>Choix 2</th>
+                  <th>Choix 3</th>
+                  <th>Choix 4</th>
+                  <th>Réponse</th>
+                </tr>
+                <tr *ngFor="let q of question">
+                  <td>{{ q.txt }}</td>
+                  <td>{{ q.p1 }}</td>
+                  <td>{{ q.p2 }}</td>
+                  <td>{{ q.p3 }}</td>
+                  <td>{{ q.p4 }}</td>
+                  <td><select ngModel="" name="{{q.id}}" class="center">
+                      <option>1</option><option>2</option><option>3</option><option>4</option>
+                  </select></td>
+                  <hr>
+                </tr>
+              </table>
+              <br>
+              <button type="submit" class="btn btn-primary btn-block">Valider</button>
+        </form>
+    </div>
+    <br><br>
+    <div class="container">
+        <p>Résultats : </p>
+        <p id="ret">{{ resultat}}</p>
+        <br>
+    </div>
 </div>

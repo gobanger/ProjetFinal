@@ -12,9 +12,11 @@ export class TestsComponent implements OnInit {
   constructor(private http: HttpClient, private auth: AuthService) { }
 
   formations:any;
+  candidats:any;
   question:any;
   fofo:string | undefined;
   selectedOne: string | undefined;
+  selectedOneToSend: string | undefined;
 
   msgErr:any;
 
@@ -22,6 +24,7 @@ export class TestsComponent implements OnInit {
     this.auth.canActive();
     setInterval( () => {this.fofo = this.selectedOne}, 100);
     this.lesFormations();
+    this.lesCandidats();
     this.listeQuestionParFormation();
     //setInterval(() => {this.lesFormations()}, 100);
     setInterval(() => {this.listeQuestionParFormation()}, 100);
@@ -61,7 +64,12 @@ export class TestsComponent implements OnInit {
   }
 
   lesCandidats(){
-    //this.http.get(this.auth.lienApi + )
+    this.http.get("http://localhost:8086/candidats").subscribe({
+      next: (data) => {
+        this.candidats = data;
+      },
+      error: (err) => {console.log(err)}
+    });
   }
 
   listeQuestionParFormation(){
@@ -78,6 +86,10 @@ export class TestsComponent implements OnInit {
   }
   cancelCreation(){
     document.getElementById("creationQuestion")?.setAttribute("hidden", "");
+  }
+
+  envoiQCM(form:any){
+
   }
 
 }

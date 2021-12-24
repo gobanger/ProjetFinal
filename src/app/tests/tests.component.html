@@ -78,16 +78,18 @@
     <br>
     <button type="submit" class="btn btn-primary btn-block" (click)="cancelCreation()">Annuler</button>
 </div>
-<!-- <div class="container" id="envoiTest">
-    <form #connect="ngForm" (ngSubmit)="envoiQCM(connect.value)">
+<div class="container" id="envoiTest" >
+    <form #connectForm="ngForm" (ngSubmit)="envoiQCM(connectForm.value)">
         <select class="slt-rep" id="formationToSend" [(ngModel)]="selectedOneToSend">
             <option>-- Sélectionner formation --</option>
             <option *ngFor="let f of formations">{{ f.nomComplet }}</option>
         </select>
-        <br>
-        <select class="slt-rep" id="candidateToSend" [(ngModel)]="selectedOneToReceive">
+        <br><br>
+        <select class="slt-rep" id="candidateToSend" name="candidat" ngModel="">
             <option>-- Sélectionner le candidat --</option>
-            <option *ngFor="let c of candidats">{{ c.nom }}</option>
+            <option *ngFor="let c of candidats">{{ c.prenom }}</option>
         </select>
+        <br><br>
+        <button type="submit" class="btn btn-primary btn-block">Envoyer le test</button>
     </form>
-</div> -->
+</div>
