@@ -16,20 +16,7 @@ export class CandidatureComponent implements OnInit {
   ngOnInit(): void {
     this.auth.canActive();
   }
-  /*
-  candidat(info:any): any{
-    this.http.post('http://localhost:8086/inscription/information/8',info).subscribe({
-      next:(data) => {
-        info = data;
-        console.log(info);
-        this.msgValidation="inscription complete";
-      },
-      error:(err) => {
-        console.log(info);
-      },
-    })
-  }
-  */
+ 
   candidat(info:any){
     this.http.put('http://localhost:8086/inscription/information/7', info).subscribe({
       next: (data) =>{
