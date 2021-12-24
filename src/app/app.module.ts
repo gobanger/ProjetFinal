@@ -29,13 +29,13 @@ import { ListeCandidatsComponent } from './liste-candidats/liste-candidats.compo
 import { MoncompteComponent } from './moncompte/moncompte.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
-import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 
-
+import { GestionInscriptionComponent } from './gestion-inscription/gestion-inscription.component';
 
 
 
@@ -58,7 +58,8 @@ import { MatSelectModule } from '@angular/material/select';
     ChoixformationComponent,
     TestcandidatComponent,
     ListeCandidatsComponent,
-    MoncompteComponent
+    MoncompteComponent,
+    GestionInscriptionComponent
   ],
   imports: [
     BrowserModule,
