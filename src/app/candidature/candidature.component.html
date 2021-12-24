@@ -36,17 +36,20 @@
                         <input type="text" class="form-control" name="nomNaissance" ngModel="">
                     </div>
                     &nbsp;&nbsp;
+                
+            
                     <div class="form-group">
                         <label class="nomUsage">Nom d'usage</label>
-                        <input type="text" class="form-control" name="nomUsage" ngModel="">
+                        <input type="text" class="form-control" name="" ngModel="">
                     </div>
                     &nbsp;&nbsp;
                     <div class="form-group">
                         <label class="prenom">Prénom</label>
-                        <input type="text" class="form-control" name="prenom" ngModel="">
+                        <input type="text" class="form-control" name="" ngModel="">
                     </div>
                     &nbsp;&nbsp;
                 </div>
+            
                 <div class="form1">
                     &nbsp;&nbsp;
                     <div class="form-group">
@@ -88,9 +91,11 @@
                     </div>
                     &nbsp;&nbsp;
                 </div>
+                
                 <label class="mail">Adresse mail</label>
-                <input type="text" class="form-control" name="mail" ngModel="">
+                <input type="text" class="form-control" name="" ngModel="">
                 <br>
+                
                 <br>
                 <label class="pid">Numéro sécurité sociale </label>
                 <input type="text" class="form-control" name="numSecuSocial" ngModel="">
@@ -384,12 +389,16 @@
                         <input type="text" class="form-control" name="nomEntreprise" ngModel="">
                     </div>
                 </div>
-                <label class="adresseSiegeSocial">Adresse du siège social : </label>
-                <input type="text" class="form-control" name="adresseSiegeSocial">
+                <div class="form-group">
+                    <label class="adresseSiegeSocial">Adresse du siège social :</label>
+                    <input type="text" class="form-control" name="adresseSiegeSocial" ngModel="">
+                </div>
                 <br>
-                <label class="adresseEntreprise">Adresse du site de rattachement de l’alternant(e) </label>
-                <input type="text" class="form-control" name="adresseEntreprise">
-                <br>
+                <div class="form-group">
+                    <label class="adresseEntreprise">Adresse du site de rattachement de l’alternant(e)</label>
+                    <input type="text" class="form-control" name="adresseEntreprise" ngModel="">
+                </div>
+              <br>
                 <label class="pid">Le contrat de travail a-t-il été signé  </label>
                 <form action="/action_page.php">&nbsp;
                     <input type="radio" id="r37" name="contratSigne">
