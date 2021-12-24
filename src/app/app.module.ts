@@ -29,6 +29,11 @@ import { ListeCandidatsComponent } from './liste-candidats/liste-candidats.compo
 import { MoncompteComponent } from './moncompte/moncompte.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+
 
 
 
@@ -63,7 +68,11 @@ import {MatButtonModule} from '@angular/material/button';
     BrowserAnimationsModule,
     MatDialogModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCheckboxModule,
+    MatRadioModule,
+    MatFormFieldModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

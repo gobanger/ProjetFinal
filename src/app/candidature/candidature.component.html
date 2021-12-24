@@ -2,30 +2,29 @@
 <div class="candidature">
     <br><br><br><br>
     <form #connect="ngForm" (ngSubmit)="candidat(connect.value)">
-        
         <div class="f-connect">
             <div class="card p-5 bs_perso">
-                <h1>Mes informations </h1>
+                <h1>Mes informations</h1>
                 <br><br>
                 <!-- Bouton choix parcours -->
-                <label class="pid">Parcours souhaité : </label>
-                <form action="/action_page.php">
-                    <input value="Continu" type="radio" id="r1" name="parcours">
-                    <label for="r1">En continu</label><br>
-                    <input value="contrat de professionnalisation" type="radio" id="r2" name="parcours">
-                    <label for="r2">Contrat de professionnalisation</label><br>
-                    <input value="contrat d'apprentissage" type="radio" id="r3" name="parcours">
-                    <label for="r3">Contrat d’apprentissage </label><br><br>
-                </form>
+                <div class="blocquestion">
+                    <h3 class="titrebloc2">Parcours souhaitée </h3>
+                    <mat-radio-group class="radio-group" name="parcours" [(ngModel)]="user.parcours" >
+                      <mat-radio-button class="radio-button" *ngFor="let p of parcoursSouhaite " [value]="p.parcours">
+                        {{p.parcours}}
+                      </mat-radio-button>
+                    </mat-radio-group>
+                  </div>
                 <!-- FIN Bouton choix parcours -->
                 <!-- Civilité -->
-                <label class="pid">Civilité </label>
-                <form action="/action_page.php">
+                <div>
+                    <label class="pid">Civilité </label>
+                    <br>
                     <input type="radio" id="r4" name="civ">
                     <label for="r4">Madame</label> &nbsp;
                     <input type="radio" id="r5" name="civ">
                     <label for="r5">Monsieur</label><br>
-                </form>
+                </div>
                 <br>
                 <!-- FIN Civilité -->
                 <!-- Infos candidat -->
@@ -33,17 +32,17 @@
                 <div class="form1">
                     <div class="form-group">
                         <label class="nomNaissance">Nom de naissance</label>
-                        <input type="text" class="form-control" name="nomNaissance" ngModel="">
+                        <input type="text" class="form-control" name="nomNaissance" [(ngModel)]="user.nomNaissance">
                     </div>
                     &nbsp;&nbsp;
                     <div class="form-group">
                         <label class="nomUsage">Nom d'usage</label>
-                        <input type="text" class="form-control" name="nomUsage" ngModel="">
+                        <input type="text" class="form-control" name="nomUsage" [(ngModel)]="user.nomUsage">
                     </div>
                     &nbsp;&nbsp;
                     <div class="form-group">
                         <label class="prenom">Prénom</label>
-                        <input type="text" class="form-control" name="prenom" ngModel="">
+                        <input type="text" class="form-control" name="prenom" [(ngModel)]="user.prenom">
                     </div>
                     &nbsp;&nbsp;
                 </div>
@@ -51,49 +50,50 @@
                     &nbsp;&nbsp;
                     <div class="form-group">
                         <label for="dateNaissance" class="text-secondary">Date de naissance</label>
-                        <input type="date" id="start" name="dateNaissance" class="form-control" ngModel="">
+                        <input type="date" id="start" name="dateNaissance" class="form-control"
+                            [(ngModel)]="user.dateNaissance">
                     </div>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <div class="form-group">
                         <label class="lieuNaissance">Lieu de naissance</label>
-                        <input type="text" class="form-control" name="lieuNaissance" ngModel="">
+                        <input type="text" class="form-control" name="lieuNaissance" [(ngModel)]="user.lieuNaissance">
                     </div>
                 </div>
                 <!-- FIN Infos candidat -->
                 <!-- Coordonnées -->
                 <label class="pid"> Coordonnées </label>
                 <label class="adresse">Adresse</label>
-                <input type="text" class="form-control" name="adresse" ngModel="">
+                <input type="text" class="form-control" name="adresse" [(ngModel)]="user.adresse">
                 <br>
                 <div class="form1">
                     <div class="form-group">
                         <label class="codePostal">Code Postal</label>
-                        <input type="text" name="codePostal" class="form-control" ngModel="">
+                        <input type="text" name="codePostal" class="form-control" [(ngModel)]="user.codePostal">
                     </div>
                     &nbsp;&nbsp;
                     <div class="form-group">
                         <label class="Ville">Ville</label>
-                        <input type="text" name="Ville" class="form-control" ngModel="">
+                        <input type="text" name="Ville" class="form-control" [(ngModel)]="user.Ville">
                     </div>
                 </div>
                 <div class="form1">
                     <div class="form-group">
                         <label class="telFixe">N° de téléphone fixe</label>
-                        <input type="text" name="telFixe" class="form-control" ngModel="">
+                        <input type="text" name="telFixe" class="form-control" [(ngModel)]="user.telFixe">
                     </div>
                     &nbsp;&nbsp;
                     <div class="form-group">
                         <label class="telPortable">N° de téléphone portable</label>
-                        <input type="text" name="telPortable" class="form-control" ngModel="">
+                        <input type="text" name="telPortable" class="form-control" [(ngModel)]="user.portable">
                     </div>
                     &nbsp;&nbsp;
                 </div>
                 <label class="mail">Adresse mail</label>
-                <input type="text" class="form-control" name="mail" ngModel="">
+                <input type="text" class="form-control" name="mail" [(ngModel)]="user.mail" [disabled]="true">
                 <br>
                 <br>
                 <label class="pid">Numéro sécurité sociale </label>
-                <input type="text" class="form-control" name="numSecuSocial" ngModel="">
+                <input type="text" class="form-control" name="numSecuSocial" [(ngModel)]="user.numSecuSocial">
                 <br>
                 <label class="pid">Nationalité </label>
                 <form action="/action_page.php">
@@ -111,31 +111,37 @@
                 <div class="form1">
                     <div class="form-group">
                         <label class="nomRepresentant">Nom représentant légal</label>
-                        <input type="text" class="form-control" name="nomRepresentant" ngModel="">
+                        <input type="text" class="form-control" name="nomRepresentant"
+                            [(ngModel)]="user.nomRepresentant">
                     </div>
                     &nbsp;&nbsp;
                     <div class="form-group">
                         <label class="prenomRepresentant">Prénom représentant légal</label>
-                        <input type="text" class="form-control" name="prenomRepresentant" ngModel="">
+                        <input type="text" class="form-control" name="prenomRepresentant"
+                            [(ngModel)]="user.prenomRepresentant">
                     </div>
                     &nbsp;&nbsp;
                     <div class="form-group">
                         <label class="typeRepresentant">Mère, Père, Tuteur (préciser) </label>
-                        <input type="text" class="form-control" name="typeRepresentant" ngModel="">
+                        <input type="text" class="form-control" name="typeRepresentant"
+                            [(ngModel)]="user.typeRepresentant">
                     </div>
                     &nbsp;&nbsp;
                 </div>
                 <label class="adresseRepresentant">Adresse représentant légal</label>
-                <input type="text" class="form-control" name="adresseRepresentant" ngModel="">
+                <input type="text" class="form-control" name="adresseRepresentant"
+                    [(ngModel)]="user.adresseRepresentant">
                 <div class="form1">
                     <div class="form-group">
                         <label class="codePostalRepresentant">Code Postal</label>
-                        <input type="text" name="codePostalRepresentant" class="form-control" ngModel="">
+                        <input type="text" name="codePostalRepresentant" class="form-control"
+                            [(ngModel)]="user.codePostalRepresentant">
                     </div>
                     &nbsp;&nbsp;
                     <div class="form-group">
                         <label class="villeRepresentant">Ville</label>
-                        <input type="text" name="villeRepresentant" class="form-control" ngModel="">
+                        <input type="text" name="villeRepresentant" class="form-control"
+                            [(ngModel)]="user.villeRepresentant">
                     </div>
                     &nbsp;&nbsp;
                 </div>
@@ -143,17 +149,19 @@
                 <div class="form1">
                     <div class="form-group">
                         <label class="telFixeRepresentant">N° de téléphone fixe</label>
-                        <input type="text" name="telFixeRepresentant" class="form-control" ngModel="">
+                        <input type="text" name="telFixeRepresentant" class="form-control"
+                            [(ngModel)]="user.telFixeRepresentant">
                     </div>
                     &nbsp;&nbsp;
                     <div class="form-group">
                         <label class="telPortableRepresentant">N° de téléphone portable</label>
-                        <input type="text" name="telPortableRepresentant" class="form-control" ngModel="">
+                        <input type="text" name="telPortableRepresentant" class="form-control"
+                            [(ngModel)]="user.telPortableRepresentant">
                     </div>
                     &nbsp;&nbsp;
                 </div>
                 <label class="emailRepresentant">Adresse mail du représentant légal</label>
-                <input type="text" class="form-control" name="emailRepresentant" ngModel="">
+                <input type="text" class="form-control" name="emailRepresentant" [(ngModel)]="user.emailRepresentant">
                 <hr>
                 <!-- FIN Représentant légal -->
                 <!-- Situation -->
@@ -186,16 +194,17 @@
                     <label for="r15">non</label> &nbsp;
                 </form>
                 <input type="text" class="form-control" name="nomOrganisme" placeholder="Précisez le nom de l'organisme"
-                    ngModel="">
+                    [(ngModel)]="user.nomOrganisme">
                 <br>
                 <input type="text" class="form-control" name="coordOrganisme" placeholder="Coordonnées de l’organisme"
-                    ngModel="">
+                    [(ngModel)]="user.coordOrganisme">
                 <!-- FIN Situation -->
                 <br>
                 <!-- Besoin -->
                 <label class="pid"> Si oui, aurez-vous des besoins particuliers en formation au CFA ou en entreprise ?
                     (pédagogie, matériel, moyens techniques, humains, organisation,…) : </label>
-                <textarea id="besoinParticulier" name="besoinParticulier" rows="5" cols="33" ngModel=""></textarea>
+                <textarea id="besoinParticulier" name="besoinParticulier" rows="5" cols="33"
+                    [(ngModel)]="user.besoinParticulier"></textarea>
                 <!-- FIN Besoin -->
                 <hr>
                 <!-- Pole emploi -->
@@ -211,12 +220,14 @@
                     &nbsp;&nbsp;
                     <div class="form-group">
                         <label class="identifiantPoleEmploi">Si oui, N° d’identifiant</label>
-                        <input type="text" class="form-control" name="identifiantPoleEmploi" ngModel="">
+                        <input type="text" class="form-control" name="identifiantPoleEmploi"
+                            [(ngModel)]="user.identifiantPoleEmploi">
                     </div>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <div class="form-group">
                         <label for="inscriptionPoleEmploi" class="text-secondary">Date d'inscription</label>
-                        <input type="date" id="start" name="inscriptionPoleEmploi" class="form-control" ngModel="">
+                        <input type="date" id="start" name="inscriptionPoleEmploi" class="form-control"
+                            [(ngModel)]="user.inscriptionPoleEmploi">
                     </div>
                 </div>
                 <!-- FIN Pole emploi -->
@@ -232,24 +243,29 @@
                     &nbsp;&nbsp;
                     <div class="form-group">
                         <label class="coordMissionLocal">Si oui, coordonnées de la mission locale</label>
-                        <input type="text" class="form-control" name="coordMissionLocal" ngModel="">
+                        <input type="text" class="form-control" name="coordMissionLocal"
+                            [(ngModel)]="user.coordMissionLocal">
                     </div>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <div class="form-group">
                         <label class="nomConseillerMissionLocal">Nom du conseiller</label>
-                        <input type="text" class="form-control" name="nomConseillerMissionLocal" ngModel="">
+                        <input type="text" class="form-control" name="nomConseillerMissionLocal"
+                            [(ngModel)]="user.nomConseillerMissionLocal">
                     </div>
                 </div>
                 <!-- FIN mission locale -->
                 <hr>
                 <!-- Classe fréquentées -->
                 <label class="pid">Dernière classe fréquentée </label>
-                <input type="text" class="form-control" name="derniereClasse" ngModel="">
+                <input type="text" class="form-control" name="derniereClasse" [(ngModel)]="user.derniereClasse">
                 <br>
                 <label class="pid">Diplôme(s) obtenu(s) </label>
-                <input type="text" class="form-control" name="diplome1" placeholder="diplome 1" ngModel=""> <br>
-                <input type="text" class="form-control" name="diplome2" placeholder="diplome 2" ngModel=""><br>
-                <input type="text" class="form-control" name="diplome3" placeholder="diplome 3" ngModel=""><br>
+                <input type="text" class="form-control" name="diplome1" placeholder="diplome 1"
+                    [(ngModel)]="user.diplome1"> <br>
+                <input type="text" class="form-control" name="diplome2" placeholder="diplome 2"
+                    [(ngModel)]="user.diplome2"><br>
+                <input type="text" class="form-control" name="diplome3" placeholder="diplome 3"
+                    [(ngModel)]="user.diplome3"><br>
                 <!-- FIN classe fréquantées -->
                 <!-- Niveau Français -->
                 <label class="pid">Votre niveau de français : Merci de cocher la case adéquate </label>
@@ -361,8 +377,10 @@
                             étranger dans lequel j’ai vécu longtemps </td>
                     </tr>
                 </table>
-                <input type="text" class="form-control" name="langue1" placeholder="Autres langues ?">
-                <input type="text" class="form-control" name="niveau1" placeholder="Merci de préciser le niveau"><br>
+                <input type="text" class="form-control" name="langue1" [(ngModel)]="user.langue1"
+                    placeholder="Autres langues ?">
+                <input type="text" class="form-control" name="niveau1" [(ngModel)]="user.niveau1"
+                    placeholder="Merci de préciser le niveau"><br>
                 <!-- FIN Niveau Anglais -->
                 <!-- Contact entreprise -->
                 <label class="pid">Avez-vous déjà contacté des entreprises ? </label>
@@ -376,19 +394,20 @@
                     &nbsp;&nbsp;
                     <div class="form-group">
                         <label class="nombreContactEntreprise">Si oui, combien ?</label>
-                        <input type="text" class="form-control" name="nombreContactEntreprise" ngModel="">
+                        <input type="text" class="form-control" name="nombreContactEntreprise"
+                            [(ngModel)]="user.nombreContactEntreprise">
                     </div>
                     &nbsp;&nbsp;&nbsp;
                     <div class="form-group">
                         <label class="nomEntreprise">Si oui, Nom de l’entreprise ? </label>
-                        <input type="text" class="form-control" name="nomEntreprise" ngModel="">
+                        <input type="text" class="form-control" name="nomEntreprise" [(ngModel)]="user.nomEntreprise">
                     </div>
                 </div>
                 <label class="adresseSiegeSocial">Adresse du siège social : </label>
-                <input type="text" class="form-control" name="adresseSiegeSocial">
+                <input type="text" class="form-control" name="adresseSiegeSocial" [(ngModel)]="user.adresseSiegeSocial">
                 <br>
                 <label class="adresseEntreprise">Adresse du site de rattachement de l’alternant(e) </label>
-                <input type="text" class="form-control" name="adresseEntreprise">
+                <input type="text" class="form-control" name="adresseEntreprise" [(ngModel)]="user.adresseEntreprise">
                 <br>
                 <label class="pid">Le contrat de travail a-t-il été signé  </label>
                 <form action="/action_page.php">&nbsp;
@@ -401,35 +420,38 @@
                 </form>
                 <div class="form-group">
                     <label class="text-secondary">Date de démarrage du contrat de travail </label>
-                    <input type="date" id="start" name="dateDemarrageContrat" class="form-control">
+                    <input type="date" id="start" name="dateDemarrageContrat" [(ngModel)]="user.dateDemarrageContrat"
+                        class="form-control">
                 </div>
                 <label class="text-secondary">Personne à contacter dans l’entreprise :  </label>
                 <div class="form1">
                     <div class="form-group">
                         <label class="nomContact">Nom</label>
-                        <input type="text" class="form-control" name="nomContact" ngModel="">
+                        <input type="text" [(ngModel)]="user.nomContact" class="form-control" name="nomContact"
+                            ngModel="">
                     </div>
                     &nbsp;&nbsp;
                     <div class="form-group">
                         <label class="prenomContact">Prénom</label>
-                        <input type="text" class="form-control" name="prenomContact" ngModel="">
+                        <input type="text" class="form-control" name="prenomContact" [(ngModel)]="user.prenomContact">
                     </div>
                     &nbsp;&nbsp;
                     <div class="form-group">
                         <label class="fonctionContact">Fonction</label>
-                        <input type="text" class="form-control" name="fonctionContact" ngModel="">
+                        <input type="text" class="form-control" name="fonctionContact"
+                            [(ngModel)]="user.fonctionContact">
                     </div>
                     &nbsp;&nbsp;
                 </div>
                 <div class="form1">
                     <div class="form-group">
                         <label class="telContact">N° telephone</label>
-                        <input type="text" class="form-control" name="telContact" ngModel="">
+                        <input type="text" class="form-control" name="telContact" [(ngModel)]="user.telContact">
                     </div>
                     &nbsp;&nbsp;
                     <div class="form-group">
                         <label class="mailContact">Adresse mail</label>
-                        <input type="text" class="form-control" name="mailContact" ngModel="">
+                        <input type="text" class="form-control" name="mailContact" [(ngModel)]="user.mailContact">
                     </div>
                     &nbsp;&nbsp;
                 </div>
@@ -474,27 +496,27 @@
                 <!-- QUESTIONS -->
                 <label class="pid"> Merci de répondre à chacune des questions : </label>
                 <label class="text-secondary"> 1 – Quelles sont vos attentes par rapport à la formation ?  </label>
-                <textarea id="story" name="question1" rows="5" cols="33" ngModel="">  </textarea>
+                <textarea id="story" name="question1" rows="5" cols="33" [(ngModel)]="user.question1">  </textarea>
                 <br>
                 <label class="text-secondary"> 2 – Quelles sont vos attentes par rapport à l’entreprise ?  </label>
-                <textarea id="story" name="question2" rows="5" cols="33" ngModel=""> </textarea>
+                <textarea id="story" name="question2" rows="5" cols="33" [(ngModel)]="user.question2"> </textarea>
                 <br>
                 <label class="text-secondary"> 3 – Quelles sont vos motivations professionnelles ? </label>
-                <textarea id="story" name="question3" rows="5" cols="33" ngModel=""> </textarea>
+                <textarea id="story" name="question3" rows="5" cols="33" [(ngModel)]="user.question3"> </textarea>
                 <br>
                 <label class="text-secondary"> 4 – Dans quel secteur d’activité aimeriez-vous travailler ? Pourquoi ?
                 </label>
-                <textarea id="story" name="question4" rows="5" cols="33" ngModel=""> </textarea>
+                <textarea id="story" name="question4" rows="5" cols="33" [(ngModel)]="user.question4"> </textarea>
                 <br>
                 <label class="text-secondary"> 5 – Quels sont vos objectifs à long terme ?  </label>
-                <textarea id="story" name="question5" rows="5" cols="33" ngModel=""> </textarea>
+                <textarea id="story" name="question5" rows="5" cols="33" [(ngModel)]="user.question5"> </textarea>
                 <br>
                 <label class="text-secondary"> 6 – Parmi vos emplois précédents, lequel vous a le plus intéressé (le cas
                     échéant) ? Pourquoi ?  </label>
-                <textarea id="story" name="question6" rows="5" cols="33" ngModel=""> </textarea>
+                <textarea id="story" name="question6" rows="5" cols="33" [(ngModel)]="user.question6"> </textarea>
                 <br><br>
                 <!-- FIN QUESTIONS -->
-                <button name="Enregistrer" class="btn1" onclick="window.location.href='/home'" type="submit">Soumettre
+                <button class="btn1" type="submit">Soumettre
                     ma
                     candidature</button>
                 <br>
