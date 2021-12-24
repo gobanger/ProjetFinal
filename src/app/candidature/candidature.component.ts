@@ -17,7 +17,7 @@ export class CandidatureComponent implements OnInit {
     this.auth.canActive();
   }
   candidat(info:any): any{
-    this.http.post('http://localhost:8086/candidature',info).subscribe({
+    this.http.post('http://localhost:8086/inscription/information/8',info).subscribe({
       next:(data) => {
         info = data;
         console.log(info);
