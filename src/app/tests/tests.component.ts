@@ -16,6 +16,8 @@ export class TestsComponent implements OnInit {
   fofo:string | undefined;
   selectedOne: string | undefined;
 
+  msgErr:any;
+
   ngOnInit(): void {
     this.auth.canActive();
     setInterval( () => {this.fofo = this.selectedOne}, 100);
@@ -25,18 +27,28 @@ export class TestsComponent implements OnInit {
     setInterval(() => {this.listeQuestionParFormation()}, 100);
   }
 
+  verif(): boolean{
+    if(document.getElementById("Q")?.innerHTML == null){
+      this.msgErr = "Tous les champs doivent être rempli"
+      return false;
+    }
+    else{
+      return true;
+    }
+  }
+
   creationQCM(question:any){
-    this.http.post(this.auth.lienApi + "qcm/" , question).subscribe({
-      next: (data) => {
-        question = data;
-        console.log(question);
-      },
-      error: (err) => {
-        console.log(err);
-      }
-    });
-    this.listeQuestionParFormation();
-    this.ngOnInit();
+      this.http.post(this.auth.lienApi + "qcm" , question).subscribe({
+        next: (data) => {
+          question = data;
+          console.log(question);
+        },
+        error: (err) => {
+          console.log(err);
+        }
+      });
+      this.listeQuestionParFormation();
+      this.ngOnInit();
   }
 
   lesFormations(){
@@ -46,6 +58,10 @@ export class TestsComponent implements OnInit {
       },
       error: (err) => {console.log(err)}
     })
+  }
+
+  lesCandidats(){
+    //this.http.get(this.auth.lienApi + )
   }
 
   listeQuestionParFormation(){

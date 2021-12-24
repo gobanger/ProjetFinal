@@ -11,11 +11,13 @@ export class CompteAdminComponent implements OnInit {
 
   formations : any;
   informations:any;
+  pwd: any;
 
   constructor(private http: HttpClient, private auth: AuthService) { }
 
   ngOnInit(): void {
     this.auth.canActive();
+    this.pwd = this.auth.getUserConnect().mdp;
   }
 
   modifier(informations: any): any{

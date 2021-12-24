@@ -32,31 +32,31 @@
     <form #connect="ngForm" (ngSubmit)="creationQCM(connect.value)">
         <div class="form-group">
             <label for="" class="text-secondary">Entrez la question</label>
-            <input type="text" class="form-control" name="txt" ngModel="">
+            <input type="text" class="form-control" name="txt" ngModel="" id="Q">
         </div>
         <hr>
         <div class="listeQuestion">
             <div class="form-group">
                 <label for="" class="text-secondary">Entrez le premier choix</label>
-                <input type="text" class="form-control" name="p1" ngModel="">
+                <input type="text" class="form-control" name="p1" ngModel="" id="P1">
             </div>
             <div class="form-group">
                 <label for="" class="text-secondary">Entrez le deuxieme choix</label>
-                <input type="text" class="form-control" name="p2" ngModel="">
+                <input type="text" class="form-control" name="p2" ngModel="" id="P2">
             </div>
             <div class="form-group">
                 <label for="" class="text-secondary">Entrez le troisieme choix</label>
-                <input type="text" class="form-control" name="p3" ngModel="">
+                <input type="text" class="form-control" name="p3" ngModel="" id="P3">
             </div>
             <div class="form-group">
                 <label for="" class="text-secondary">Entrez le quatrieme choix</label>
-                <input type="text" class="form-control" name="p4" ngModel="">
+                <input type="text" class="form-control" name="p4" ngModel="" id="P4">
             </div>
         </div>
         <hr>
         <div class="form-group">
             <label for="" class="text-secondary">Sélectionnez la répone  : </label> 
-            <select class="slt-rep" name="reponse" ngModel="">
+            <select class="slt-rep" name="reponse" ngModel="" id="R">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -65,7 +65,8 @@
         </div>
         <div class="form-group">
             <label for="" class="text-secondary">Sélectionnez la formation : </label> 
-            <select class="slt-rep" ngModel="" name="formation">
+            <select class="slt-rep" ngModel="" name="formation" id="F">
+                <option>-- Sélectionner la formation --</option>
                 <option *ngFor="let f of formations">{{ f.nomComplet }}</option>
             </select>
         </div>
@@ -73,5 +74,20 @@
         <button type="submit" class="btn btn-primary btn-block">Enregistrer la question</button>
     </form>
     <br>
+    <p class="text-danger text-center"> {{ msgErr }} </p>
+    <br>
     <button type="submit" class="btn btn-primary btn-block" (click)="cancelCreation()">Annuler</button>
 </div>
+<!-- <div class="container" id="envoiTest">
+    <form #connect="ngForm" (ngSubmit)="envoiQCM(connect.value)">
+        <select class="slt-rep" id="formationToSend" [(ngModel)]="selectedOneToSend">
+            <option>-- Sélectionner formation --</option>
+            <option *ngFor="let f of formations">{{ f.nomComplet }}</option>
+        </select>
+        <br>
+        <select class="slt-rep" id="candidateToSend" [(ngModel)]="selectedOneToReceive">
+            <option>-- Sélectionner le candidat --</option>
+            <option *ngFor="let c of candidats">{{ c.nom }}</option>
+        </select>
+    </form>
+</div> -->
