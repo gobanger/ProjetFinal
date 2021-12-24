@@ -11,23 +11,34 @@ import { AppComponent } from '../app.component';
 export class CandidatureComponent implements OnInit {
   info: any;
   msgValidation: any;
+  user: any;
+
+  parcoursSouhaite = [
+    {parcours: 'En continu'},
+    {parcours: 'Contrat de professionnalisation'},
+    {parcours: 'Contrat d’apprentissage'},
+  ]
+
 
   constructor(private auth: AuthService, private http: HttpClient) { }
   ngOnInit(): void {
     this.auth.canActive();
+    this.user = this.auth.getUserConnect();
   }
-
-  candidat(info:any): any{
-    this.http.put('http://localhost:8086/inscription/information/7',info).subscribe({
-      next:(data) => {
+ 
+  candidat(info:any){
+    this.http.put(this.auth.lienApi + 'user/' + this.user.id, this.user).subscribe({
+      next: (data) =>{
         info = data;
         console.log(info);
-        this.msgValidation="inscription complete";
+        this.ngOnInit();
       },
-      error:(err) => {
+      error: (err) => {
         console.log(err);
-      },
-    })
+      }
+    });
+ 
+    this.ngOnInit();
   }
 
 }
