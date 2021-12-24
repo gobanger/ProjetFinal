@@ -62,12 +62,14 @@ export class ChoixformationComponent implements OnInit {
       next: (data) => {
         information = data;
         console.log(information);
-        this.msgValidation = "Vous venez de réaliser votre choix de formation";
       },
       error: (err) => {
         console.log(information);
       },
-    })
+    });
+    if(information != "-- Veuillez selectionner une session --"){
+      this.msgValidation = "Vous venez de réaliser votre choix de formation";
+    }
   }
 
   choixsession(info: any): any {
@@ -75,11 +77,12 @@ export class ChoixformationComponent implements OnInit {
       next: (data) => {
         info = data;
         console.log(info);
-        this.msgValidation2 = "Vous venez de réaliser votre choix de session";
+        
       },
       error: (err) => {
         console.log(info);
       },
-    })
+    });
+    this.msgValidation2 = "Vous venez de réaliser votre choix de session";
   }
 }

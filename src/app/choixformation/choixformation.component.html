@@ -23,21 +23,19 @@
             <p>{{msgValidation}}</p>
 
 
-          
-
             <form #connectForm="ngForm" (ngSubmit)="choixsession(connectForm.value)">
                 <label for="">Choisissez votre session de formation</label>
                 <br>
                 <select type="array" name="session" ngModel="">
                     <option>-- Veuillez selectionner une session --</option>
-                    <option *ngFor="let s of session" name="session" ngModel=""> {{ s.session }} </option>
+                    <option *ngFor="let s of session"> {{ s.session }} </option>
                     <p class="text-danger">{{ msgErrSession }}</p>
                 </select>
                 <br><br>
                 <button class="btn btn-block btn-primary" type="submit">Postuler à la session </button>
             </form>
             <p>{{msgValidation2}}</p>
-        
+
             <button class="btn btn-block btn-primary" type="submit" onClick="location.href='accueilcandidat1'">Retour à
                 l'accueil </button>
         </div>
