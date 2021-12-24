@@ -2,7 +2,7 @@
 <div class="container mt-5 mlr-15">
     <div class="row fs">
         <div class="col-sm-6" style="text-align: center;" *ngFor="let f of formations">
-            <div class="card">
+            <div class="card p-2">
                 <button style="border: none;" (click)="afficherCacher(f.id)">
                     <p class="my-font">
                         Formation : <br>{{ f.nomComplet }}
@@ -11,30 +11,34 @@
                 <div class="info" id="info{{f.id}}" hidden> <br>
                     <p>Niveau de certification : {{ f.nivCertif }} </p> <br>
                     <p>Intitulé de la formation : {{ f.intitule }} </p> <br>
-                    <button (click)="showModify(f.id)">Modifier la formation</button>
+                    <button class="btn btn-blue-grey btn-sm" (click)="showModify(f.id)">Modifier la formation</button>
                     <br><br>
                     <div class="modifFormation" id="{{f.id}}" hidden>
                         <!-- Modification formation -->
-                        <form #connectFormulair="ngForm" (ngSubmit)="modifyFormation(connectFormulair.value)">
+                        <form #connectFormulair="ngForm" (ngSubmit)="modifyFormation(connectFormulair.value)"
+                            style="margin: auto; width: 80%;">
                             <div class="form-group" hidden>
                                 <label for="" class="text-secondary">id de la formation</label>
-                                <input  type="text" class="form-control" name="id" ngModel="{{ f.id }}">
+                                <input type="text" class="form-control" name="id" ngModel="{{ f.id }}">
                             </div>
                             <div class="form-group">
                                 <label for="" class="text-secondary">Nom de la formation</label>
-                                <input  type="text" class="form-control" name="nomComplet" ngModel="{{ f.nomComplet }}">
+                                <input type="text" class="form-control w3-text-brown" name="nomComplet"
+                                    ngModel="{{ f.nomComplet }}">
                             </div>
                             <div class="form-group">
                                 <label for="" class="text-secondary">Intitulé de la formation</label>
-                                <input  type="text" class="form-control" name="intitule" ngModel="{{ f.intitule }}">
+                                <input type="text" class="form-control w3-text-deep-purple" name="intitule"
+                                    ngModel="{{ f.intitule }}">
                             </div>
                             <div class="form-group">
                                 <label for="" class="text-secondary">Niveau de certification requis</label>
-                                <input  type="text" class="form-control" name="nivCertif" ngModel="{{ f.nivCertif}}">
+                                <input type="text" class="form-control w3-text-indigo" name="nivCertif"
+                                    ngModel="{{ f.nivCertif}}">
                             </div>
-                            <button type="submit" > Modifier </button>
+                            <button class="btn btn-primary btn-sm" type="submit"> Modifier </button>
+                            <button type="button" class="btn btn-danger btn-sm" (click)="modifyCancel(f.id)">Annuler</button>
                         </form> <br>
-                        <button (click)="modifyCancel(f.id)">Annuler</button>
                     </div> <br>
                 </div>
             </div>
@@ -42,9 +46,16 @@
         </div>
     </div>
     <br>
-    <div class="d-flex justify-content-center my-font">
-        <button type="button" class="noselect patate"  (click)="ajoutShow()"><span class='text'>Add</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/></svg></span></button> <br><br> <br>
-        <button type="button" class="noselect patate" style="background: red; background: #e62222;" (click)="deleteShow()"><span class='text'>Delete</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/></svg></span></button>
+    
+    
+    <div class="d-flex justify-content-center">
+        <button mat-fab color="primary" (click)="ajoutShow()" aria-label="Example icon button with a delete icon">
+            <mat-icon>add</mat-icon>
+          </button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <button mat-fab color="warn" (click)="deleteShow()" aria-label="Example icon button with a delete icon">
+            <mat-icon>delete</mat-icon>
+          </button>
+        
     </div>
 
     <!-- Suppression formation-->
@@ -66,15 +77,15 @@
         <form #connect="ngForm" (ngSubmit)="createFormation(connect.value)">
             <div class="form-group">
                 <label for="" class="text-secondary">Nom de la formation</label>
-                <input  type="text" class="form-control" name="nomComplet" ngModel="">
+                <input type="text" class="form-control" name="nomComplet" ngModel="">
             </div>
             <div class="form-group">
                 <label for="" class="text-secondary">Intitulé de la formation</label>
-                <input  type="text" class="form-control" name="intitule" ngModel="">
+                <input type="text" class="form-control" name="intitule" ngModel="">
             </div>
             <div class="form-group">
                 <label for="" class="text-secondary">Niveau de certification requis</label>
-                <input  type="text" class="form-control" name="nivCertif" ngModel="">
+                <input type="text" class="form-control" name="nivCertif" ngModel="">
             </div>
             <br>
             <button type="submit" class="btn btn-primary btn-block" (click)="ajoutHide()">Créer</button> <br><br>

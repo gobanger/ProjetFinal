@@ -260,3 +260,10 @@ body {
   }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.active-route{
+  background-color: rgba(55, 236, 186, 0.5);
+  text-decoration: none;
+  transition: all 0.3s;
+}

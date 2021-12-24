@@ -27,6 +27,10 @@ import { ChoixformationComponent } from './choixformation/choixformation.compone
 import { TestcandidatComponent } from './testcandidat/testcandidat.component';
 import { ListeCandidatsComponent } from './liste-candidats/liste-candidats.component';
 import { MoncompteComponent } from './moncompte/moncompte.component';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+
+
 
 
 
@@ -57,7 +61,9 @@ import { MoncompteComponent } from './moncompte/moncompte.component';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
